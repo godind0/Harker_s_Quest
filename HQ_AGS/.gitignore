@@ -1,0 +1,20 @@
+_Debug/
+Compiled/
+AudioCache/
+Crashcar.exe
+warnings.log
+
+# Backup files
+*.bak
+backup_acsprset.spr
+
+*.user
+
+_OpenInEditor.lock
+~aclzw.tmp
+game28.dta
+
+*.dmp
+Game.agf.user
+Game.agf.bak
+backup_acsprset.spr
