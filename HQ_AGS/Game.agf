@@ -40,8 +40,8 @@
       <EnforceObjectBasedScript>True</EnforceObjectBasedScript>
       <GUIAlphaStyle>MultiplyTranslucenceSrcBlend</GUIAlphaStyle>
       <GUIDAsString>{b05bf5a4-2005-4fe6-a598-1525905a95d6}</GUIDAsString>
-      <GameFileName>dracula</GameFileName>
-      <GameName>Dracula</GameName>
+      <GameFileName xml:space="preserve">Harker's Quest</GameFileName>
+      <GameName xml:space="preserve">Harker's Quest</GameName>
       <GameTextEncoding>utf-8</GameTextEncoding>
       <Genre>Adventure</Genre>
       <GlobalSpeechAnimationDelay>5</GlobalSpeechAnimationDelay>
@@ -65,7 +65,7 @@
       <RoomTransition>FadeOutAndIn</RoomTransition>
       <RunGameLoopsWhileDialogOptionsDisplayed>False</RunGameLoopsWhileDialogOptionsDisplayed>
       <SaveGameFileExtension />
-      <SaveGameFolderName>Dracula</SaveGameFolderName>
+      <SaveGameFolderName xml:space="preserve">Harker's Quest</SaveGameFolderName>
       <SaveScreenshots>False</SaveScreenshots>
       <ScaleMovementSpeedWithMaskResolution>False</ScaleMovementSpeedWithMaskResolution>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
