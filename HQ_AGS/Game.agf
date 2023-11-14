@@ -6998,7 +6998,7 @@ stop
                         <Sprites>
                           <Sprite Slot="138" Width="9" Height="4" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_1_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7013,7 +7013,7 @@ stop
                           </Sprite>
                           <Sprite Slot="139" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_2_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7028,7 +7028,7 @@ stop
                           </Sprite>
                           <Sprite Slot="140" Width="11" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_3_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7043,7 +7043,7 @@ stop
                           </Sprite>
                           <Sprite Slot="141" Width="14" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_4_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7058,7 +7058,7 @@ stop
                           </Sprite>
                           <Sprite Slot="142" Width="15" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_5_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7073,7 +7073,7 @@ stop
                           </Sprite>
                           <Sprite Slot="143" Width="15" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_6_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7088,7 +7088,7 @@ stop
                           </Sprite>
                           <Sprite Slot="144" Width="17" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_7_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7103,7 +7103,7 @@ stop
                           </Sprite>
                           <Sprite Slot="145" Width="18" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_8_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7118,7 +7118,7 @@ stop
                           </Sprite>
                           <Sprite Slot="146" Width="21" Height="15" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_9_1.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_1.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7138,7 +7138,7 @@ stop
                         <Sprites>
                           <Sprite Slot="147" Width="9" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_1_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7153,7 +7153,7 @@ stop
                           </Sprite>
                           <Sprite Slot="148" Width="9" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_2_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7168,7 +7168,7 @@ stop
                           </Sprite>
                           <Sprite Slot="149" Width="11" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_3_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7183,7 +7183,7 @@ stop
                           </Sprite>
                           <Sprite Slot="150" Width="14" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_4_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7198,7 +7198,7 @@ stop
                           </Sprite>
                           <Sprite Slot="151" Width="15" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_5_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7213,7 +7213,7 @@ stop
                           </Sprite>
                           <Sprite Slot="152" Width="15" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_6_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7228,7 +7228,7 @@ stop
                           </Sprite>
                           <Sprite Slot="153" Width="17" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_7_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7243,7 +7243,7 @@ stop
                           </Sprite>
                           <Sprite Slot="154" Width="18" Height="15" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_8_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7258,7 +7258,7 @@ stop
                           </Sprite>
                           <Sprite Slot="155" Width="21" Height="17" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_9_2.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_2.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7278,7 +7278,7 @@ stop
                         <Sprites>
                           <Sprite Slot="156" Width="9" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_1_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7293,7 +7293,7 @@ stop
                           </Sprite>
                           <Sprite Slot="157" Width="9" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_2_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7308,7 +7308,7 @@ stop
                           </Sprite>
                           <Sprite Slot="158" Width="11" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_3_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7323,7 +7323,7 @@ stop
                           </Sprite>
                           <Sprite Slot="159" Width="14" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_4_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7338,7 +7338,7 @@ stop
                           </Sprite>
                           <Sprite Slot="160" Width="15" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_5_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7353,7 +7353,7 @@ stop
                           </Sprite>
                           <Sprite Slot="161" Width="15" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_6_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7368,7 +7368,7 @@ stop
                           </Sprite>
                           <Sprite Slot="162" Width="17" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_7_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7383,7 +7383,7 @@ stop
                           </Sprite>
                           <Sprite Slot="163" Width="18" Height="14" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_8_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7398,7 +7398,7 @@ stop
                           </Sprite>
                           <Sprite Slot="164" Width="21" Height="17" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_9_3.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_3.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7418,7 +7418,7 @@ stop
                         <Sprites>
                           <Sprite Slot="165" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_1_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7433,7 +7433,7 @@ stop
                           </Sprite>
                           <Sprite Slot="166" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_2_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7448,7 +7448,7 @@ stop
                           </Sprite>
                           <Sprite Slot="167" Width="11" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_3_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7463,7 +7463,7 @@ stop
                           </Sprite>
                           <Sprite Slot="168" Width="14" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_4_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7478,7 +7478,7 @@ stop
                           </Sprite>
                           <Sprite Slot="169" Width="15" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_5_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7493,7 +7493,7 @@ stop
                           </Sprite>
                           <Sprite Slot="170" Width="15" Height="9" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_6_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7508,7 +7508,7 @@ stop
                           </Sprite>
                           <Sprite Slot="171" Width="17" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_7_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7523,7 +7523,7 @@ stop
                           </Sprite>
                           <Sprite Slot="172" Width="18" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_8_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7538,7 +7538,7 @@ stop
                           </Sprite>
                           <Sprite Slot="173" Width="21" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                             <Source>
-                              <FileName>Assets/Piskel/HarkinsOffice/Drawer_9_4.png</FileName>
+                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_4.png</FileName>
                               <OffsetX>0</OffsetX>
                               <OffsetY>0</OffsetY>
                               <ImportHeight>240</ImportHeight>
@@ -7560,7 +7560,7 @@ stop
                 <Sprites>
                   <Sprite Slot="126" Width="10" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/certificate 1.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/certificate 1.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7575,7 +7575,7 @@ stop
                   </Sprite>
                   <Sprite Slot="127" Width="8" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/certificate 2.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/certificate 2.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7590,7 +7590,7 @@ stop
                   </Sprite>
                   <Sprite Slot="128" Width="10" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Clerk chair.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Clerk chair.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7605,7 +7605,7 @@ stop
                   </Sprite>
                   <Sprite Slot="129" Width="15" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Clerk desk.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Clerk desk.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7620,7 +7620,7 @@ stop
                   </Sprite>
                   <Sprite Slot="130" Width="16" Height="18" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/globe.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/globe.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7635,7 +7635,7 @@ stop
                   </Sprite>
                   <Sprite Slot="131" Width="32" Height="25" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/map europe.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/map europe.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7650,7 +7650,7 @@ stop
                   </Sprite>
                   <Sprite Slot="132" Width="36" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/map london.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/map london.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7665,7 +7665,7 @@ stop
                   </Sprite>
                   <Sprite Slot="133" Width="12" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Sollicitor chair.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Sollicitor chair.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7680,7 +7680,7 @@ stop
                   </Sprite>
                   <Sprite Slot="134" Width="34" Height="28" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Sollicitor desk.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Sollicitor desk.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7695,7 +7695,7 @@ stop
                   </Sprite>
                   <Sprite Slot="135" Width="11" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Visitor chair 1.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Visitor chair 1.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7710,7 +7710,7 @@ stop
                   </Sprite>
                   <Sprite Slot="136" Width="11" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Visitor chair 2.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Visitor chair 2.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7725,7 +7725,7 @@ stop
                   </Sprite>
                   <Sprite Slot="137" Width="14" Height="26" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Visitor waiting sofa.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Visitor waiting sofa.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7740,7 +7740,7 @@ stop
                   </Sprite>
                   <Sprite Slot="174" Width="16" Height="18" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/globe_open.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/globe_open.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7755,7 +7755,7 @@ stop
                   </Sprite>
                   <Sprite Slot="175" Width="25" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/MapExeter.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/MapExeter.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7770,7 +7770,7 @@ stop
                   </Sprite>
                   <Sprite Slot="181" Width="3" Height="2" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Notebook.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Notebook.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7785,7 +7785,7 @@ stop
                   </Sprite>
                   <Sprite Slot="184" Width="5" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Piskel/HarkinsOffice/Ledger.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/Ledger.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
@@ -7800,7 +7800,7 @@ stop
                   </Sprite>
                   <Sprite Slot="188" Width="7" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
-                      <FileName>Assets/Visual/HarkinsOffice/EastmanCam.png</FileName>
+                      <FileName>Assets/Visual/HawkinsOffice/EastmanCam.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
