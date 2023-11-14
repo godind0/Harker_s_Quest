@@ -3046,6 +3046,368 @@
               </InventoryItem>
             </InventoryItems>
           </InventoryItemFolder>
+          <InventoryItemFolder Name="Photos">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Photo of Kitchen</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>21</ID>
+                <Image>0</Image>
+                <Name>iPhotoKitchen</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">This is a photo of the kitchen</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Photo of the living room</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>22</ID>
+                <Image>0</Image>
+                <Name>iPhotoLiving</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">This is a picture of the living room</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Photo of the dining room</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>23</ID>
+                <Image>0</Image>
+                <Name>iPhotoDining</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">This is a picture of the dining room</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Photo of the bedroom</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>24</ID>
+                <Image>0</Image>
+                <Name>iPhotoBedroom</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">This is a photo of the bedroom</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Camera film</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>29</ID>
+                <Image>0</Image>
+                <Name>iFilm</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">The film from the camera. This can be developed into pictures by the professionals</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
+          <InventoryItemFolder Name="Harker's apartment items">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>74</CursorImage>
+                <Description>Razor</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>3</ID>
+                <Image>74</Image>
+                <Name>iRazor</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">My trusty razor. One needs to keep a clean shave to be taken seriously</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>114</CursorImage>
+                <Description xml:space="preserve">Shaving glass</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>4</ID>
+                <Image>114</Image>
+                <Name>iMirror</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">My travel-sized mirror</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>alternateNames</Name>
+                    <Value xml:space="preserve">mirror, glass</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>125</CursorImage>
+                <Description xml:space="preserve">Legal papers</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>6</ID>
+                <Image>125</Image>
+                <Name>iLegalPapers</Name>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>alternateNames</Name>
+                    <Value xml:space="preserve">paper, contract, letter, files</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">The contracts I need to bring to Mr. Hawkins</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>ReadDisplay</Name>
+                    <Value xml:space="preserve">One more verification, but everything in these papers is perfect!</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3">iLegalPapers_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>123</CursorImage>
+                <Description>Folder</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>7</ID>
+                <Image>123</Image>
+                <Name>iFolder</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">A contract folder to keep contracts together</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3">iFolder_UseInv</Event>
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>117</CursorImage>
+                <Description>Trunk</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>5</ID>
+                <Image>117</Image>
+                <Name>iTrunk</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties />
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description>Pens</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>10</ID>
+                <Image>0</Image>
+                <Name>iPen</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">A travel pen to write with</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description>Ink</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>11</ID>
+                <Image>0</Image>
+                <Name>iInk</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">A traveling bottle of ink</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description>Matches</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>26</ID>
+                <Image>0</Image>
+                <Name>iMatches</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">Matches, to light my cigar after supper</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Polyglot dictionary</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>27</ID>
+                <Image>0</Image>
+                <Name>iDictionary</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">My 'polyglot' dictionary. It translates English to German and the other way around</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description>Cigars</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>28</ID>
+                <Image>0</Image>
+                <Name>iCigars</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">Cigars, to unwind after supper</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
         </SubFolders>
         <InventoryItems>
           <InventoryItem>
@@ -3099,128 +3461,6 @@
               <Event Index="1">iLedger_Interact</Event>
               <Event Index="2" />
               <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>74</CursorImage>
-            <Description>Razor</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>3</ID>
-            <Image>74</Image>
-            <Name>iRazor</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">My trusty razor. One needs to keep a clean shave to be taken seriously</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>114</CursorImage>
-            <Description xml:space="preserve">Shaving glass</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>4</ID>
-            <Image>114</Image>
-            <Name>iMirror</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">My travel-sized mirror</Value>
-              </CustomProperty>
-              <CustomProperty>
-                <Name>alternateNames</Name>
-                <Value xml:space="preserve">mirror, glass</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>117</CursorImage>
-            <Description>Trunk</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>5</ID>
-            <Image>117</Image>
-            <Name>iTrunk</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>125</CursorImage>
-            <Description xml:space="preserve">Legal papers</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>6</ID>
-            <Image>125</Image>
-            <Name>iLegalPapers</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>alternateNames</Name>
-                <Value xml:space="preserve">paper, contract, letter, files</Value>
-              </CustomProperty>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">The contracts I need to bring to Mr. Hawkins</Value>
-              </CustomProperty>
-              <CustomProperty>
-                <Name>ReadDisplay</Name>
-                <Value xml:space="preserve">One more verification, but everything in these papers is perfect!</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iLegalPapers_UseInv</Event>
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>123</CursorImage>
-            <Description>Folder</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>7</ID>
-            <Image>123</Image>
-            <Name>iFolder</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">A contract folder to keep contracts together</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3">iFolder_UseInv</Event>
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
@@ -3284,52 +3524,6 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description>Pens</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>10</ID>
-            <Image>0</Image>
-            <Name>iPen</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">A travel pen to write with</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description>Ink</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>11</ID>
-            <Image>0</Image>
-            <Name>iInk</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">A traveling bottle of ink</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
             <Description xml:space="preserve">London Map</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
@@ -3341,6 +3535,125 @@
               <CustomProperty>
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">A detailed map of London with important sites and businesses noted on it</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Sales papers for property</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>20</ID>
+            <Image>0</Image>
+            <Name>iSalesDossier</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">The sales dossier for the sale of a property</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Telegram from P. Hawkins</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>25</ID>
+            <Image>0</Image>
+            <Name>iTelegramHawkins</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is a telegram from my employer, Peter Hawkins</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ReadDisplay</Name>
+                <Value xml:space="preserve">Peter. You need to got to Count Dracula's castle. Cannot go gout is acting up. Will send letter for Count to London train station. </Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Sollicitor diploma</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>30</ID>
+            <Image>0</Image>
+            <Name>iDiploma</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">My official Sollicitor Diploma!</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Painkiller solution</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>31</ID>
+            <Image>0</Image>
+            <Name>iPainkiller</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">A painkiller solution for that poor horse</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Bandages</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>32</ID>
+            <Image>0</Image>
+            <Name>iBandages</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">Bandages to secure the horse's wounds</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
