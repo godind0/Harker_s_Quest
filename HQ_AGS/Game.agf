@@ -320,6 +320,17 @@
         <Name>tellsTime</Name>
         <Type>Boolean</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>True</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>Null</DefaultValue>
+        <Description xml:space="preserve">This is the type of possible interaction for the object. Choices are Classify and Look inside</Description>
+        <Name>invContext</Name>
+        <Type>Text</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -1046,7 +1057,7 @@
                 <ID>3</ID>
                 <Image>48</Image>
                 <Left>100</Left>
-                <Locked>True</Locked>
+                <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>notBtnSquare</Name>
                 <NewModeNumber>0</NewModeNumber>
@@ -1055,8 +1066,8 @@
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>26</Top>
-                <Visible>True</Visible>
+                <Top>164</Top>
+                <Visible>False</Visible>
                 <Width>33</Width>
                 <ZOrder>3</ZOrder>
               </GUIButton>
@@ -1072,7 +1083,7 @@
                 <Text />
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>60</Top>
+                <Top>26</Top>
                 <Visible>True</Visible>
                 <Width>174</Width>
                 <ZOrder>4</ZOrder>
@@ -1096,10 +1107,34 @@
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>32</Top>
-                <Visible>True</Visible>
+                <Top>170</Top>
+                <Visible>False</Visible>
                 <Width>21</Width>
                 <ZOrder>5</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>6</ID>
+                <Image>42</Image>
+                <Left>184</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnInvContext</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnInvContext_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">&gt; Context</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>170</Top>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>6</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -2874,6 +2909,333 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>190</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>104</Height>
+              <ID>16</ID>
+              <Left>31</Left>
+              <Name>gWait</Name>
+              <OnClick />
+              <PopupStyle>PopupModal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>68</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>258</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>0</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnToggleForUntil</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnToggleForUntil_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Wait for</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>44</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>1</ID>
+                <Image>42</Image>
+                <Left>162</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnToggleMinHrs</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnToggleMinHrs_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Minutes</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>44</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUITextBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>20</Height>
+                <ID>2</ID>
+                <Left>99</Left>
+                <Locked>False</Locked>
+                <Name>tbWaitAmount</Name>
+                <OnActivate />
+                <ShowBorder>True</ShowBorder>
+                <Text />
+                <TextColor>63488</TextColor>
+                <Top>47</Top>
+                <Visible>True</Visible>
+                <Width>60</Width>
+                <ZOrder>2</ZOrder>
+              </GUITextBox>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>40</Height>
+                <ID>3</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lblWaitUI</Name>
+                <Text xml:space="preserve">It is 8:00AM[How long should I wait ?</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>3</Top>
+                <Visible>True</Visible>
+                <Width>250</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>4</ID>
+                <Image>42</Image>
+                <Left>24</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnConfirmWait</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnConfirmWait_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Confirm wait</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>74</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>5</ID>
+                <Image>42</Image>
+                <Left>142</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnCancelWait</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnCancelWait_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Cancel</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>74</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>50</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>200</Height>
+              <ID>17</ID>
+              <Left>20</Left>
+              <Name>gClassify</Name>
+              <OnClick />
+              <PopupStyle>PopupModal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>20</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>280</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIListBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>75</Height>
+                <ID>0</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lbClassifiable</Name>
+                <OnSelectionChanged>lbClassifiable_OnSelectionChanged</OnSelectionChanged>
+                <SelectedBackgroundColor>63488</SelectedBackgroundColor>
+                <SelectedTextColor>0</SelectedTextColor>
+                <ShowBorder>True</ShowBorder>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>65</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIListBox>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>1</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnClassifyBackToInventory</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnClassifyBackToInventory_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Inventory</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>170</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>2</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnClassifyUP</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnClassifyUP_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Move in front</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>37</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>3</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnClassifyDOWN</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnClassifyDOWN_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Move behind</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>142</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>4</ID>
+                <Image>42</Image>
+                <Left>184</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnClassifyFILEIT</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnClassifyFILEIT_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">File it</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>170</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>131</Height>
+                <ID>5</ID>
+                <Left>102</Left>
+                <Locked>False</Locked>
+                <Name>lblClassifyDescription</Name>
+                <Text />
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>37</Top>
+                <Visible>True</Visible>
+                <Width>173</Width>
+                <ZOrder>5</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>30</Height>
+                <ID>6</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lblClassifyTitle</Name>
+                <Text xml:space="preserve">Classify documents</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>5</Top>
+                <Visible>True</Visible>
+                <Width>272</Width>
+                <ZOrder>6</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -3227,7 +3589,7 @@
                 <ID>6</ID>
                 <Image>125</Image>
                 <Name>iLegalPapers</Name>
-                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>alternateNames</Name>
@@ -3240,6 +3602,10 @@
                   <CustomProperty>
                     <Name>ReadDisplay</Name>
                     <Value xml:space="preserve">One more verification, but everything in these papers is perfect!</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>invContext</Name>
+                    <Value>Classify</Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -8194,6 +8560,21 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>240</ImportHeight>
                   <ImportWidth>320</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="190" Width="258" Height="104" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/258x104.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>104</ImportHeight>
+                  <ImportWidth>258</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>

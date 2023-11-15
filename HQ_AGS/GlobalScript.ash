@@ -57,6 +57,7 @@ import String getClientName();
 import String getClientNameFromCode(String, bool);
 import String getCodeFromClientName(String, bool);
 import String readClientFile(String);
+import function addClassifiableFile(String, String,  String);
 
 import function open_gui(GUI*);
 import function close_gui(GUI*);
