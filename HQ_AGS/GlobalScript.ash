@@ -52,6 +52,8 @@ import String keycodeToString(char);
 import String etToString(elementType);
 import elementType stringToET(String);
 import bool alphaOrder_isThisBeforeThat(String, String);
+import function giveScoreOnce(String, int);
+
 import String getNoteDescription(String);
 import String whatTimeIsIt(bool);
 import bool isItBeforeThisTime(int, int, int, bool, int);

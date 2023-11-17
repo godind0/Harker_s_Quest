@@ -3374,7 +3374,7 @@
                 <Description xml:space="preserve">Train ticket to London</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>12</ID>
+                <ID>11</ID>
                 <Image>0</Image>
                 <Name>iTicketLondon</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3397,7 +3397,7 @@
                 <Description xml:space="preserve">Train ticket to Paris</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>14</ID>
+                <ID>13</ID>
                 <Image>0</Image>
                 <Name>iTicketParis</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3420,7 +3420,7 @@
                 <Description xml:space="preserve">Train ticket to Munich</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>15</ID>
+                <ID>14</ID>
                 <Image>0</Image>
                 <Name>iTicketMunich</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3443,7 +3443,7 @@
                 <Description xml:space="preserve">Train ticket to Vienna</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>16</ID>
+                <ID>15</ID>
                 <Image>0</Image>
                 <Name>iTicketVienna</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3466,7 +3466,7 @@
                 <Description xml:space="preserve">Train ticket to Budapest</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>17</ID>
+                <ID>16</ID>
                 <Image>0</Image>
                 <Name>iTicketBudapest</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3489,7 +3489,7 @@
                 <Description xml:space="preserve">Train ticket to Klausenburg</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>18</ID>
+                <ID>17</ID>
                 <Image>0</Image>
                 <Name>iTicketKlausenburg</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3512,7 +3512,7 @@
                 <Description xml:space="preserve">Train ticket to Bistritz</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>19</ID>
+                <ID>18</ID>
                 <Image>0</Image>
                 <Name>iTicketBistritz</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3540,7 +3540,7 @@
                 <Description xml:space="preserve">Photo of Kitchen</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>21</ID>
+                <ID>20</ID>
                 <Image>0</Image>
                 <Name>iPhotoKitchen</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3563,7 +3563,7 @@
                 <Description xml:space="preserve">Photo of the living room</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>22</ID>
+                <ID>21</ID>
                 <Image>0</Image>
                 <Name>iPhotoLiving</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3586,7 +3586,7 @@
                 <Description xml:space="preserve">Photo of the dining room</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>23</ID>
+                <ID>22</ID>
                 <Image>0</Image>
                 <Name>iPhotoDining</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3609,7 +3609,7 @@
                 <Description xml:space="preserve">Photo of the bedroom</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>24</ID>
+                <ID>23</ID>
                 <Image>0</Image>
                 <Name>iPhotoBedroom</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3632,7 +3632,7 @@
                 <Description xml:space="preserve">Camera film</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>29</ID>
+                <ID>28</ID>
                 <Image>0</Image>
                 <Name>iFilm</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3783,40 +3783,21 @@
               </InventoryItem>
               <InventoryItem>
                 <CursorImage>0</CursorImage>
-                <Description>Pens</Description>
+                <Description xml:space="preserve">Pen and ink bottle</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
                 <ID>10</ID>
                 <Image>0</Image>
-                <Name>iPen</Name>
+                <Name>iPenInk</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>TextDescription</Name>
-                    <Value xml:space="preserve">A travel pen to write with</Value>
+                    <Value xml:space="preserve">A travel pen to write with and a bottle of ink</Value>
                   </CustomProperty>
-                </Properties>
-                <Interactions>
-                  <Event Index="0" />
-                  <Event Index="1" />
-                  <Event Index="2" />
-                  <Event Index="3" />
-                  <Event Index="4" />
-                </Interactions>
-              </InventoryItem>
-              <InventoryItem>
-                <CursorImage>0</CursorImage>
-                <Description>Ink</Description>
-                <HotspotX>0</HotspotX>
-                <HotspotY>0</HotspotY>
-                <ID>11</ID>
-                <Image>0</Image>
-                <Name>iInk</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
-                <Properties>
                   <CustomProperty>
-                    <Name>TextDescription</Name>
-                    <Value xml:space="preserve">A traveling bottle of ink</Value>
+                    <Name>alternateNames</Name>
+                    <Value xml:space="preserve">pen, ink, bottle, stylus</Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -3832,7 +3813,7 @@
                 <Description>Matches</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>26</ID>
+                <ID>25</ID>
                 <Image>0</Image>
                 <Name>iMatches</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3855,7 +3836,7 @@
                 <Description xml:space="preserve">Polyglot dictionary</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>27</ID>
+                <ID>26</ID>
                 <Image>0</Image>
                 <Name>iDictionary</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3878,7 +3859,7 @@
                 <Description>Cigars</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>28</ID>
+                <ID>27</ID>
                 <Image>0</Image>
                 <Name>iCigars</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4022,7 +4003,7 @@
             <Description xml:space="preserve">London Map</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>13</ID>
+            <ID>12</ID>
             <Image>0</Image>
             <Name>iLondonMap</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4045,7 +4026,7 @@
             <Description xml:space="preserve">Sales papers for property</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>20</ID>
+            <ID>19</ID>
             <Image>0</Image>
             <Name>iSalesDossier</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4068,7 +4049,7 @@
             <Description xml:space="preserve">Telegram from P. Hawkins</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>25</ID>
+            <ID>24</ID>
             <Image>0</Image>
             <Name>iTelegramHawkins</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4095,7 +4076,7 @@
             <Description xml:space="preserve">Sollicitor diploma</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>30</ID>
+            <ID>29</ID>
             <Image>0</Image>
             <Name>iDiploma</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4118,7 +4099,7 @@
             <Description xml:space="preserve">Painkiller solution</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>31</ID>
+            <ID>30</ID>
             <Image>0</Image>
             <Name>iPainkiller</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4141,7 +4122,7 @@
             <Description>Bandages</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>32</ID>
+            <ID>31</ID>
             <Image>0</Image>
             <Name>iBandages</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -5119,9 +5100,7 @@ HAWKINS: My physician says I should not travel...
 HAWKINS: But I have this estate sale coming up.
 HARKER: Right
 option-off-forever 1
-  if(Game.DoOnceOnly("AskHawkinsHowHeIsDoing")){
-    GiveScore(1);
-  }
+  giveScoreOnce("AskHawkinsHowHeIsDoing", 1);
 return
 @2
   if(!player.HasInventory(iNotebook))
@@ -5137,12 +5116,11 @@ return
     if(iLegalPapers.Name != "Legal dossier")
     {
       cHawkins.Say("You could not put them together in a folder?");
+      giveScoreOnce("HandedInALegalDossier", -1);
       cHawkins.Say("Everything is in here, at least. Good");
     } else {
       cHawkins.Say("Complete and neat, well done Harker");
-      if(Game.DoOnceOnly("HandedInALegalDossier")){
-        GiveScore(1);
-      }
+      giveScoreOnce("HandedInALegalDossier", 1);
     }
     dHawkins1.SetOptionState(2,eOptionOffForever);
     dHawkins1.SetOptionState(3,eOptionOn);
@@ -5160,7 +5138,7 @@ stop
 return
 @5
 HAWKINS: I told you to note it down.
-  CallRoomScript(5);
+  CallRoomScript(4);
 return
 @6
 HAWKINS: Sure. Let's get back to work.
@@ -5409,6 +5387,7 @@ HARKER: Let's head home
 stop
 @2
 HARKER: Let's go to work
+HARKER: I hope I have everything
   travel(HawkinsOffices);
 stop
 @3
@@ -8155,6 +8134,36 @@ stop
                   <Sprite Slot="186" Width="6" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Piskel/Apartment_Harker/wallClock.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="191" Width="10" Height="12" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Apartment_Harker/cigarTable.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="192" Width="1" Height="1" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Apartment_Harker/matches.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
