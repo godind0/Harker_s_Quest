@@ -18,6 +18,32 @@ enum cutsceneIndex
   getToWork
 };
 
+enum storyBeat
+{
+  startYourDay, 
+  packYourThings, 
+  goToLondon
+};
+
+enum zone
+{
+  JonathanApt, 
+  HawkinsOffices, 
+  ExeterTrainStation, 
+  StationCafe, 
+  LondonTrainStation, 
+  Purfleet, 
+  TelegramOffice, 
+  BritishMuseum, 
+  PhotographyShop, 
+  LawSocietyOffices, 
+  StayHere, 
+  LondonHotel
+};
+
+import function setStoryBeat(storyBeat);
+import storyBeat getStoryBeat();
+
 import String[] roomSpecificParse(String);
 import String findVerbInDictionary(String);
 import bool interact(String[]);
@@ -29,15 +55,22 @@ import bool alphaOrder_isThisBeforeThat(String, String);
 import String getNoteDescription(String);
 import String whatTimeIsIt(bool);
 import bool isItBeforeThisTime(int, int, int, bool, int);
-import String addFirstNameInitial (String);
-import String getSetofPropertiesByCitySector(String, String);
-import String findCodeInCMD(String, bool);
-import String findClientNameInCMD(String, bool);
-import int getAgePerCode(String);
-import String getCityPerCode(String);
-import String getSectorPerCode(String);
-import String justTheLastName(String);
-import bool validateHawkinsCode(String);
+import function openWaitGUI(String);
+
+import function adjustTravelDestinations();
+import function addTravelDestination(zone);
+import function removeTravelDestination(zone);
+import function travel(zone);
+
+import String getClientListPerCitySector(String, String);
+import String generateReadHawkinsFileString(String);
+import bool validatePropertyProposition(String, String);
+import String getPropertyRequestMessage(String);
+import String getPropertyRequesterName();
+import Set* getHawkinsSellerList();
+import function createAllHawkinsFiles();
+import String getProposedSeller();
+
 import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);
 import bool isThisOpened(Object*);
@@ -52,11 +85,7 @@ import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);
 import function enterMap();
 import function exitMap();
-import String generateHawkinsFile(String, String, int, int, String,  String);
-import String getClientName();
-import String getClientNameFromCode(String, bool);
-import String getCodeFromClientName(String, bool);
-import String readClientFile(String);
+
 import function addClassifiableFile(String, String,  String);
 
 import function open_gui(GUI*);

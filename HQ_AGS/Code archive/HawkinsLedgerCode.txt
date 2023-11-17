@@ -1,0 +1,405 @@
+String addFirstNameInitial (String lastName)
+{
+  return String.Format("%s, %c.", lastName, Random(25) + 65);
+}
+
+String getRandomSector()
+{
+  String sectors[] = new String[5];
+  sectors[0] = "City center";
+  sectors[1] = "North end";
+  sectors[2] = "South end";
+  sectors[3] = "East end";
+  sectors[4] = "West end";
+  return sectors[Random(4)];
+}
+
+String getClientName() // Get a client's name,  format: Lastname, F.
+{
+  int i = Random(possibleClientNames.ItemCount - 1);
+  String clientNamesList[] = possibleClientNames.GetItemsAsArray();
+  String clientName = clientNamesList[i];
+  possibleClientNames.Remove(clientName);
+  return addFirstNameInitial(clientName);
+}
+
+String generateHawkinsCode() // Generate a code,  format: A#####-###
+{
+  String code;
+  do
+  {
+    code = String.Format("%s%05d-%03d", keycodeToString(65 + Random(90-65)), Random(99999), Random(999));
+  } while(hawkinsLedgerClientNames.Get(code) != null);
+  
+  return code;
+}
+
+String justTheLastName(String nameWithInitial)
+{
+  String lastName;
+  
+  if(nameWithInitial.IndexOf(",") != -1)
+  {
+    lastName = nameWithInitial.Truncate(nameWithInitial.IndexOf(","));
+    lastName = lastName.Replace(",", "", eCaseInsensitive);
+  } else {
+    lastName = nameWithInitial;
+  }
+  lastName = lastName.Replace(" ", "", eCaseInsensitive);
+  
+  return lastName;
+}
+
+String formatClientName(String providedName)
+{
+  String lastName = justTheLastName(providedName);
+  String fullName;
+  providedName = removeOneStringInstance(lastName, lastName);
+  providedName = providedName.Replace(",", "", eCaseInsensitive);
+  providedName = providedName.Replace(" ", "", eCaseInsensitive);
+  providedName = providedName.Replace(".", "", eCaseInsensitive);
+  if(providedName.Chars[0] < 65 || providedName.Chars[0] > 90)
+  {
+    fullName = addFirstNameInitial(lastName);
+  } else {
+    fullName = String.Format("%s, %c.", lastName, providedName.Chars[0]);
+  }
+  
+  return fullName;
+}
+
+bool validatePossibleClientName(String thisName)
+{
+  bool validName = true;
+  String lastName = justTheLastName(thisName);
+  
+  if(!possibleClientNames.Contains(lastName))
+  {
+    validName = false;
+  }
+  
+  return validName;
+}
+
+bool validateHawkinsCode(String code)
+{
+  bool correct = true;
+  int i = 0;
+  while((i < code.Length) && (correct))
+  {
+    if(code.Length != 10)
+    {
+      correct = false;
+    } else 
+    {
+      switch(i)
+      {
+        case 0:
+          if(code.Chars[i] < 65 || code.Chars[i] > 90)
+          {
+            correct = false;
+          }
+          break;
+        case 6:
+          if(code.Chars[i] != '-')
+          {
+            correct = false;
+          }
+          break;
+        default:
+          if(code.Chars[i] < 48 || code.Chars[i] > 57)
+          {
+            correct = false;
+          }
+      }
+    }
+    i++;
+  }
+  
+  return correct;
+}
+
+String findValidCodePart(String cmd)
+{
+  String analysedPart = "Null";
+  int validCodeLength = 10;
+  int i = 0;
+  String foundCode = "Null";
+  
+  while(i + validCodeLength <= cmd.Length)
+  {
+    analysedPart = cmd.Substring(i, validCodeLength);
+    if(validateHawkinsCode(analysedPart))
+    {
+      //debugDisplay(String.Format("This is valid: %s", analysedPart));
+      foundCode = analysedPart;
+    } else {
+      analysedPart = "Null";
+      i++;
+    }
+  }
+  
+  return analysedPart;
+}
+
+String findValidNamePart(String cmd)
+{
+  String thatWord;
+  Set* words = Set.Create(eSorted);
+  int SpaceIndex;
+  int CommaIndex;
+  int PeriodIndex;
+  int nextCut;
+  String nextCutChar;
+  
+  String wordsArray[];
+  int i = 0;
+  String foundMatch = "Null";
+  
+  do
+  {
+    nextCut = 1000;
+    nextCutChar = "";
+    
+    SpaceIndex = cmd.IndexOf(" ");
+    if(SpaceIndex == -1) {
+      SpaceIndex = 1000;
+    } else if(SpaceIndex < nextCut) {
+      nextCut = SpaceIndex;
+      nextCutChar = " ";
+    }    
+    CommaIndex = cmd.IndexOf(",");
+    if(CommaIndex == -1) {
+      CommaIndex = 1000;
+    } else if(CommaIndex < nextCut) {
+      nextCut = CommaIndex;
+      nextCutChar = ",";
+    }
+    PeriodIndex = cmd.IndexOf(".");
+    if(PeriodIndex == -1) {
+      PeriodIndex = 1000;
+    } else if (PeriodIndex < nextCut) {
+      nextCut = PeriodIndex;
+      nextCutChar = ".";
+    }
+    
+    thatWord = cmd.Truncate(nextCut);
+    thatWord = thatWord.Replace(" ", "", eCaseInsensitive);
+    thatWord = thatWord.Replace(",", "", eCaseInsensitive);
+    thatWord = thatWord.Replace(".", "", eCaseInsensitive);
+    words.Add(thatWord);
+    
+    cmd = removeOneStringInstance(cmd, thatWord.Append(nextCutChar));
+    
+  } while((SpaceIndex + CommaIndex + PeriodIndex) < 3000);
+  
+  wordsArray = words.GetItemsAsArray();
+  while(i < words.ItemCount && foundMatch == "Null")
+  {
+    if(validatePossibleClientName(wordsArray[i]))
+    {
+      if(wordsArray[i + 1].Length == 1)
+      {
+        wordsArray[i] = String.Format("%s, %s.", wordsArray[i], wordsArray[i+1]);
+      }
+      foundMatch = wordsArray[i];
+    } else {
+      i++;
+    }
+  }
+  
+  return foundMatch;
+  
+}
+
+String generateHawkinsFile(String city, String sector, int ageMin, int ageMax,  String code, String name) // Code (returns this) and client name can be randomized,  not city or sector (age is always randomized)
+{
+  if(!validateHawkinsCode(code)){
+    code = generateHawkinsCode();
+  }
+  if(name == "Null")
+  {
+    name = getClientName();
+  }
+  hawkinsLedgerCity.Set(code, city);
+  hawkinsLedgerClientNames.Set(code, name);
+  hawkinsLedgerPropertyAge.Set(code, String.Format("%d", ageMin + Random(ageMax)));
+  hawkinsLedgerSector.Set(code, sector);
+  
+  return code;
+}
+
+String findCodeInCMD(String cmd, bool createIfValid) //<< This sends back the CMD if not found which is not intended ! HEREE
+{
+  String knownCodes[] = hawkinsLedgerClientNames.GetKeysAsArray();
+  int i = 0;
+  String foundMatch = "Null";
+    
+  String newClientName;
+  String foundValidCode;
+  
+  while(foundMatch == "Null" && i < hawkinsLedgerClientNames.ItemCount) // Does it exist already?
+  {
+    if(cmd.IndexOf(knownCodes[i]) != -1)
+    {
+      foundMatch = knownCodes[i];
+    } else {
+      i++;
+    }
+  }
+  
+  if(createIfValid && foundMatch == "Null") // If we haven't found it in the current ledger (and we're allowed to create a file)
+  {
+    foundValidCode = findValidCodePart(cmd); // included an actual valid,  yet not created, code
+    if(foundValidCode != "Null")
+    {
+      generateHawkinsFile("Exeter", getRandomSector(), 5, 1000, foundValidCode, "Null");
+      foundMatch = foundValidCode;
+    }
+  }
+  
+  return foundMatch;
+}
+
+String findClientNameInCMD(String cmd, bool createIfValid)
+{
+  String knownNames[] = hawkinsLedgerClientNames.GetValuesAsArray();
+  int i = 0;
+  String foundMatch = "Null";
+  
+  String foundValidName;
+  
+  while(foundMatch == "Null" && i < hawkinsLedgerClientNames.ItemCount) // Does it exist already?
+  {
+    if(cmd.IndexOf(knownNames[i]) != -1)
+    {
+      foundMatch = knownNames[i];
+    } else {
+      i++;
+    }
+  }
+  
+  if(createIfValid && foundMatch == "Null") // If we haven't found it in the current ledger (and we're allowed to create a file)
+  {
+    foundValidName = findValidNamePart(cmd); // included an actual valid,  yet not created, client
+    if(foundValidName != "Null")
+    {
+      generateHawkinsFile("Exeter", getRandomSector(), 5, 1000, "Null", formatClientName(foundValidName));
+      foundMatch = foundValidName;
+    }
+  }
+  
+  return foundMatch;
+}
+
+String getCityPerCode(String code)
+{
+  String returnString = "Null";
+  if(hawkinsLedgerCity.Get(code) != null)
+  {
+    returnString = hawkinsLedgerCity.Get(code);
+  }
+  return returnString;
+}
+
+String getSectorPerCode(String code)
+{
+  String returnString = "Null";
+  if(hawkinsLedgerSector.Get(code) != null)
+  {
+    returnString = hawkinsLedgerSector.Get(code);
+  }
+  return returnString;
+}
+
+int getAgePerCode(String code)
+{
+  String tempString;
+  int returnInt = -1;
+  if(hawkinsLedgerPropertyAge.Get(code) != null)
+  {
+    tempString = hawkinsLedgerPropertyAge.Get(code);
+    returnInt = tempString.AsInt;
+  }
+  return returnInt;
+}
+
+String getClientNameFromCode(String code, bool allowCreateNewOne) 
+{
+  String thisClientName = "Null";
+  
+  if(validateHawkinsCode(code)){
+    thisClientName = hawkinsLedgerClientNames.Get(code);
+    if(thisClientName == null && allowCreateNewOne) {
+      generateHawkinsFile("Exeter", getRandomSector(), 5, 1000, code, "Null");
+      thisClientName = hawkinsLedgerClientNames.Get(code);
+    }
+  }
+  
+  return thisClientName;
+}
+
+String getCodeFromClientName(String clientName, bool allowCreateNewOne)
+{
+  String thisCode = "Null";
+  String registeredCodes[] = hawkinsLedgerClientNames.GetKeysAsArray();
+  String registeredNames[] = hawkinsLedgerClientNames.GetValuesAsArray();
+  int i = 0;
+  
+  while(i < hawkinsLedgerClientNames.ItemCount && thisCode == "Null")
+  {
+    if(clientName == registeredNames[i])
+    {
+      thisCode = registeredCodes[i];
+    } else {
+      i++;
+    }
+  }
+  
+  if(allowCreateNewOne && thisCode == "Null")
+  {
+    if(validatePossibleClientName(clientName))
+    {
+      thisCode = generateHawkinsFile("Exeter", getRandomSector(), 5, 1000, "Null", formatClientName(clientName));
+    }
+  }
+  
+  return thisCode;
+}
+
+String getSetofPropertiesByCitySector(String selectedCity, String selectedSector)
+{
+  String codes[] = hawkinsLedgerCity.GetKeysAsArray();
+  String returnCodes = "";
+  
+  int i;
+  
+  for(i = 0 ; i < hawkinsLedgerCity.ItemCount ; i++)
+  {
+    if((hawkinsLedgerCity.Get(codes[i]) == selectedCity) && (hawkinsLedgerSector.Get(codes[i]) == selectedSector))
+    {
+      if(returnCodes == "")
+      {
+        returnCodes = codes[i];
+      } else {
+        returnCodes = returnCodes.Append(String.Format("[%s", codes[i]));
+      }
+    }
+  }
+  
+  return returnCodes;
+}
+
+String readClientFile(String code)
+{
+  String fileInfo = "";
+  fileInfo = fileInfo.Append(String.Format("# %s", code));
+  fileInfo = fileInfo.Append(String.Format("[Name: %s", hawkinsLedgerClientNames.Get(code)));
+  fileInfo = fileInfo.Append("[PROPERTY:");
+  fileInfo = fileInfo.Append(String.Format("[ %s", hawkinsLedgerCity.Get(code)));
+  fileInfo = fileInfo.Append(String.Format("[ %s", hawkinsLedgerSector.Get(code)));
+  String ageString = hawkinsLedgerPropertyAge.Get(code);
+  int ageInt = ageString.AsInt;
+  fileInfo = fileInfo.Append(String.Format("[ %d (%d years old)", 1897 - ageInt, ageInt));
+  return fileInfo;
+}

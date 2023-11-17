@@ -331,6 +331,39 @@
         <Name>invContext</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>True</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">The X coordinate where the player is placed when entering the room</Description>
+        <Name>Arrival_x</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>True</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">The Y coordinate where the player is placed when entering the room</Description>
+        <Name>Arrival_Y</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>True</AppliesToRooms>
+        <DefaultValue>Up</DefaultValue>
+        <Description xml:space="preserve">The direction the player is facing when entering the room (Up, Down, Left, Right)</Description>
+        <Name>Arrival_FaceDirection</Name>
+        <Type>Text</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -884,6 +917,10 @@
             <Description xml:space="preserve">City Map - London</Description>
             <Number>11</Number>
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Description xml:space="preserve">Title screen</Description>
+            <Number>12</Number>
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -906,7 +943,7 @@
               <PopupYPos>0</PopupYPos>
               <Top>0</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>320</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -2023,7 +2060,7 @@
               <PopupYPos>0</PopupYPos>
               <Top>201</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>70</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -2709,13 +2746,13 @@
               <Height>240</Height>
               <ID>14</ID>
               <Left>0</Left>
-              <Name>gTitleScreen</Name>
+              <Name>gStartHelp</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
               <Top>0</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>320</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -2906,6 +2943,30 @@
                 <Visible>True</Visible>
                 <Width>33</Width>
                 <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>3</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnSimpleTBConfirm</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnSimpleTBConfirm_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Confirm</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>48</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>3</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -3233,6 +3294,69 @@
                 <Visible>True</Visible>
                 <Width>272</Width>
                 <ZOrder>6</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>240</Height>
+              <ID>18</ID>
+              <Left>0</Left>
+              <Name>gSplash</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>True</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>0</ID>
+                <Image>42</Image>
+                <Left>114</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnStartGame</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnStartGame_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Start</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>115</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>45</Height>
+                <ID>1</ID>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <Name>Label1</Name>
+                <Text xml:space="preserve">Harker's Quest</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>74</Top>
+                <Visible>True</Visible>
+                <Width>320</Width>
+                <ZOrder>1</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -3774,62 +3898,94 @@
               </InventoryItem>
             </InventoryItems>
           </InventoryItemFolder>
+          <InventoryItemFolder Name="Hawkins Office items">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>182</CursorImage>
+                <Description>Notebook</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>1</ID>
+                <Image>182</Image>
+                <Name>iNotebook</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">My notebook to take important notes</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>ReadDisplay</Name>
+                    <Value xml:space="preserve">Use the interface button shaped like a book to see the content of the notebook.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>183</CursorImage>
+                <Description xml:space="preserve">Files ledger</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>2</ID>
+                <Image>183</Image>
+                <Name>iLedger</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">This is the ledger used to find the drawer number for each client file. I should read it to see the content.</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>alternateNames</Name>
+                    <Value xml:space="preserve">ledger, file key</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1">iLedger_Interact</Event>
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>189</CursorImage>
+                <Description>Camera</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>9</ID>
+                <Image>189</Image>
+                <Name>iCamera</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>alternateNames</Name>
+                    <Value xml:space="preserve">photo, kodak, eastman, camera, picture</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>TextDescription</Name>
+                    <Value xml:space="preserve">This is the office's photo camera. State of the art technology!</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
         </SubFolders>
         <InventoryItems>
-          <InventoryItem>
-            <CursorImage>182</CursorImage>
-            <Description>Notebook</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>1</ID>
-            <Image>182</Image>
-            <Name>iNotebook</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">My notebook to take important notes</Value>
-              </CustomProperty>
-              <CustomProperty>
-                <Name>ReadDisplay</Name>
-                <Value xml:space="preserve">Use the interface button shaped like a book to see the content of the notebook.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>183</CursorImage>
-            <Description xml:space="preserve">Files ledger</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>2</ID>
-            <Image>183</Image>
-            <Name>iLedger</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">This is the ledger used to find the drawer number for each client file. I should read it to see the content.</Value>
-              </CustomProperty>
-              <CustomProperty>
-                <Name>alternateNames</Name>
-                <Value xml:space="preserve">ledger, file key</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1">iLedger_Interact</Event>
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
           <InventoryItem>
             <CursorImage>185</CursorImage>
             <Description xml:space="preserve">Pocket watch</Description>
@@ -3851,33 +4007,6 @@
               <CustomProperty>
                 <Name>alternateNames</Name>
                 <Value xml:space="preserve">watch, clock</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>189</CursorImage>
-            <Description xml:space="preserve">Eastman Camera</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>9</ID>
-            <Image>189</Image>
-            <Name>iCamera</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>alternateNames</Name>
-                <Value xml:space="preserve">camera, photo, kodak, eastman</Value>
-              </CustomProperty>
-              <CustomProperty>
-                <Name>TextDescription</Name>
-                <Value xml:space="preserve">This is the office's photo camera. State of the art technology!</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4231,7 +4360,7 @@
             <SpeechView>0</SpeechView>
             <StartX>47</StartX>
             <StartY>168</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>12</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -4279,7 +4408,7 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value xml:space="preserve">hawkins, peter, boss, old man</Value>
+                <Value xml:space="preserve">hawkins, peter, boss, old man, man, sollicitor</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
@@ -4292,8 +4421,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>1608</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>171</StartX>
-            <StartY>165</StartY>
+            <StartX>274</StartX>
+            <StartY>196</StartY>
             <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4353,6 +4482,618 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>3</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>7</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">Wilhelmina, Mina, woman, fiancee, bethroted</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is Mina, my bethroted!</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Mina Murray</RealName>
+            <ScriptName>cMina</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>3</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>4</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>8</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, cashier, officer, guy</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">The Queen Street Station officer</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Exeter Train Station Officer</RealName>
+            <ScriptName>cExeterTrainOfficer</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65504</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>3</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>5</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>9</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, cashier, officer</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is the Waterloo Train Station Officer</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">London Train Station Officer</RealName>
+            <ScriptName>cLondonTrainStation</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>64520</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>5</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>6</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>10</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, driver, coach</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is a coach driver who can probably get me out of town.</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Cab Driver</RealName>
+            <ScriptName>cCabby</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>34815</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>5</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>7</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>12</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value>horse</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">What a lovely creature</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName>Horse</RealName>
+            <ScriptName>cHorse1</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>33280</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>5</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>8</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>12</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">What a lovely creature</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value>horse</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName>Horse</RealName>
+            <ScriptName>cHorse2</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>33280</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>5</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>9</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>19</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is the driver's cab</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value>Cab</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName>Coach</RealName>
+            <ScriptName>cCoach</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65535</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>5</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>10</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>14</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">woman, receptionist, attendant</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This person seems to be in charge, here</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName>Librarian</RealName>
+            <ScriptName>cLibrarian</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>63519</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>9</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>11</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>15</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">woman, attendant, secretary</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is the person to ask for information about the Law Society</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName>Receptionist</RealName>
+            <ScriptName>cReceptionist</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>33823</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>10</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>12</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>16</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, operator, telegram</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is the operator of the telegraph</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Telegram operator</RealName>
+            <ScriptName>cTelegramOperator</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>1055</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>8</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>13</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>17</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, photo, develop, attendant, cashier</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">I press the button, he does the rest</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Photography professional</RealName>
+            <ScriptName>cPhotoPro</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>65520</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>10</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>14</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>18</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, administrator, doctor, john, seward</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">The man looks overworked, if not overwhelmed. There is a glint of sharp intellect and passion in his eye</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Dr. John Seward</RealName>
+            <ScriptName>cSeward</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>50712</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>7</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -4396,7 +5137,7 @@ return
     if(iLegalPapers.Name != "Legal dossier")
     {
       cHawkins.Say("You could not put them together in a folder?");
-      cHawkins.Say("Everything is in order, at least. Good");
+      cHawkins.Say("Everything is in here, at least. Good");
     } else {
       cHawkins.Say("Complete and neat, well done Harker");
       if(Game.DoOnceOnly("HandedInALegalDossier")){
@@ -4406,33 +5147,12 @@ return
     dHawkins1.SetOptionState(2,eOptionOffForever);
     dHawkins1.SetOptionState(3,eOptionOn);
     dHawkins1.SetOptionState(5,eOptionOn);
-    //debugDisplay(String.Format("Found score: %d[Current time: %s[Current day: %d",game.score,whatTimeIsIt(false),currentDay));
-    if(isItBeforeThisTime(4,0,0,true,1)) { //Before 4PM
-      if(game.score < 10)
-      {
-        //debugDisplay("Normal");
-        cHawkins.Say("I have a new assignment for you");
-        cHawkins.Say("We have another client interested in a new property");
-        CallRoomScript(2);
-      } else {
-        //debugDisplay("Final");
-        cHawkins.Say("I have a new assignment for you");
-        cHawkins.Say("We have another client interested in a new property");
-        CallRoomScript(3);
-      }
-    } else {
-      cHawkins.Say("That is all for today, Harker");
-      cHawkins.Say("Dismissed");
-      dHawkins1.SetOptionState(2,eOptionOff);
-      dHawkins1.SetOptionState(3,eOptionOff);
-      dHawkins1.SetOptionState(4,eOptionOff);
-      dHawkins1.SetOptionState(5,eOptionOff);
-    }
+    CallRoomScript(2);
   }
 return
 @3
 HAWKINS: Ah yes! What property are you proposing?
-  lblSimpleTextbox.Text = "Suggested property code";
+  lblSimpleTextbox.Text = "Seller's name";
   tbSimpleTextbox.Text = "";
   open_gui(gSimpleTextbox);
 stop
@@ -4457,13 +5177,13 @@ stop
                     <ID>2</ID>
                     <Say>False</Say>
                     <Show>True</Show>
-                    <Text xml:space="preserve">About the contracts...</Text>
+                    <Text xml:space="preserve">Here are the contracts</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
                     <Say>False</Say>
                     <Show>False</Show>
-                    <Text xml:space="preserve">About the request property...</Text>
+                    <Text xml:space="preserve">Suggest a seller</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
@@ -4475,7 +5195,7 @@ stop
                     <ID>5</ID>
                     <Say>False</Say>
                     <Show>False</Show>
-                    <Text xml:space="preserve">Could you repeat the required task</Text>
+                    <Text xml:space="preserve">Could you repeat the task</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>6</ID>
@@ -4495,41 +5215,40 @@ return
 @1
 HARKER: The London properties for sale belonging to our clients are all pinned here
 HARKER: They are divided by city sectors
-HARKER: Only their client code is visible on the pin however
-HARKER: When I found the right set of code I can note them down in my notebook.
+HARKER: When I found the right set of properties, I can note them down in my notebook.
   if(!player.HasInventory(iNotebook))
   {
-    player.Say("I leave my notebook on my desk at night, it should be there");
+    player.Say("I always leave my notebook on my desk at night, it should be there");
   } else {
-    player.Say("Those codes are too similar for me to remember many of them");
+    player.Say("After a while all the name sound the same to me");
     player.Say("I can only note the last set I found");
   }
-HARKER: I can translate the code for their client name using the ledger
-HARKER: Then find which file drawer holds their name using the same ledger
+HARKER: Then, I can find which file drawer holds their file using the ledger
+HARKER: The property's age is on the seller's file.
   if(!player.HasInventory(iLedger))
   {
     player.Say("I will have to find that ledger to do that, however");
   }
 return
 @2
-HARKER: Central London codes are...
-  notableSay(player, "Central London", getSetofPropertiesByCitySector("London", "City center"),  0);
+HARKER: Central London sellers are...
+  notableSay(player, "Central London", getClientListPerCitySector("London", "City center"),  0);
 return
 @3
-HARKER: Northern London codes are...
-  notableSay(player, "Northern London", getSetofPropertiesByCitySector("London", "North end"),  0);
+HARKER: Northern London sellers are...
+  notableSay(player, "Northern London", getClientListPerCitySector("London", "North"),  0);
 return
 @4
-HARKER: Western London codes are...
-  notableSay(player, "Western London", getSetofPropertiesByCitySector("London", "West end"),  0);
+HARKER: Western London sellers are...
+  notableSay(player, "Western London", getClientListPerCitySector("London", "West"),  0);
 return
 @5
-HARKER: Southern London codes are...
-  notableSay(player, "Southern London", getSetofPropertiesByCitySector("London", "South end"),  0);
+HARKER: Southern London sellers are...
+  notableSay(player, "Southern London", getClientListPerCitySector("London", "South"),  0);
 return
 @6
-HARKER: Eastern London codes are...
-  notableSay(player, "Eastern London", getSetofPropertiesByCitySector("London", "East end"),  0);
+HARKER: Eastern London sellers are...
+  notableSay(player, "Eastern London", getClientListPerCitySector("London", "East"),  0);
 return
 @7
 stop]]></Script>
@@ -4588,41 +5307,40 @@ return
 @1
 HARKER: The Exeter properties for sale belonging to our clients are all pinned here
 HARKER: They are divided by city sectors
-HARKER: Only their client code is visible on the pin however
-HARKER: When I found the right set of code I can note them down in my notebook.
+HARKER: When I found the right set of properties, I can note them down in my notebook.
   if(!player.HasInventory(iNotebook))
   {
-    player.Say("I leave my notebook on my desk at night, it should be there");
+    player.Say("I always leave my notebook on my desk at night, it should be there");
   } else {
-    player.Say("Those codes are too similar for me to remember many of them");
+    player.Say("After a while all the name sound the same to me");
     player.Say("I can only note the last set I found");
   }
-HARKER: I can use the ledger to find the seller's name
-HARKER: Then find which file drawer holds their name using the same ledger
+HARKER: Then, I can find which file drawer holds their file using the ledger
+HARKER: The property's age is on the seller's file.
   if(!player.HasInventory(iLedger))
   {
     player.Say("I will have to find that ledger to do that, however");
   }
 return
 @2
-HARKER: Central Exeter codes are...
-  notableSay(player, "Central Exeter", getSetofPropertiesByCitySector("Exeter", "City center"),  0);
+HARKER: Central Exeter sellers are...
+  notableSay(player, "Central Exeter", getClientListPerCitySector("Exeter", "City center"),  0);
 return
 @3
-HARKER: Northern Exeter codes are...
-  notableSay(player, "Northern Exeter", getSetofPropertiesByCitySector("Exeter", "North end"),  0);
+HARKER: Northern Exeter sellers are...
+  notableSay(player, "Northern Exeter", getClientListPerCitySector("Exeter", "North"),  0);
 return
 @4
-HARKER: Western Exeter codes are...
-  notableSay(player, "Western Exeter", getSetofPropertiesByCitySector("Exeter", "West end"),  0);
+HARKER: Western Exeter sellers are...
+  notableSay(player, "Western Exeter", getClientListPerCitySector("Exeter", "West"),  0);
 return
 @5
-HARKER: Southern Exeter codes are...
-  notableSay(player, "Southern Exeter", getSetofPropertiesByCitySector("Exeter", "South end"),  0);
+HARKER: Southern Exeter sellers are...
+  notableSay(player, "Southern Exeter", getClientListPerCitySector("Exeter", "South"),  0);
 return
 @6
-HARKER: Eastern Exeter codes are...
-  notableSay(player, "Eastern Exeter", getSetofPropertiesByCitySector("Exeter", "East end"),  0);
+HARKER: Eastern Exeter sellers are...
+  notableSay(player, "Eastern Exeter", getClientListPerCitySector("Exeter", "East"),  0);
 return
 @7
 stop]]></Script>
@@ -4671,50 +5389,146 @@ stop]]></Script>
                   </DialogOption>
                 </DialogOptions>
               </Dialog>
-              <Dialog>
-                <ID>3</ID>
-                <Name>dLedger</Name>
-                <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-HARKER: Let's see, here...
-return
-@1
-  lblSimpleTextbox.Text = "File code";
-  tbSimpleTextbox.Text = "";
-  open_gui(gSimpleTextbox);
-stop
-@2
-  readThis(iLedger.GetTextProperty("ReadDisplay"),"¶");
-return
-@3
-stop
-]]></Script>
-                <DialogOptions>
-                  <DialogOption>
-                    <ID>1</ID>
-                    <Say>False</Say>
-                    <Show>True</Show>
-                    <Text xml:space="preserve">Find a name from a code</Text>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>2</ID>
-                    <Say>False</Say>
-                    <Show>True</Show>
-                    <Text xml:space="preserve">Consult file drawer list</Text>
-                  </DialogOption>
-                  <DialogOption>
-                    <ID>3</ID>
-                    <Say>False</Say>
-                    <Show>True</Show>
-                    <Text xml:space="preserve">Close ledger</Text>
-                  </DialogOption>
-                </DialogOptions>
-              </Dialog>
             </Dialogs>
           </DialogFolder>
         </SubFolders>
-        <Dialogs />
+        <Dialogs>
+          <Dialog>
+            <ID>3</ID>
+            <Name>dTravel</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  
+  Display("Where to?");
+  adjustTravelDestinations();
+return
+@1
+HARKER: Let's head home
+  travel(JonathanApt);
+stop
+@2
+HARKER: Let's go to work
+  travel(HawkinsOffices);
+stop
+@3
+HARKER: Destination: Queen Street Station
+  travel(ExeterTrainStation);
+stop
+@4
+HARKER: I could do with a nice hot tea
+  travel(StationCafe);
+stop
+@5
+HARKER: Back to Waterloo Station
+  travel(LondonTrainStation);
+stop
+@6
+HARKER: Can you take me to this address?
+HARKER: It is in Purfleet
+CABBY: I can take you there, no problem
+CABBY: Mind the step
+  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Transparency = 100;
+  travel(Purfleet);
+stop
+@7
+HARKER: To the telegram office
+  travel(TelegramOffice);
+stop
+@8
+HARKER: Ah the British Museum!
+  travel(BritishMuseum);
+stop
+@9
+  if(player.HasInventory(iFilm))
+  {
+    player.Say("Let's get those picture developed");
+  } else
+  {
+    player.Say("Let's get back to the photo store");
+  }
+  travel(PhotographyShop);
+stop
+@10
+HARKER: To the Law Society!
+  travel(LawSocietyOffices);
+stop
+@11
+HARKER: Maybe no traveling for now
+  travel(StayHere);
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Jonathan's apartment</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Hawkins Esq. Offices</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Exeter Train Station</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Station Café</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">London Train Station</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Purfleet</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Telegram Office</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">British Museum</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Photography Shop</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Law Society Offices</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Stay here</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+        </Dialogs>
       </DialogFolder>
     </Dialogs>
     <Cursors>
@@ -5184,7 +5998,7 @@ stop
         </GlobalVariable>
         <GlobalVariable>
           <DefaultValue>0</DefaultValue>
-          <Name>storyBeats</Name>
+          <Name>CurrentStoryBeat</Name>
           <Type>int</Type>
         </GlobalVariable>
         <GlobalVariable>
@@ -10198,22 +11012,170 @@ stop
           <View>
             <ID>7</ID>
             <Name>Mina_sit</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>8</ID>
             <Name>TrainOfficerExeter_stand</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>9</ID>
             <Name>TrainOfficerLondon_stand</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>10</ID>
             <Name>CabbyDriver_walk</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>11</ID>
@@ -10223,7 +11185,44 @@ stop
           <View>
             <ID>12</ID>
             <Name>Horse_walk</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>13</ID>
@@ -10233,27 +11232,254 @@ stop
           <View>
             <ID>14</ID>
             <Name>Librarian_stand</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>15</ID>
             <Name>LawSocietyReceptionist_sit</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>16</ID>
             <Name>TelegrammAttendant_stand</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>17</ID>
             <Name>PhotoAttendant_stand</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>18</ID>
-            <Name>JStewart_walk</Name>
-            <Loops />
+            <Name>JSeward_walk</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>19</ID>
+            <Name>coach_rolling</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
           </View>
         </Views>
       </ViewFolder>
