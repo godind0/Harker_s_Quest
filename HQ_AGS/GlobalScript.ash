@@ -41,8 +41,23 @@ enum zone
   LondonHotel
 };
 
+enum city
+{
+  Exeter, 
+  London, 
+  Paris, 
+  Munich, 
+  Vienna, 
+  Budapest, 
+  Klausenburg, 
+  Bistritz
+};
+
 import function setStoryBeat(storyBeat);
 import storyBeat getStoryBeat();
+import function gameIsOver(String);
+import int arrival_x[];
+import int arrival_y[];
 
 import String[] roomSpecificParse(String);
 import String findVerbInDictionary(String);
@@ -53,10 +68,17 @@ import String etToString(elementType);
 import elementType stringToET(String);
 import bool alphaOrder_isThisBeforeThat(String, String);
 import function giveScoreOnce(String, int);
+import function createTrainTimetables();
+import function show_trainTicket_GUI(city, city);
+import String getTrainArrivalTime(String);
+import String getTrainDepartureTime();
 
 import String getNoteDescription(String);
 import String whatTimeIsIt(bool);
 import bool isItBeforeThisTime(int, int, int, bool, int);
+import bool isThisTimeWithinXminOfThisTime(String, String,  int);
+import function setCurrentTime(int, int, int, bool,  int);
+import int translateTimeToMinutes(String);
 import function openWaitGUI(String);
 
 import function adjustTravelDestinations();
@@ -82,6 +104,7 @@ import String getMemorisedThought();
 import function debugDisplay(String);
 import function triggerCutscene(cutsceneIndex);
 import function sit(elementType, int, Character*, int,  bool);
+import function standUp(Character*,  int);
 import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);

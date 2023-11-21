@@ -331,39 +331,6 @@
         <Name>invContext</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
-      <CustomPropertySchemaItem>
-        <AppliesToCharacters>False</AppliesToCharacters>
-        <AppliesToHotspots>False</AppliesToHotspots>
-        <AppliesToInvItems>False</AppliesToInvItems>
-        <AppliesToObjects>False</AppliesToObjects>
-        <AppliesToRooms>True</AppliesToRooms>
-        <DefaultValue>0</DefaultValue>
-        <Description xml:space="preserve">The X coordinate where the player is placed when entering the room</Description>
-        <Name>Arrival_x</Name>
-        <Type>Number</Type>
-      </CustomPropertySchemaItem>
-      <CustomPropertySchemaItem>
-        <AppliesToCharacters>False</AppliesToCharacters>
-        <AppliesToHotspots>False</AppliesToHotspots>
-        <AppliesToInvItems>False</AppliesToInvItems>
-        <AppliesToObjects>False</AppliesToObjects>
-        <AppliesToRooms>True</AppliesToRooms>
-        <DefaultValue>0</DefaultValue>
-        <Description xml:space="preserve">The Y coordinate where the player is placed when entering the room</Description>
-        <Name>Arrival_Y</Name>
-        <Type>Number</Type>
-      </CustomPropertySchemaItem>
-      <CustomPropertySchemaItem>
-        <AppliesToCharacters>False</AppliesToCharacters>
-        <AppliesToHotspots>False</AppliesToHotspots>
-        <AppliesToInvItems>False</AppliesToInvItems>
-        <AppliesToObjects>False</AppliesToObjects>
-        <AppliesToRooms>True</AppliesToRooms>
-        <DefaultValue>Up</DefaultValue>
-        <Description xml:space="preserve">The direction the player is facing when entering the room (Up, Down, Left, Right)</Description>
-        <Name>Arrival_FaceDirection</Name>
-        <Type>Text</Type>
-      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -3360,6 +3327,264 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>16384</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>False</Clickable>
+              <Height>240</Height>
+              <ID>19</ID>
+              <Left>0</Left>
+              <Name>gDark</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>100</Transparency>
+              <Visible>True</Visible>
+              <Width>320</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>190</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>104</Height>
+              <ID>20</ID>
+              <Left>31</Left>
+              <Name>gGameOver</Name>
+              <OnClick />
+              <PopupStyle>PopupModal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>23</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>258</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>0</ID>
+                <Image>42</Image>
+                <Left>162</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnGameOver_quit</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnGameOver_quit_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Quit</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>74</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>1</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnGameOver_restart</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnGameOver_restart_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Restart</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>74</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>2</ID>
+                <Image>42</Image>
+                <Left>83</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnGameOver_restore</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnGameOver_restore_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Restore</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>46</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>33</Height>
+                <ID>3</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lblGameOver_how</Name>
+                <Text xml:space="preserve">Jonathan did not make it</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>6</Top>
+                <Visible>True</Visible>
+                <Width>250</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>54</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>208</Height>
+              <ID>21</ID>
+              <Left>0</Left>
+              <Name>gTrainTickets</Name>
+              <OnClick />
+              <PopupStyle>PopupModal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>194</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>44</Height>
+                <ID>0</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lblTrainTicket_title</Name>
+                <Text xml:space="preserve">Train Timetable : Exeter to London</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>4</Top>
+                <Visible>True</Visible>
+                <Width>186</Width>
+                <ZOrder>0</ZOrder>
+              </GUILabel>
+              <GUIListBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>125</Height>
+                <ID>1</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lbTrainDepartures</Name>
+                <OnSelectionChanged>lbTrainDepartures_OnSelectionChanged</OnSelectionChanged>
+                <SelectedBackgroundColor>63488</SelectedBackgroundColor>
+                <SelectedTextColor>0</SelectedTextColor>
+                <ShowBorder>True</ShowBorder>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>33808</TextColor>
+                <Top>49</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>101</Width>
+                <ZOrder>1</ZOrder>
+              </GUIListBox>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>2</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnTrainTicketCancel</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnTrainTicketCancel_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Cancel</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>178</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>3</ID>
+                <Image>42</Image>
+                <Left>98</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnBuyTicket</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnBuyTicket_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Buy ticket</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>178</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>4</ID>
+                <Left>108</Left>
+                <Locked>False</Locked>
+                <Name>Label4</Name>
+                <Text xml:space="preserve">TODAY[EXETER[##:## AM[TO[LONDON[##:## AM</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>33808</TextColor>
+                <Top>49</Top>
+                <Visible>True</Visible>
+                <Width>81</Width>
+                <ZOrder>4</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -4495,8 +4720,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>385</StartX>
+            <StartY>178</StartY>
             <StartingRoom>3</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4537,17 +4762,17 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">The Queen Street Station officer</Value>
+                <Value xml:space="preserve">The Queen Street Station clerk who sells the train tickets</Value>
               </CustomProperty>
             </Properties>
-            <RealName xml:space="preserve">Exeter Train Station Officer</RealName>
+            <RealName xml:space="preserve">Exeter Train Station Clerk</RealName>
             <ScriptName>cExeterTrainOfficer</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>65504</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>165</StartX>
+            <StartY>161</StartY>
             <StartingRoom>3</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -5504,6 +5729,58 @@ stop
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">Stay here</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>4</ID>
+            <Name>dTrainTicketClerk</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+EXETERTRAINOFFICER: Good day, sir!
+EXETERTRAINOFFICER: What can I do for you?
+return
+@1
+EXETERTRAINOFFICER: Of course, sir!
+EXETERTRAINOFFICER: Right away sir!
+EXETERTRAINOFFICER: Here are the upcoming departure time.
+  show_trainTicket_GUI(Exeter, London);
+stop
+@2
+EXETERTRAINOFFICER: Of course, sir!
+EXETERTRAINOFFICER: Easiest thing in the world, sir!
+EXETERTRAINOFFICER: Yu see the gated underpass to your left, sir?
+EXETERTRAINOFFICER: The train goes through that underpass when it leaves, sir!
+EXETERTRAINOFFICER: All you have to do is walk in this direction to reach the train, sir!
+EXETERTRAINOFFICER: But, careful, sir!
+EXETERTRAINOFFICER: You will only be let aboard the train 20 minutes before your departure, sir!
+EXETERTRAINOFFICER: Not before, sir!
+EXETERTRAINOFFICER: Anything else, sir?
+return
+@3
+EXETERTRAINOFFICER: But of course, sir!
+EXETERTRAINOFFICER: Good day to you as well, sir!
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I need a ticket to London</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">How do you take the train?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Goodbye</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -9002,6 +9279,116 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="193" Width="10" Height="35" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/lightning.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="QueenStreetStation">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="194" Width="140" Height="74" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Gare_Exeter_Guichet.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="196" Width="51" Height="73" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Gare_Exeter_Cafe_FrontDoor.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="197" Width="15" Height="25" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Gare_Exeter_CafeMenu.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="198" Width="9" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Gare_Exeter_Chaise.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="199" Width="4" Height="3" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Gare_Exeter_CupCafe.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>10</ImportHeight>
+                      <ImportWidth>10</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="200" Width="15" Height="14" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Gare_Exeter_Table.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
             </SubFolders>
@@ -10061,6 +10448,21 @@ stop
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="195" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/GareExeter/TrainOffice_Exeter_32_u.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>32</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Maps">
@@ -11067,7 +11469,15 @@ stop
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>195</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
