@@ -79,6 +79,7 @@ import bool isItBeforeThisTime(int, int, int, bool, int);
 import bool isThisTimeWithinXminOfThisTime(String, String,  int);
 import function setCurrentTime(int, int, int, bool,  int);
 import int translateTimeToMinutes(String);
+import String translateTimeToHHMMAM(int, int, String);
 import function openWaitGUI(String);
 
 import function adjustTravelDestinations();
