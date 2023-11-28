@@ -15,14 +15,16 @@ enum elementType
 enum cutsceneIndex
 {
   beginQuest, 
-  getToWork
+  getToWork, 
+  arriveInLondon
 };
 
 enum storyBeat
 {
   startYourDay, 
   packYourThings, 
-  goToLondon
+  goToLondon, 
+  HarkerinLondon
 };
 
 enum zone
@@ -79,12 +81,21 @@ import bool isItBeforeThisTime(int, int, int, bool, int);
 import bool isThisTimeWithinXminOfThisTime(String, String,  int);
 import function setCurrentTime(int, int, int, bool,  int);
 import int translateTimeToMinutes(String);
-import function openWaitGUI(String);
+import String translateTimeToHHMMAM(int, int, String);
+import function show_wait_GUI(String);
+import function applyWait(bool);
 
 import function adjustTravelDestinations();
 import function addTravelDestination(zone);
 import function removeTravelDestination(zone);
+import zone stringAsZone(String);
 import function travel(zone);
+
+import function setThreeLondonCabRides(bool);
+import Dictionary* cabSellMsg_TravelDestinations;
+import function sayListOfThings(String[], Dictionary*, int, Character*);
+import String getCabPropositionByIndex(int);
+import function cabTellPropositions();
 
 import String getClientListPerCitySector(String, String);
 import String generateReadHawkinsFileString(String);
