@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>0</AudioIndexer>
+      <AudioIndexer>8</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
@@ -3482,12 +3482,12 @@
               <Clickable>True</Clickable>
               <Height>208</Height>
               <ID>21</ID>
-              <Left>0</Left>
+              <Left>63</Left>
               <Name>gTrainTickets</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>0</Top>
+              <Top>16</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>194</Width>
@@ -3589,7 +3589,7 @@
                 <ID>4</ID>
                 <Left>108</Left>
                 <Locked>False</Locked>
-                <Name>Label4</Name>
+                <Name>lblTrainTicketSchedule</Name>
                 <Text xml:space="preserve">TODAY[EXETER[##:## AM[TO[LONDON[##:## AM</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>33808</TextColor>
@@ -3611,7 +3611,7 @@
             <InventoryItems>
               <InventoryItem>
                 <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Train ticket to London</Description>
+                <Description xml:space="preserve">Ticket to London</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
                 <ID>11</ID>
@@ -4943,8 +4943,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>34815</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>369</StartX>
-            <StartY>178</StartY>
+            <StartX>428</StartX>
+            <StartY>181</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4994,8 +4994,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33280</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>482</StartX>
-            <StartY>161</StartY>
+            <StartX>424</StartX>
+            <StartY>167</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -5045,9 +5045,9 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33280</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>454</StartX>
-            <StartY>162</StartY>
-            <StartingRoom>5</StartingRoom>
+            <StartX>290</StartX>
+            <StartY>201</StartY>
+            <StartingRoom>-1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -5098,7 +5098,7 @@
             <SpeechView>0</SpeechView>
             <StartX>405</StartX>
             <StartY>163</StartY>
-            <StartingRoom>5</StartingRoom>
+            <StartingRoom>-1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -6040,6 +6040,7 @@ CABBY: Good day indeed
   dCabby.SetOptionState(4,eOptionOff);
   dCabby.SetOptionState(5,eOptionOff);
   dCabby.SetOptionState(6,eOptionOff);
+  dCabby.SetOptionState(7,eOptionOff);
 return
 @1
 CABBY: 'Tis what I be here for!
@@ -6058,28 +6059,22 @@ return
 @3
 CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
-  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
   player.Transparency = 100;
-  cCabby.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
-  cCabby.Transparency = 100;
   travel(stringAsZone(getCabPropositionByIndex(0)));
 stop
 @4
 CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
-  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
   player.Transparency = 100;
-  cCabby.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
-  cCabby.Transparency = 100;
   travel(stringAsZone(getCabPropositionByIndex(1)));
 stop
 @5
 CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
-  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
   player.Transparency = 100;
-  cCabby.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
-  cCabby.Transparency = 100;
   travel(stringAsZone(getCabPropositionByIndex(2)));
 stop
 @6
@@ -6088,8 +6083,16 @@ CABBY: How about them places then
 HARKER: Maybe I can tell you where I...
   setThreeLondonCabRides(true);
   cabTellPropositions();
+  if(getStoryBeat() >= PurfleetDone)
+  {
+    dCabby.SetOptionState(7,eOptionOn);
+  }
 return
 @7
+CABBY: Oh I can't do it, mate
+CABBY: The road are too bumpy, the horse will hurt themselves
+return
+@8
 CABBY: Alright, mate
 stop
 ]]></Script>
@@ -6133,20 +6136,16 @@ stop
               <DialogOption>
                 <ID>7</ID>
                 <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I need to go to Purfleet</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Sorry to have disturbed you</Text>
               </DialogOption>
             </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>7</ID>
-            <Name>dCabbyPurfleet</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-]]></Script>
-            <DialogOptions />
           </Dialog>
         </Dialogs>
       </DialogFolder>
@@ -10877,6 +10876,81 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="204" Width="32" Height="36" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/Caddy/CabbyDriver_32_u.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>36</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="205" Width="131" Height="78" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/Caddy/CaddyVehicule_Empty_HurtHorse.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>78</ImportHeight>
+                  <ImportWidth>131</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="206" Width="131" Height="78" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/Caddy/CaddyVehicule_Empty_Idle.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>78</ImportHeight>
+                  <ImportWidth>131</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="207" Width="131" Height="78" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Visual/Caddy/CaddyVehicule_walk.gif</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>78</ImportHeight>
+                  <ImportWidth>131</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="208" Width="131" Height="78" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Visual/Caddy/CaddyVehicule_walk.gif</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>78</ImportHeight>
+                  <ImportWidth>131</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>1</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Maps">
@@ -11991,33 +12065,25 @@ return
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>204</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>0</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
               <Loop>
                 <ID>2</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>0</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
               <Loop>
                 <ID>3</ID>
@@ -12038,33 +12104,32 @@ return
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>205</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>206</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>0</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
               <Loop>
                 <ID>2</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>0</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
-                    <Image>0</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
+                <Frames />
               </Loop>
               <Loop>
                 <ID>3</ID>
@@ -12076,7 +12141,28 @@ return
           <View>
             <ID>13</ID>
             <Name>Horse_pain</Name>
-            <Loops />
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>207</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>208</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
           </View>
           <View>
             <ID>14</ID>
@@ -12400,7 +12486,73 @@ See KeyboardMovement.txt for details.
         <SubFolders>
           <AudioClipFolder Name="Music">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>0</ID>
+                <Index>1</Index>
+                <ScriptName>aUpAndDown</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT05 - GP Ensemble - 4 4 - C  minor - 80BPM.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>1</ID>
+                <Index>2</Index>
+                <ScriptName>aHighStress</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT08 - GP Ensemble - 4 4 - D minor - 90BPM.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>2</ID>
+                <Index>3</Index>
+                <ScriptName>aIntrigue</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT11 - GP Ensemble - 4 4 - G minor - 105BPM.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>3</ID>
+                <Index>4</Index>
+                <ScriptName>aDeambulation</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT12 - GP Ensemble - 4 4 - D  minor - 80BPM.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>4</ID>
+                <Index>5</Index>
+                <ScriptName>ALostInThought</ScriptName>
+                <SourceFileName>Assets/Audio/Music/Lost_in_thought.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InSeparateVOX</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>
@@ -12411,7 +12563,47 @@ See KeyboardMovement.txt for details.
           </AudioClipFolder>
           <AudioClipFolder Name="Sounds">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>5</ID>
+                <Index>6</Index>
+                <ScriptName>aCancel</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Cancel 1.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>6</ID>
+                <Index>7</Index>
+                <ScriptName>aConfirm</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Confirm 1.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>7</ID>
+                <Index>8</Index>
+                <ScriptName>aSelect</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Select 1.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InGameEXE</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>

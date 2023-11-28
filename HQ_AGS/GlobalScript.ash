@@ -16,7 +16,8 @@ enum cutsceneIndex
 {
   beginQuest, 
   getToWork, 
-  arriveInLondon
+  arriveInLondon, 
+  arriveInPurfleet
 };
 
 enum storyBeat
@@ -24,7 +25,8 @@ enum storyBeat
   startYourDay, 
   packYourThings, 
   goToLondon, 
-  HarkerinLondon
+  HarkerinLondon, 
+  PurfleetDone
 };
 
 enum zone
@@ -62,6 +64,8 @@ import int arrival_x[];
 import int arrival_y[];
 
 import String[] roomSpecificParse(String);
+import function musicInRoom(AudioClip*);
+import function musicFirstSetup(AudioClip*);
 import String findVerbInDictionary(String);
 import bool interact(String[]);
 import String[] findElementIndexByName(String);
@@ -89,6 +93,7 @@ import function adjustTravelDestinations();
 import function addTravelDestination(zone);
 import function removeTravelDestination(zone);
 import zone stringAsZone(String);
+import function travel_movePlayer(zone);
 import function travel(zone);
 
 import function setThreeLondonCabRides(bool);
