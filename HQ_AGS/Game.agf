@@ -331,6 +331,17 @@
         <Name>invContext</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>True</AppliesToRooms>
+        <DefaultValue>1</DefaultValue>
+        <Description xml:space="preserve">When using the gWait, does it handle the fade itself (true) or does the room functions handle it (false)</Description>
+        <Name>FadeForWait</Name>
+        <Type>Boolean</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -887,6 +898,10 @@
           <UnloadedRoom>
             <Description xml:space="preserve">Title screen</Description>
             <Number>12</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description xml:space="preserve">Hotel The Hummums</Description>
+            <Number>13</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -4873,8 +4888,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>64520</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>205</StartX>
+            <StartY>161</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4917,6 +4932,10 @@
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">This is a coach driver who can probably get me out of town.</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogIndex</Name>
+                <Value>6</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Cab Driver</RealName>
             <ScriptName>cCabby</ScriptName>
@@ -4924,8 +4943,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>34815</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>369</StartX>
+            <StartY>178</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -4975,8 +4994,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33280</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>482</StartX>
+            <StartY>161</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -5026,8 +5045,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33280</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>454</StartX>
+            <StartY>162</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -5077,8 +5096,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>65535</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
+            <StartX>405</StartX>
+            <StartY>163</StartY>
             <StartingRoom>5</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -5999,6 +6018,135 @@ stop
                 <Text xml:space="preserve">I must go</Text>
               </DialogOption>
             </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>6</ID>
+            <Name>dCabby</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+
+@S  // Dialog startup entry point
+HARKER: Good day, my good man
+CABBY: Aye aye, stranger!
+CABBY: 'Tis a good day I suppose
+CABBY: Not too cloudy
+CABBY: Not rainy
+CABBY: Not freezy
+CABBY: Good day indeed
+  setThreeLondonCabRides(false);
+  dCabby.SetOptionState(1,eOptionOn);
+  dCabby.SetOptionState(2,eOptionOff);
+  dCabby.SetOptionState(3,eOptionOff);
+  dCabby.SetOptionState(4,eOptionOff);
+  dCabby.SetOptionState(5,eOptionOff);
+  dCabby.SetOptionState(6,eOptionOff);
+return
+@1
+CABBY: 'Tis what I be here for!
+  cabTellPropositions();
+  dCabby.SetOptionState(1,eOptionOff);
+  dCabby.SetOptionState(2,eOptionOn);
+  dCabby.SetOptionState(3,eOptionOn);
+  dCabby.SetOptionState(4,eOptionOn);
+  dCabby.SetOptionState(5,eOptionOn);
+  dCabby.SetOptionState(6,eOptionOn);
+return
+@2
+CABBY: 'Tis what I be here for!
+  cabTellPropositions();
+return
+@3
+CABBY: Alright, mate
+CABBY: Get yourself snug in the buggy
+  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Transparency = 100;
+  cCabby.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  cCabby.Transparency = 100;
+  travel(stringAsZone(getCabPropositionByIndex(0)));
+stop
+@4
+CABBY: Alright, mate
+CABBY: Get yourself snug in the buggy
+  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Transparency = 100;
+  cCabby.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  cCabby.Transparency = 100;
+  travel(stringAsZone(getCabPropositionByIndex(1)));
+stop
+@5
+CABBY: Alright, mate
+CABBY: Get yourself snug in the buggy
+  player.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  player.Transparency = 100;
+  cCabby.Walk(cCoach.x,cCoach.y,eBlock,eWalkableAreas);
+  cCabby.Transparency = 100;
+  travel(stringAsZone(getCabPropositionByIndex(2)));
+stop
+@6
+CABBY: Oh, do you?
+CABBY: How about them places then
+HARKER: Maybe I can tell you where I...
+  setThreeLondonCabRides(true);
+  cabTellPropositions();
+return
+@7
+CABBY: Alright, mate
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I would like a cab ride</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Can you repeat those ?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Yes, the first one</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Yes, the second one</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Yes, the third one</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">No, I need to go somewhere else</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Sorry to have disturbed you</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>7</ID>
+            <Name>dCabbyPurfleet</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+]]></Script>
+            <DialogOptions />
           </Dialog>
         </Dialogs>
       </DialogFolder>
@@ -9607,6 +9755,26 @@ stop
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
+              <SpriteFolder Name="WaterlooStation">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="203" Width="140" Height="74" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareLondres/Gare_Londres_Guichet.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
             </SubFolders>
             <Sprites />
           </SpriteFolder>
@@ -10694,6 +10862,21 @@ stop
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="202" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/GareLondres/TrainOfficer_Londres_32_u.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>32</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Maps">
@@ -11758,7 +11941,15 @@ stop
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>202</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
