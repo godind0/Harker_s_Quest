@@ -41,8 +41,8 @@ enum zone
   BritishMuseum, 
   PhotographyShop, 
   LawSocietyOffices, 
-  StayHere, 
-  LondonHotel
+  LondonHotel, 
+  StayHere
 };
 
 enum city
@@ -62,6 +62,7 @@ import storyBeat getStoryBeat();
 import function gameIsOver(String);
 import int arrival_x[];
 import int arrival_y[];
+import String carfaxSeller;
 
 import String[] roomSpecificParse(String);
 import function musicInRoom(AudioClip*);
@@ -112,9 +113,12 @@ import String getPropertyRequesterName();
 import Set* getHawkinsSellerList();
 import function createAllHawkinsFiles();
 import String getProposedSeller();
+import int getNbNegative();
+import function modifyNbNegative(int);
 
 import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);
+import bool isCharacterNearCharacter(Character*, float,  Character*);
 import bool isThisOpened(Object*);
 import function memorize(String);
 import String getMemorisedThought();

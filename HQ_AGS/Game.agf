@@ -903,6 +903,18 @@
             <Description xml:space="preserve">Hotel The Hummums</Description>
             <Number>13</Number>
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Carfax</Description>
+            <Number>14</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>CarfaxLeft</Description>
+            <Number>15</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>CarfaxRight</Description>
+            <Number>16</Number>
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -5559,6 +5571,10 @@ HARKER: To the Law Society!
   travel(LawSocietyOffices);
 stop
 @11
+HARKER: Let's take a breather at the hotel
+  travel(LondonHotel);
+stop
+@12
 HARKER: Maybe no traveling for now
   travel(StayHere);
 stop
@@ -5626,6 +5642,12 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>11</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Hotel the Hummums</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>12</ID>
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">Stay here</Text>
@@ -5907,6 +5929,13 @@ CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
   player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
   player.Transparency = 100;
+  if(stringAsZone(getCabPropositionByIndex(2)) == Purfleet)
+  {
+    cCabby.ChangeRoom(6, 111, 183, eDirectionRight);
+    cHorse1.ChangeRoom(6, 171, 183, eDirectionRight);
+    cHorse1.Transparency = 0;
+    cCabby.Transparency = 0;
+  }
   travel(stringAsZone(getCabPropositionByIndex(2)));
 stop
 @6
@@ -6123,9 +6152,9 @@ stop
         <Name>Normal</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>UseOutlineFont</OutlineStyle>
-        <PointSize>13</PointSize>
+        <PointSize>12</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/alagard.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/Gontserrat-Light.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -6137,9 +6166,9 @@ stop
         <Name>Speech</Name>
         <OutlineFont>2</OutlineFont>
         <OutlineStyle>Automatic</OutlineStyle>
-        <PointSize>13</PointSize>
+        <PointSize>12</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/alagard.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/Gontserrat-Light.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -6151,9 +6180,9 @@ stop
         <Name>SpeechOutline</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>Automatic</OutlineStyle>
-        <PointSize>13</PointSize>
+        <PointSize>12</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/alagard.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/Gontserrat-Light.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -6167,22 +6196,8 @@ stop
         <OutlineStyle>Automatic</OutlineStyle>
         <PointSize>18</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/alagard.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/gothica_2/Gothica-Book.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
-        <VerticalOffset>0</VerticalOffset>
-      </Font>
-      <Font>
-        <AutoOutlineStyle>Squared</AutoOutlineStyle>
-        <AutoOutlineThickness>1</AutoOutlineThickness>
-        <ID>4</ID>
-        <LineSpacing>0</LineSpacing>
-        <Name xml:space="preserve">Font 4</Name>
-        <OutlineFont>0</OutlineFont>
-        <OutlineStyle>None</OutlineStyle>
-        <PointSize>18</PointSize>
-        <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/alagard.ttf</SourceFilename>
-        <TTFMetricsFixup>None</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
     </Fonts>
@@ -9610,6 +9625,56 @@ stop
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
                       <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="Carfax">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="209" Width="17" Height="65" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Carfax/Carfax_LeftSide_plancheCloture.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="210" Width="14" Height="35" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Carfax/Carfax_Front_porteCloture.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>469</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="211" Width="17" Height="40" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Carfax/Carfax_RightSide_FenetreFermee.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
