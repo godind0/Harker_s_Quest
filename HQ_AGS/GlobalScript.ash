@@ -72,6 +72,8 @@ import String[] findElementIndexByName(String);
 import String keycodeToString(char);
 import String etToString(elementType);
 import elementType stringToET(String);
+import int getIndexOfElementUsed();
+import elementType getETOfElementUsed();
 import bool alphaOrder_isThisBeforeThat(String, String);
 import function giveScoreOnce(String, int);
 import function createTrainTimetables();
