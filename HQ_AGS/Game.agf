@@ -327,7 +327,7 @@
         <AppliesToObjects>False</AppliesToObjects>
         <AppliesToRooms>False</AppliesToRooms>
         <DefaultValue>Null</DefaultValue>
-        <Description xml:space="preserve">This is the type of possible interaction for the object. Choices are Classify and Look inside</Description>
+        <Description xml:space="preserve">This is the type of possible interaction for the object. Choices are Classify and Contains</Description>
         <Name>invContext</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
@@ -341,6 +341,17 @@
         <Description xml:space="preserve">When using the gWait, does it handle the fade itself (true) or does the room functions handle it (false)</Description>
         <Name>FadeForWait</Name>
         <Type>Boolean</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>True</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>Null</DefaultValue>
+        <Description xml:space="preserve">IF invContext == classify : The name the item gains when the classification is succeeded</Description>
+        <Name>invContext_classifiedName</Name>
+        <Type>Text</Type>
       </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
@@ -872,7 +883,7 @@
             <Number>5</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">Carfax and Asylum - Purfleet</Description>
+            <Description xml:space="preserve">Purfleet Road</Description>
             <Number>6</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -888,7 +899,7 @@
             <Number>9</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">Law Society and Kodak Store - London</Description>
+            <Description xml:space="preserve">Law Society - London</Description>
             <Number>10</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -908,11 +919,11 @@
             <Number>14</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description>CarfaxLeft</Description>
+            <Description xml:space="preserve">Carfax, Left side</Description>
             <Number>15</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description>CarfaxRight</Description>
+            <Description xml:space="preserve">Carfax, Right side</Description>
             <Number>16</Number>
           </UnloadedRoom>
         </UnloadedRooms>
@@ -2542,23 +2553,104 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>0</BackgroundImage>
+              <BackgroundImage>50</BackgroundImage>
               <BorderColor>0</BorderColor>
-              <Clickable>False</Clickable>
-              <Height>240</Height>
+              <Clickable>True</Clickable>
+              <Height>200</Height>
               <ID>13</ID>
-              <Left>0</Left>
-              <Name>gUSEME</Name>
+              <Left>20</Left>
+              <Name>gSubitems</Name>
               <OnClick />
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>0</Top>
+              <Top>20</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
-              <Width>320</Width>
-              <ZOrder>0</ZOrder>
+              <Width>280</Width>
+              <ZOrder>3</ZOrder>
             </NormalGUI>
-            <Controls />
+            <Controls>
+              <GUIListBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>131</Height>
+                <ID>0</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lbSubtiems</Name>
+                <OnSelectionChanged>lbSubtiems_OnSelectionChanged</OnSelectionChanged>
+                <SelectedBackgroundColor>63488</SelectedBackgroundColor>
+                <SelectedTextColor>0</SelectedTextColor>
+                <ShowBorder>True</ShowBorder>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>37</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIListBox>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>23</Height>
+                <ID>1</ID>
+                <Left>4</Left>
+                <Locked>True</Locked>
+                <Name>lblSubitem_titles</Name>
+                <Text>Items</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>4</Top>
+                <Visible>True</Visible>
+                <Width>272</Width>
+                <ZOrder>1</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>2</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnSubitem_inventory</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnSubitem_inventory_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Inventory</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>170</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>159</Height>
+                <ID>3</ID>
+                <Left>100</Left>
+                <Locked>False</Locked>
+                <Name>lblSubitemDescription</Name>
+                <Text xml:space="preserve">Item description</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>37</Top>
+                <Visible>True</Visible>
+                <Width>176</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
+            </Controls>
           </GUIMain>
           <GUIMain>
             <NormalGUI>
@@ -3110,7 +3202,7 @@
                 <Left>4</Left>
                 <Locked>False</Locked>
                 <Name>lblClassifyTitle</Name>
-                <Text xml:space="preserve">Classify documents</Text>
+                <Text>Items</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
                 <Top>5</Top>
@@ -3618,86 +3710,21 @@
             <InventoryItems>
               <InventoryItem>
                 <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Photo of Kitchen</Description>
+                <Description>Photos</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
                 <ID>20</ID>
                 <Image>0</Image>
-                <Name>iPhotoKitchen</Name>
+                <Name>iPhotos</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>TextDescription</Name>
-                    <Value xml:space="preserve">This is a photo of the kitchen</Value>
+                    <Value xml:space="preserve">This is an envelope of my developped pictures</Value>
                   </CustomProperty>
-                </Properties>
-                <Interactions>
-                  <Event Index="0" />
-                  <Event Index="1" />
-                  <Event Index="2" />
-                  <Event Index="3" />
-                  <Event Index="4" />
-                </Interactions>
-              </InventoryItem>
-              <InventoryItem>
-                <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Photo of the living room</Description>
-                <HotspotX>0</HotspotX>
-                <HotspotY>0</HotspotY>
-                <ID>21</ID>
-                <Image>0</Image>
-                <Name>iPhotoLiving</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
-                <Properties>
                   <CustomProperty>
-                    <Name>TextDescription</Name>
-                    <Value xml:space="preserve">This is a picture of the living room</Value>
-                  </CustomProperty>
-                </Properties>
-                <Interactions>
-                  <Event Index="0" />
-                  <Event Index="1" />
-                  <Event Index="2" />
-                  <Event Index="3" />
-                  <Event Index="4" />
-                </Interactions>
-              </InventoryItem>
-              <InventoryItem>
-                <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Photo of the dining room</Description>
-                <HotspotX>0</HotspotX>
-                <HotspotY>0</HotspotY>
-                <ID>22</ID>
-                <Image>0</Image>
-                <Name>iPhotoDining</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
-                <Properties>
-                  <CustomProperty>
-                    <Name>TextDescription</Name>
-                    <Value xml:space="preserve">This is a picture of the dining room</Value>
-                  </CustomProperty>
-                </Properties>
-                <Interactions>
-                  <Event Index="0" />
-                  <Event Index="1" />
-                  <Event Index="2" />
-                  <Event Index="3" />
-                  <Event Index="4" />
-                </Interactions>
-              </InventoryItem>
-              <InventoryItem>
-                <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Photo of the bedroom</Description>
-                <HotspotX>0</HotspotX>
-                <HotspotY>0</HotspotY>
-                <ID>23</ID>
-                <Image>0</Image>
-                <Name>iPhotoBedroom</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
-                <Properties>
-                  <CustomProperty>
-                    <Name>TextDescription</Name>
-                    <Value xml:space="preserve">This is a photo of the bedroom</Value>
+                    <Name>invContext</Name>
+                    <Value>Constains</Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -3713,7 +3740,7 @@
                 <Description xml:space="preserve">Camera film</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>28</ID>
+                <ID>25</ID>
                 <Image>0</Image>
                 <Name>iFilm</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3721,6 +3748,10 @@
                   <CustomProperty>
                     <Name>TextDescription</Name>
                     <Value xml:space="preserve">The film from the camera. This can be developed into pictures by the professionals</Value>
+                  </CustomProperty>
+                  <CustomProperty>
+                    <Name>invContext</Name>
+                    <Value>Contains</Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -3812,6 +3843,10 @@
                     <Name>invContext</Name>
                     <Value>Classify</Value>
                   </CustomProperty>
+                  <CustomProperty>
+                    <Name>invContext_classifiedName</Name>
+                    <Value xml:space="preserve">Legal dossier</Value>
+                  </CustomProperty>
                 </Properties>
                 <Interactions>
                   <Event Index="0" />
@@ -3894,7 +3929,7 @@
                 <Description>Matches</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>25</ID>
+                <ID>22</ID>
                 <Image>0</Image>
                 <Name>iMatches</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3917,7 +3952,7 @@
                 <Description xml:space="preserve">Polyglot dictionary</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>26</ID>
+                <ID>23</ID>
                 <Image>0</Image>
                 <Name>iDictionary</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -3940,7 +3975,7 @@
                 <Description>Cigars</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
-                <ID>27</ID>
+                <ID>24</ID>
                 <Image>0</Image>
                 <Name>iCigars</Name>
                 <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4025,7 +4060,7 @@
                 <ID>9</ID>
                 <Image>189</Image>
                 <Name>iCamera</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>alternateNames</Name>
@@ -4114,7 +4149,11 @@
             <Properties>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">The sales dossier for the sale of a property</Value>
+                <Value xml:space="preserve">The sales details for the sale of the Carfax property. It will need the appropriate pictures to complete the dossier.</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>invContext</Name>
+                <Value>Classify</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4127,21 +4166,21 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">Telegram from P. Hawkins</Description>
+            <Description xml:space="preserve">Letters &amp; Telegrams</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>24</ID>
+            <ID>21</ID>
             <Image>0</Image>
-            <Name>iTelegramHawkins</Name>
+            <Name>iTelegrams</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">This is a telegram from my employer, Peter Hawkins</Value>
+                <Value xml:space="preserve">These are my letters and telegrams</Value>
               </CustomProperty>
               <CustomProperty>
-                <Name>ReadDisplay</Name>
-                <Value xml:space="preserve">Peter. You need to got to Count Dracula's castle. Cannot go gout is acting up. Will send letter for Count to London train station. </Value>
+                <Name>invContext</Name>
+                <Value>Contains</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4157,7 +4196,7 @@
             <Description xml:space="preserve">Sollicitor diploma</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>29</ID>
+            <ID>26</ID>
             <Image>0</Image>
             <Name>iDiploma</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4180,7 +4219,7 @@
             <Description xml:space="preserve">Painkiller solution</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>30</ID>
+            <ID>27</ID>
             <Image>0</Image>
             <Name>iPainkiller</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4203,7 +4242,7 @@
             <Description>Bandages</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>31</ID>
+            <ID>28</ID>
             <Image>0</Image>
             <Name>iBandages</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4226,7 +4265,7 @@
             <Description xml:space="preserve">Pocket knife</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>32</ID>
+            <ID>29</ID>
             <Image>0</Image>
             <Name>iKnife</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4242,6 +4281,56 @@
               <CustomProperty>
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">A beautifully engraved pocket knife</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Eggs</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>30</ID>
+            <Image>0</Image>
+            <Name>iEggs</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">A small carton of eggs</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Food</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>31</ID>
+            <Image>0</Image>
+            <Name>iFood</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is food</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>invContext</Name>
+                <Value>Contains</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4442,7 +4531,11 @@
             <Properties>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value xml:space="preserve">Jonathan, Harker, John, me, myself</Value>
+                <Value xml:space="preserve">Jonathan, Harker, John, me, myself, self</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">It is me: Jonathan Harker</Value>
               </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Jonathan Harker</RealName>
@@ -5019,18 +5112,26 @@
             <IdleDelay>20</IdleDelay>
             <IdleView>0</IdleView>
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
-            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeed>2</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>15</NormalView>
             <Properties>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value xml:space="preserve">woman, attendant, secretary</Value>
+                <Value>woman,attendant,secretary</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">This is the person to ask for information about the Law Society</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>dialogIndex</Name>
+                <Value>7</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>25</Value>
               </CustomProperty>
             </Properties>
             <RealName>Receptionist</RealName>
@@ -5039,7 +5140,7 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33823</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
+            <StartX>108</StartX>
             <StartY>120</StartY>
             <StartingRoom>10</StartingRoom>
             <ThinkingView>0</ThinkingView>
@@ -5083,6 +5184,14 @@
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">This is the operator of the telegraph</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogIndex</Name>
+                <Value>10</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>40</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Telegram operator</RealName>
             <ScriptName>cTelegramOperator</ScriptName>
@@ -5090,7 +5199,7 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>1055</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
+            <StartX>184</StartX>
             <StartY>120</StartY>
             <StartingRoom>8</StartingRoom>
             <ThinkingView>0</ThinkingView>
@@ -5134,6 +5243,10 @@
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">I press the button, he does the rest</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogIndex</Name>
+                <Value>8</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Photography professional</RealName>
             <ScriptName>cPhotoPro</ScriptName>
@@ -5141,7 +5254,7 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>65520</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
+            <StartX>108</StartX>
             <StartY>120</StartY>
             <StartingRoom>10</StartingRoom>
             <ThinkingView>0</ThinkingView>
@@ -5267,9 +5380,7 @@ return
 return
 @3
 HAWKINS: Ah yes! What property are you proposing?
-  lblSimpleTextbox.Text = "Seller's name";
-  tbSimpleTextbox.Text = "";
-  open_gui(gSimpleTextbox);
+  show_simpleTextBox("Seller's name");
 stop
 @4
 return
@@ -6005,6 +6116,780 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Sorry to have disturbed you</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>7</ID>
+            <Name>dLawSocietyReceptionist</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  if(getAMPM() == "AM")
+  {
+    cReceptionist.Say("Good morning!"); 
+  } else
+  {
+    cReceptionist.Say("Good day to you!");
+  }
+RECEPTIONIST: Welcome to the London Law Society Offices
+RECEPTIONIST: What can I help you with?
+return
+@1
+RECEPTIONIST: What a silly thing to say, sir
+RECEPTIONIST: Of course I was not avoiding you
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
+return
+@2
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your last name?
+  CallRoomScript(9);//remember if photo desk destination is known
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
+return
+@3
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your employer's name?
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
+  CallRoomScript (2);
+return
+@4
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your employer's name?
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
+  CallRoomScript (3);
+return
+@5
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your employer's name?
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
+  CallRoomScript (4);
+return
+@6
+RECEPTIONIST: Of course, sir
+  CallRoomScript (5);
+  CallRoomScript (8);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
+  CallRoomScript(10);
+return
+@7
+RECEPTIONIST: Of course, sir
+  CallRoomScript (5);
+  CallRoomScript (8);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
+  CallRoomScript(10);
+return
+@8
+RECEPTIONIST: Of course, sir
+  CallRoomScript (5);
+  CallRoomScript (8);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(2,eOptionOn);
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
+  CallRoomScript(10);
+return
+@9
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: First, you have to know this...
+RECEPTIONIST: The corridor to your right lead East, the one to your left is West
+RECEPTIONIST: If you go behind you, this is South. The opposite, behind me, would be North.
+RECEPTIONIST: With that in mind, this is the way to the photo desk...
+  notableSay(cReceptionist,"To the photo desk","From the reception, East, North, West, North, North.",1);
+RECEPTIONIST: If you go South enough times, you'll get to the exit walkway leading you back here.");
+return
+@10
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: Here you are, and a pen as a bonus!
+HARKER: Oh thank you. This was surprisingly straightforward
+RECEPTIONIST: The pen is engraved with the Law Society Logo
+HARKER: I see
+RECEPTIONIST: Free publicity for the organization
+HARKER: Understood
+  iPenInk.SetTextProperty("TextDescription","A monogrammed pen with the Law Society logo and a bottle of ink");
+  player.AddInventory(iPenInk);
+  dLawSocietyReceptionist.SetOptionState(10,eOptionOffForever);
+@11
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: Under whose name?
+  player.Say(String.Format("Edward %s, concerning a property named Carfax, in Purfleet", getCarfaxSeller()));
+RECEPTIONIST: Carfax? The old house by the Asylum?
+HARKER: Yes, that is the one
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: Let me see, here...
+  cReceptionist.Walk(78,cReceptionist.y,eBlock,eAnywhere);
+  Wait(60);
+RECEPTIONIST: Here we are!
+  cReceptionist.Walk(player.x,cReceptionist.y,eBlock,eAnywhere);
+RECEPTIONIST: There you are, the 'Carfax Estate Sales details'
+  addSubitem(iSalesDossier,"Property survey","A fairly recent survey of the land dimensions an borders","This survey was updated less than 3 years ago");
+  addSubitem(iSalesDossier,"Property deed","The official title of ownership of the land","It was acquired 167 years ago");
+  addSubitem(iSalesDossier,"Tenants and Leases","An old list of people who rented to property","I was rented than 200 years ago");
+  addSubitem(iSalesDossier,"Labour book","A list of the prior owner's employees, who were hired to maintain the house","");
+  addSubitem(iSalesDossier,"Sales and advertisement","A collection of flyer advertising the sale of the house by the prior owners","");
+  addSubitem(iSalesDossier,"Conditions","A form for me to fill about the conditions of the sale","Those concern the actual sale (biddings, payment of a deposit and signing of a contract), the quantum of interest sold, the title of property, the completion of the purchase, misdescription of particulars, forfeiture of the deposit and resale of the property");
+  addSubitem(iSalesDossier,"Title page","The introductory page of the dossier","");
+HARKER: That looks complete, but it is missing the pictures and a bit of classification
+HARKER: How did it go again?
+  notableSay(player,"Contract order","Introduction, Current sale agreements, Proof of ownership, Proof of current state, Annexes of previous paperwork. Each section should be arranged by date first, then alphabetically",2);
+HARKER: Thank you, you've been very helpful
+RECEPTIONIST: Of course, sir
+  giveScoreOnce("Carfax sales papers",1);  
+return
+@12
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: Have a good day
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve"> Were you avoiding me, just now?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I want my sollicitor exam results</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Murray</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Harker</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Parker</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Parton</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Mason</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Hawkins</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Where is your photo desk?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Do you have ink I can borrow?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I need a contract detail</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>12</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Good bye</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>8</ID>
+            <Name>dPhotoPro</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+HARKER: Hi
+PHOTOPRO: ...
+  if(player.HasInventory(iPhotos))
+  {
+    dPhotoPro.SetOptionState(6,eOptionOn);
+    if(getNbMissingNegatives() > 0)
+    {
+      dPhotoPro.SetOptionState(14,eOptionOn);
+    }
+  } else if(player.HasInventory(iFilm))
+  {
+    dPhotoPro.SetOptionState(7,eOptionOn);
+  }
+return
+@1
+PHOTOPRO: Ok
+HARKER: ...
+PHOTOPRO: ...
+  dPhotoPro.SetOptionState(8,eOptionOn);
+return
+@2
+PHOTOPRO: That is not how it works
+HARKER: Right, no...
+HARKER: How do I get you to do it
+PHOTOPRO: I don't turn negatives into photo
+  dPhotoPro.SetOptionState(3,eOptionOn);
+return
+@3
+PHOTOPRO: I don't know you
+HARKER: Is this the photo desk?
+PHOTOPRO: Yes
+HARKER: Do you develop photos?
+PHOTOPRO: No
+HARKER: ...
+PHOTOPRO: ...
+HARKER: What do you do?
+PHOTOPRO: We print photographs from negatives
+HARKER: Right
+  dPhotoPro.SetOptionState(5,eOptionOn);
+return
+@4
+PHOTOPRO: If you don't know how, you can take a course
+HARKER: I need to take a course for you to develop my photos?
+PHOTOPRO: No, I print photos
+HARKER: ...
+PHOTOPRO: ...
+HARKER: So you can do it?
+PHOTOPRO: I have done the course
+  dPhotoPro.SetOptionState(5,eOptionOn);
+  dPhotoPro.SetOptionState(8,eOptionOn);
+return
+@5
+PHOTOPRO: I can print them
+HARKER: Splendid. Let's do that
+  dPhotoPro.SetOptionState(6,eOptionOn);  
+  dPhotoPro.SetOptionState(9,eOptionOn);
+return
+@6
+  player.LoseInventory(iFilm);
+  cPhotoPro.AddInventory(iFilm);
+PHOTOPRO: ...
+HARKER: My pictures are on there...
+PHOTOPRO: No, these are negatives
+HARKER: Right
+PHOTOPRO: ...
+HARKER: But you can develop these negative into photos
+PHOTOPRO: I can print them
+  dPhotoPro.SetOptionState(10,eOptionOn);
+  dPhotoPro.SetOptionState(6,eOptionOff);
+return
+@7
+PHOTOPRO: Yes
+HARKER: Terrific
+  dPhotoPro.SetOptionState(1,eOptionOn);
+  dPhotoPro.SetOptionState(2,eOptionOn);
+  dPhotoPro.SetOptionState(4,eOptionOn);  
+  dPhotoPro.SetOptionState(8,eOptionOn);  
+  dPhotoPro.SetOptionState(9,eOptionOn);
+  if(getNbMissingNegatives() > 0)
+  {
+    dPhotoPro.SetOptionState(14,eOptionOn);
+  }
+return
+@8
+PHOTOPRO: No
+HARKER: You do not?
+PHOTOPRO: We have equipment to print photos
+HARKER: Ok good
+PHOTOPRO: ...
+HARKER: ...
+PHOTOPRO: Do you want to know how to use it?
+HARKER: Oh. Do I need to know how to use it?
+PHOTOPRO: I don't know you
+HARKER: Right.
+HARKER: I meant: Do I need to know how to use it for you to dev... PRINT my negatives?
+PHOTOPRO: No
+HARKER: Understood
+return
+@9
+PHOTOPRO: The weather is pretty cloudy, today
+HARKER: What? I mean it is, but what...
+PHOTOPRO: My guess is somewhere between 2 to 3 hours
+HARKER: Understood
+return
+@10
+  if(!cPhotoPro.HasInventory(iEggs))
+  {
+    cPhotoPro.Say("We are out of eggs");
+    player.Say("...");
+    player.Say("I am sorry to hear that");
+    cPhotoPro.Say("I cannot print photos without eggs");
+    player.Say("...");
+    cPhotoPro.Say("...");
+    player.Say("Because of all that energy eggs provide you?");
+    cPhotoPro.Say("Because eggs are an essential part of the albumen process");
+    player.Say("...");
+    cPhotoPro.Say("...");
+    player.Say("So bottom line: You cannot print the picture without eggs?");
+    cPhotoPro.Say("Correct");
+    player.Say("What if I could get you eggs");
+    cPhotoPro.Say("Then I could print you photos");
+    player.Say("Understood");
+    dPhotoPro.SetOptionState(11,eOptionOn);
+    dPhotoPro.SetOptionState(1,eOptionOff);
+    dPhotoPro.SetOptionState(2,eOptionOff);
+    dPhotoPro.SetOptionState(3,eOptionOff);
+    dPhotoPro.SetOptionState(4,eOptionOff);
+    dPhotoPro.SetOptionState(5,eOptionOff);
+    dPhotoPro.SetOptionState(7,eOptionOff);
+    dPhotoPro.SetOptionState(8,eOptionOff);
+    dPhotoPro.SetOptionState(9,eOptionOff);
+  } else {
+    cPhotoPro.Say("Just sign here to confirm you have read our quality insurance and confidentiality policy");
+    if(player.HasInventory(iPenInk))
+    {
+      player.Say("There you go");
+      CallRoomScript(11);
+    } else
+    {
+      player.Say("Ah");
+      player.Say("Can you get some ink?");
+      cPhotoPro.Say("I can't leave the desk");
+      player.Say("Terrific");
+      dPhotoPro.SetOptionState(12,eOptionOn);
+      dLawSocietyReceptionist.SetOptionState(10,eOptionOn);
+    }
+  }
+return
+@11
+  if(player.HasInventory(iEggs))
+  {
+    player.Say("I found eggs");
+    cPhotoPro.Say("Ok");
+    player.Say("Here they are");
+    player.LoseInventory(iEggs);
+    cPhotoPro.AddInventory(iEggs);
+    cPhotoPro.Say("Thank you");
+    player.Say("...");
+    cPhotoPro.Say("...");
+    player.Say("So you can devel... print my pictures now?");
+    cPhotoPro.Say("I can");
+    player.Say("Terrific");
+    giveScoreOnce("Albumen print enabled",1);
+    cPhotoPro.Say("Just sign here to confirm you have read our quality insurance and confidentiality policy");
+    player.Say("Your what policy?");
+    cPhotoPro.Say("The Society of Attorneys, Solicitors, Proctors and others not being Barristers, practising in...");
+    player.Say("Nevermind, I'll sign it");
+    cPhotoPro.Say("I don't have ink");
+    if(player.HasInventory(iPenInk))
+    {
+      player.Say("No worries I have some");
+      giveScoreOnce("Prepared to sign anything",2);
+      CallRoomScript(11);
+    } else
+    {
+      player.Say("Ah");
+      player.Say("Can you get some ink?");
+      cPhotoPro.Say("I can't leave the desk");
+      player.Say("Terrific");
+      dPhotoPro.SetOptionState(12,eOptionOn);
+      dLawSocietyReceptionist.SetOptionState(10,eOptionOn);
+    }
+    dPhotoPro.SetOptionState(11,eOptionOffForever); 
+  } else 
+  {
+    player.Say("Where can I find eggs?");
+    cPhotoPro.Say("Markets");
+    cPhotoPro.Say("Chicken coops");
+    cPhotoPro.Say("My mum's icebox");
+    player.Say("Right. Is there a market nearby");
+    cPhotoPro.Say("I mean yes, but the Law Society's cantine is closer");
+    player.Say("The cantine has eggs");
+    dMenu.SetOptionState(8, eOptionOn);
+    cPhotoPro.Say("That is where I normally get them");
+    player.Say("Terrific. Where is the cantine");
+    notableSay(cPhotoPro,"Cantine location","From here, go East twice and South three times",1);
+    player.Say("Understood");
+  }
+return
+@12
+  if(player.HasInventory(iPenInk))
+  {
+    player.Say("I have ink, and a pen");
+    cPhotoPro.Say("Ok");
+    player.Say("I can sign your disclaimer");
+    cPhotoPro.Say("Here it is");
+    CallRoomScript(11);
+  } else
+  {
+    player.Say("Where can I find ink?");
+    cPhotoPro.Say("The front desk normally has complimentary monogrammed stationary");
+    player.Say("Right");
+    cPhotoPro.Say("Free publicity");
+  }
+return
+@13
+  CallRoomScript(13);
+return
+@14
+PHOTOPRO: How many?
+  if(getNbMissingNegatives() > 1)
+  {
+    player.Say(String.Format("I think %d negatives will do", getNbMissingNegatives()));
+    cPhotoPro.Say("There you go");
+    player.Say("Oh. Thank you");
+    resetNbNegativesToMax();
+  } if(getNbMissingNegatives() == 1)
+  {
+    player.Say("I think just one negative will do");
+    cPhotoPro.Say("There you go");
+    player.Say("Oh. Thank you");
+    resetNbNegativesToMax();
+  } else {
+    player.Say("Actually, nevermind, I have plenty");
+    cPhotoPro.Say("Ok");
+  }
+  dPhotoPro.SetOptionState(14,eOptionOff);
+return
+@15
+PHOTOPRO: Ok
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I need to develop photos</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">How do I turn my negatives into photos?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Am I at the wrong desk?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">How do I develop my negatives?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Can you develop these negatives for me?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">*Give film*</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Is this the photo desk?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Do you have the equipment to develop photos?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">How long does it take to develop photos?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I want you to print these negatives into photos</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the eggs</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>12</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the signature on the disclaimer</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>13</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About my photos</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>14</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I need a film of negatives</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>15</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Good bye</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>9</ID>
+            <Name>dMenu</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  player.Transparency = 100;
+HARKER: Hello, I would like to order a tea and...
+  if(playerHasSpoiledFood())
+  {
+    dMenu.SetOptionState(9,eOptionOn);
+  } else
+  {
+    dMenu.SetOptionState(9,eOptionOff);
+  }
+return
+@1
+  addFood("Bacon butty","sandwich,bacon,butty,pork","A cooked bacon sandwich, with buttered bread");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@2
+  addFood("Chip butty","sandwich,chip,butty,fries","A sandwich filled with chips and brown sauce, with buttered bread");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@3
+  addFood("Cucumber sandwich","sandwich,cucumber,vegetable","A sandwich filled with thin slices of cucumbers, using crustless buttered white bread");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@4
+  addFood("Jam sandwich","sandwich,jam,fruits","A toasted sandwich with fruit jam in the middle");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@5
+  addFood("Marmelade sandwich","sandwich,marmelade,orange","A raw sandwich with orange and sugar spread in the middle");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@6
+  addFood("Salt beef sandwich","sandwich,salted meat,beef,cow","A buttered bread sandwich using beef briskets. A true classic");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@7
+  addFood("Tea sandwich","sandwich,tea","A small sandwich filled with thin slices of meat or vegetable, using crustless buttered white bread");
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+@8
+  player.AddInventory(iEggs);
+  player.Say("Thank you very much");
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+  player.Say("Well, that is one thing I was not expecting to buy today");
+stop
+@9
+  cleanAllSpoiledFood();
+HARKER: Voila, thank you
+HARKER: Also, I would like to order a tea and...
+return
+@10
+  player.FaceDirection(eDirectionDown);
+  player.Transparency = 100;
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A bacon butty</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A chip butty</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A cucumber sandwich</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A jam sandwich</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A marmelade sandwich</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A salt beef sandwich</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">A tea sandwich</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">A carton of eggs</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Use your bin</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Nothing, nevermind</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>10</ID>
+            <Name>dTelegram</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+TELEGRAMOPERATOR: Good day to you too. STOP
+TELEGRAMOPERATOR: Oh! Look at me go! I am talking like a telegram!
+HARKER: Ha, that is amusing.
+TELEGRAMOPERATOR: Waht can I do for you...
+HARKER: Well, I...
+TELEGRAMOPERATOR: ...STOP!
+TELEGRAMOPERATOR: Ha ha ha!
+HARKER: Ah yes, funny!
+TELEGRAMOPERATOR: I'm sorry, I'm just being silly.
+  dTelegram.SetOptionState(1,eOptionOff);
+  dTelegram.SetOptionState(2,eOptionOn);
+return
+@2
+TELEGRAMOPERATOR: A telegram? What is that?
+HARKER: ...
+TELEGRAMOPERATOR: Ha ha ha!
+TELEGRAMOPERATOR: I'm just being silly of course
+HARKER: Of course
+TELEGRAMOPERATOR: Who is the recipient?
+  show_simpleTextBox("Telegram recipient");
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Good day</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I need to send a telegram</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -10862,6 +11747,81 @@ stop
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="212" Width="32" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/LawSociety/LawReceptionist_cropped_32.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>20</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="213" Width="32" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/LawSociety/LawReceptionist_goLeft.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>20</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="214" Width="32" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/LawSociety/LawReceptionist_goRight.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>20</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="215" Width="32" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/LawSociety/PhotoPro.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>20</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="216" Width="32" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/TelegramOffice/TelegramReceptionist_cropped_32.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>20</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="Maps">
@@ -12156,7 +13116,15 @@ stop
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>212</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
@@ -12166,7 +13134,7 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>213</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -12179,7 +13147,7 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>214</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -12198,7 +13166,15 @@ stop
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>216</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
@@ -12240,7 +13216,15 @@ stop
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>215</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>

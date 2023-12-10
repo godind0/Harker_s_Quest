@@ -57,6 +57,14 @@ enum city
   Bistritz
 };
 
+enum parentItemDict
+{
+  subitemDescription, 
+  subitemNote, 
+  subItemSpoiltime, 
+  subItemAlternateName
+};
+
 import function setStoryBeat(storyBeat);
 import storyBeat getStoryBeat();
 import function gameIsOver(String);
@@ -84,11 +92,14 @@ import String getTrainDepartureTime();
 
 import String getNoteDescription(String);
 import String whatTimeIsIt(bool);
+import String getAMPM();
 import bool isItBeforeThisTime(int, int, int, bool, int);
 import bool isThisTimeWithinXminOfThisTime(String, String,  int);
+import bool isThisTimeBeforeThisTime(String, String);
 import function setCurrentTime(int, int, int, bool,  int);
 import int translateTimeToMinutes(String);
 import String translateTimeToHHMMAM(int, int, String);
+import String translateMinutesToHHMMAM(int);
 import function show_wait_GUI(String);
 import function applyWait(bool);
 
@@ -98,6 +109,9 @@ import function removeTravelDestination(zone);
 import zone stringAsZone(String);
 import function travel_movePlayer(zone);
 import function travel(zone);
+import function addFood(String, String, String);
+import bool playerHasSpoiledFood();
+import function cleanAllSpoiledFood();
 
 import function setThreeLondonCabRides(bool);
 import Dictionary* cabSellMsg_TravelDestinations;
@@ -113,12 +127,23 @@ import String getPropertyRequesterName();
 import Set* getHawkinsSellerList();
 import function createAllHawkinsFiles();
 import String getProposedSeller();
+import String getCarfaxSeller();
+
+import String findTelegramRecipientByName(String);
+import function addPlannedTelegram(String, String,  String, String);
+import function updateTelegramMessage(String, String, String, String, String);
+import function addHotelPackage(String,  int);
+import Set* getHotelPackages();
+
 import int getNbNegative();
-import function modifyNbNegative(int);
+import int getNbMissingNegatives();
+import function resetNbNegativesToMax();
+import function takeAPicture(String, String, int);
 
 import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);
 import bool isCharacterNearCharacter(Character*, float,  Character*);
+import bool isCharacterNearHotspot(Hotspot*, float,  Character*);
 import bool isThisOpened(Object*);
 import function memorize(String);
 import String getMemorisedThought();
@@ -130,10 +155,13 @@ import function standUp(Character*,  int);
 import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);
+import function show_simpleTextBox(String);
 import function enterMap();
 import function exitMap();
 
-import function addClassifiableFile(String, String,  String);
+import function addSubitem(InventoryItem*, String, String, String);
+import function tranfertAllSubitemFromOneParentToAnother(InventoryItem*, InventoryItem*);
+import function changeAllSubItemNoteInParent(InventoryItem*, String);
 
 import function open_gui(GUI*);
 import function close_gui(GUI*);
