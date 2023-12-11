@@ -4060,7 +4060,7 @@
                 <ID>9</ID>
                 <Image>189</Image>
                 <Name>iCamera</Name>
-                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>alternateNames</Name>
