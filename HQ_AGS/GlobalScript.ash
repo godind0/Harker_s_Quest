@@ -45,6 +45,16 @@ enum zone
   StayHere
 };
 
+enum commerce
+{
+  HawkinsEsq, 
+  TrainStation, 
+  LawSocietyBuilding, 
+  Museum, 
+  Shop, 
+  AlwaysOpened
+};
+
 enum city
 {
   Exeter, 
@@ -106,6 +116,7 @@ import String translateTimeToHHMMAM(int, int, String);
 import String translateMinutesToHHMMAM(int);
 import function show_wait_GUI(String);
 import function applyWait(bool);
+import function addTime(int, int, int, int);
 
 import function adjustTravelDestinations();
 import function addTravelDestination(zone);
@@ -115,6 +126,15 @@ import function changeArrival_X_Y(int, int, int);
 import zone stringAsZone(String);
 import function travel_movePlayer(zone);
 import function travel(zone);
+import bool isThisPlaceClosingOnThePlayer(commerce,  Character*, bool, bool,  int,  int);
+import String isThisPlaceOpened(commerce);
+import commerce getCommerceType(zone);
+import zone getCurrentZone();
+import zone getWantedDestination();
+import zone getRealDestination();
+import function setTravellingBool(bool);
+import bool getTravellingBool();
+import int travelDestinationTimeInMinutes(zone, zone);
 
 import function addFood(String, String, String);
 import bool playerHasSpoiledFood();
@@ -149,6 +169,8 @@ import int getNbNegative();
 import int getNbMissingNegatives();
 import function resetNbNegativesToMax();
 import function takeAPicture(String, String, int);
+
+import function createBook(String, String, bool);
 
 import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);

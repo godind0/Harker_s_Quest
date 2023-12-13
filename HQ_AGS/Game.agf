@@ -2306,7 +2306,7 @@
               <BackgroundImage>180</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>159</Height>
+              <Height>190</Height>
               <ID>11</ID>
               <Left>13</Left>
               <Name>gNotebook</Name>
@@ -2363,17 +2363,17 @@
                 <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>115</Height>
+                <Height>128</Height>
                 <ID>2</ID>
-                <Left>165</Left>
+                <Left>166</Left>
                 <Locked>False</Locked>
                 <Name>lblNoteDescription</Name>
                 <Text />
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>36</Top>
+                <Top>9</Top>
                 <Visible>True</Visible>
-                <Width>110</Width>
+                <Width>107</Width>
                 <ZOrder>6</ZOrder>
               </GUILabel>
               <GUIButton>
@@ -2385,7 +2385,7 @@
                 <Height>26</Height>
                 <ID>3</ID>
                 <Image>42</Image>
-                <Left>32</Left>
+                <Left>102</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnResume_notebook</Name>
@@ -2395,7 +2395,7 @@
                 <Text>Resume</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>127</Top>
+                <Top>161</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>3</ZOrder>
@@ -2409,7 +2409,7 @@
                 <Height>26</Height>
                 <ID>4</ID>
                 <Image>42</Image>
-                <Left>174</Left>
+                <Left>30</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnDeleteNote</Name>
@@ -2419,7 +2419,7 @@
                 <Text xml:space="preserve">Delete note</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>6</Top>
+                <Top>125</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>4</ZOrder>
@@ -2443,7 +2443,7 @@
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>-2</Top>
+                <Top>0</Top>
                 <Visible>True</Visible>
                 <Width>294</Width>
                 <ZOrder>0</ZOrder>
@@ -2454,13 +2454,13 @@
                 <Font>0</Font>
                 <Height>1</Height>
                 <ID>6</ID>
-                <Left>160</Left>
+                <Left>166</Left>
                 <Locked>False</Locked>
                 <Name>lblNoteDescriptionHighlight</Name>
                 <Text>fdfd</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>36</Top>
+                <Top>9</Top>
                 <Visible>True</Visible>
                 <Width>1</Width>
                 <ZOrder>5</ZOrder>
@@ -2513,6 +2513,23 @@
                 <Width>7</Width>
                 <ZOrder>8</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>9</ID>
+                <Left>166</Left>
+                <Locked>False</Locked>
+                <Name>lblNote_pgNb</Name>
+                <Text xml:space="preserve">Page #/@</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>138</Top>
+                <Visible>True</Visible>
+                <Width>107</Width>
+                <ZOrder>9</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -3611,11 +3628,11 @@
               <Height>190</Height>
               <ID>22</ID>
               <Left>13</Left>
-              <Name>gLedger</Name>
+              <Name>gBook</Name>
               <OnClick />
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>40</Top>
+              <Top>10</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>294</Width>
@@ -3626,15 +3643,15 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>137</Height>
+                <Height>131</Height>
                 <ID>0</ID>
-                <Left>20</Left>
+                <Left>21</Left>
                 <Locked>False</Locked>
-                <Name>LblLedger_left</Name>
-                <Text xml:space="preserve">Ledger content</Text>
+                <Name>LblBook_left</Name>
+                <Text xml:space="preserve">Left page</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>7</Top>
+                <Top>4</Top>
                 <Visible>True</Visible>
                 <Width>115</Width>
                 <ZOrder>0</ZOrder>
@@ -3643,15 +3660,15 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>137</Height>
+                <Height>131</Height>
                 <ID>1</ID>
                 <Left>164</Left>
                 <Locked>False</Locked>
-                <Name>LblLedger_right</Name>
-                <Text xml:space="preserve">Ledger content</Text>
+                <Name>LblBook_right</Name>
+                <Text xml:space="preserve">Right page</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>7</Top>
+                <Top>4</Top>
                 <Visible>True</Visible>
                 <Width>116</Width>
                 <ZOrder>1</ZOrder>
@@ -3668,7 +3685,7 @@
                 <Left>14</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
-                <Name>btnLedgerPrev</Name>
+                <Name>btnBookPrev</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnLedgerPrev_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
@@ -3692,7 +3709,7 @@
                 <Left>275</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
-                <Name>btnLedgerNext</Name>
+                <Name>btnBookNext</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnLedgerNext_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
@@ -3713,14 +3730,14 @@
                 <Height>26</Height>
                 <ID>4</ID>
                 <Image>42</Image>
-                <Left>103</Left>
+                <Left>174</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
-                <Name>btnCloseLedger</Name>
+                <Name>btnCloseBook</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnCloseLedger_OnClick</OnClick>
                 <PushedImage>43</PushedImage>
-                <Text xml:space="preserve">Close ledger</Text>
+                <Text xml:space="preserve">Close book</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
                 <Top>161</Top>
@@ -3728,6 +3745,81 @@
                 <Width>92</Width>
                 <ZOrder>4</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>5</ID>
+                <Left>21</Left>
+                <Locked>False</Locked>
+                <Name>lblBook_pgNbLeft</Name>
+                <Text xml:space="preserve">Page #/@</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>138</Top>
+                <Visible>True</Visible>
+                <Width>115</Width>
+                <ZOrder>5</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>6</ID>
+                <Left>164</Left>
+                <Locked>False</Locked>
+                <Name>lblBook_pgNbRight</Name>
+                <Text xml:space="preserve">Page #/@</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>138</Top>
+                <Visible>True</Visible>
+                <Width>116</Width>
+                <ZOrder>6</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>175</Height>
+                <ID>7</ID>
+                <Image>224</Image>
+                <Left>8</Left>
+                <Locked>True</Locked>
+                <MouseoverImage>224</MouseoverImage>
+                <Name>img_bookmark</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>224</PushedImage>
+                <Text xml:space="preserve"> </Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>4</Top>
+                <Visible>True</Visible>
+                <Width>150</Width>
+                <ZOrder>7</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>13</Height>
+                <ID>8</ID>
+                <Left>23</Left>
+                <Locked>False</Locked>
+                <Name>lblBookTitle</Name>
+                <Text xml:space="preserve">Book title</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>165</Top>
+                <Visible>True</Visible>
+                <Width>106</Width>
+                <ZOrder>8</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -4538,6 +4630,33 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Books</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>32</ID>
+            <Image>0</Image>
+            <Name>iBooks</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>invContext</Name>
+                <Value>Contains</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is my collection of books</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -4728,7 +4847,7 @@
             <Properties>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value xml:space="preserve">Jonathan, Harker, John, me, myself, self</Value>
+                <Value xml:space="preserve">Jonathan, Harker, John, myself, self</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
@@ -4804,8 +4923,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>1608</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>274</StartX>
-            <StartY>196</StartY>
+            <StartX>265</StartX>
+            <StartY>174</StartY>
             <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -11270,6 +11389,21 @@ return
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>165</ImportHeight>
+                  <ImportWidth>300</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="224" Width="150" Height="175" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/bookmark.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>190</ImportHeight>
                   <ImportWidth>300</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
