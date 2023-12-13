@@ -891,11 +891,11 @@
             <Number>7</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">Telegram and British Museum Ent - London</Description>
+            <Description xml:space="preserve">Telegram Shop - London</Description>
             <Number>8</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">British Museum Reading room - London</Description>
+            <Description xml:space="preserve">British Museum Collection - London</Description>
             <Number>9</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -925,6 +925,10 @@
           <UnloadedRoom>
             <Description xml:space="preserve">Carfax, Right side</Description>
             <Number>16</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description xml:space="preserve">British Museum Library - London</Description>
+            <Number>17</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -2313,7 +2317,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>294</Width>
-              <ZOrder>1</ZOrder>
+              <ZOrder>3</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIListBox>
@@ -2361,7 +2365,7 @@
                 <Font>0</Font>
                 <Height>115</Height>
                 <ID>2</ID>
-                <Left>160</Left>
+                <Left>165</Left>
                 <Locked>False</Locked>
                 <Name>lblNoteDescription</Name>
                 <Text />
@@ -2369,7 +2373,7 @@
                 <TextColor>0</TextColor>
                 <Top>36</Top>
                 <Visible>True</Visible>
-                <Width>114</Width>
+                <Width>110</Width>
                 <ZOrder>6</ZOrder>
               </GUILabel>
               <GUIButton>
@@ -2461,6 +2465,54 @@
                 <Width>1</Width>
                 <ZOrder>5</ZOrder>
               </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>7</ID>
+                <Image>218</Image>
+                <Left>275</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNotebook_next</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNotebook_next_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>143</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>7</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>8</ID>
+                <Image>217</Image>
+                <Left>157</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNotebook_prev</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNotebook_prev_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>143</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>8</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -2797,7 +2849,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>139</Width>
-              <ZOrder>1</ZOrder>
+              <ZOrder>2</ZOrder>
             </NormalGUI>
             <Controls>
               <GUITextBox>
@@ -3299,20 +3351,20 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>190</BackgroundImage>
+              <BackgroundImage>222</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>104</Height>
+              <Height>125</Height>
               <ID>20</ID>
-              <Left>31</Left>
+              <Left>14</Left>
               <Name>gGameOver</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>23</Top>
+              <Top>57</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
-              <Width>258</Width>
+              <Width>291</Width>
               <ZOrder>3</ZOrder>
             </NormalGUI>
             <Controls>
@@ -3325,7 +3377,7 @@
                 <Height>26</Height>
                 <ID>0</ID>
                 <Image>42</Image>
-                <Left>162</Left>
+                <Left>194</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnGameOver_quit</Name>
@@ -3335,7 +3387,7 @@
                 <Text>Quit</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>74</Top>
+                <Top>94</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>0</ZOrder>
@@ -3359,7 +3411,7 @@
                 <Text>Restart</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>74</Top>
+                <Top>94</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>1</ZOrder>
@@ -3373,7 +3425,7 @@
                 <Height>26</Height>
                 <ID>2</ID>
                 <Image>42</Image>
-                <Left>83</Left>
+                <Left>99</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnGameOver_restore</Name>
@@ -3383,7 +3435,7 @@
                 <Text>Restore</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>46</Top>
+                <Top>94</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>2</ZOrder>
@@ -3392,18 +3444,35 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>3</Font>
-                <Height>33</Height>
+                <Height>25</Height>
                 <ID>3</ID>
                 <Left>4</Left>
                 <Locked>False</Locked>
-                <Name>lblGameOver_how</Name>
+                <Name>lblGameOver_title</Name>
                 <Text xml:space="preserve">Jonathan did not make it</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
                 <Top>6</Top>
                 <Visible>True</Visible>
-                <Width>250</Width>
+                <Width>283</Width>
                 <ZOrder>3</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>60</Height>
+                <ID>4</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lblGameOver_how</Name>
+                <Text>Failure</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>30</Top>
+                <Visible>True</Visible>
+                <Width>282</Width>
+                <ZOrder>4</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -3531,6 +3600,134 @@
                 <Width>81</Width>
                 <ZOrder>4</ZOrder>
               </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>223</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>190</Height>
+              <ID>22</ID>
+              <Left>13</Left>
+              <Name>gLedger</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>40</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>294</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>137</Height>
+                <ID>0</ID>
+                <Left>20</Left>
+                <Locked>False</Locked>
+                <Name>LblLedger_left</Name>
+                <Text xml:space="preserve">Ledger content</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>7</Top>
+                <Visible>True</Visible>
+                <Width>115</Width>
+                <ZOrder>0</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>137</Height>
+                <ID>1</ID>
+                <Left>164</Left>
+                <Locked>False</Locked>
+                <Name>LblLedger_right</Name>
+                <Text xml:space="preserve">Ledger content</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>7</Top>
+                <Visible>True</Visible>
+                <Width>116</Width>
+                <ZOrder>1</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>2</ID>
+                <Image>217</Image>
+                <Left>14</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnLedgerPrev</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnLedgerPrev_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>147</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>3</ID>
+                <Image>218</Image>
+                <Left>275</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnLedgerNext</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnLedgerNext_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>147</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>4</ID>
+                <Image>42</Image>
+                <Left>103</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnCloseLedger</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnCloseLedger_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Close ledger</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>161</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -3737,7 +3934,7 @@
               </InventoryItem>
               <InventoryItem>
                 <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Camera film</Description>
+                <Description>Negatives</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
                 <ID>25</ID>
@@ -3899,7 +4096,7 @@
               </InventoryItem>
               <InventoryItem>
                 <CursorImage>0</CursorImage>
-                <Description xml:space="preserve">Pen and ink bottle</Description>
+                <Description xml:space="preserve">Pen and bottle</Description>
                 <HotspotX>0</HotspotX>
                 <HotspotY>0</HotspotY>
                 <ID>10</ID>
@@ -4064,7 +4261,7 @@
                 <Properties>
                   <CustomProperty>
                     <Name>alternateNames</Name>
-                    <Value xml:space="preserve">photo, kodak, eastman, camera, picture</Value>
+                    <Value xml:space="preserve">kodak, eastman, camera, picture</Value>
                   </CustomProperty>
                   <CustomProperty>
                     <Name>TextDescription</Name>
@@ -5081,9 +5278,9 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>63519</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>160</StartX>
-            <StartY>120</StartY>
-            <StartingRoom>9</StartingRoom>
+            <StartX>85</StartX>
+            <StartY>167</StartY>
+            <StartingRoom>17</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -5943,6 +6140,17 @@ MINA: I will finish my tea and head over to the school
 HARKER: Have a great afternoon, my love
 MINA: Same to you
 MINA: I love you, Jonathan
+  dMina.SetOptionState(6,eOptionOffForever);
+  dMina.SetOptionState(7,eOptionOn);
+stop
+@7
+MINA: Of course
+MINA: I will finish my tea and head over to the school
+HARKER: Have a great afternoon, my love
+MINA: Same to you
+MINA: I love you, Jonathan
+  dMina.SetOptionState(6,eOptionOffForever);
+  dMina.SetOptionState(7,eOptionOn);
 stop
 ]]></Script>
             <DialogOptions>
@@ -5980,6 +6188,12 @@ stop
                 <ID>6</ID>
                 <Say>False</Say>
                 <Show>True</Show>
+                <Text xml:space="preserve">I must go</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
                 <Text xml:space="preserve">I must go</Text>
               </DialogOption>
             </DialogOptions>
@@ -6025,27 +6239,25 @@ return
 CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
   player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
-  player.Transparency = 100;
   travel(stringAsZone(getCabPropositionByIndex(0)));
 stop
 @4
 CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
   player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
-  player.Transparency = 100;
   travel(stringAsZone(getCabPropositionByIndex(1)));
 stop
 @5
 CABBY: Alright, mate
 CABBY: Get yourself snug in the buggy
   player.Walk(cCoach.x + 25,cCoach.y + 5,eBlock,eWalkableAreas);
-  player.Transparency = 100;
   if(stringAsZone(getCabPropositionByIndex(2)) == Purfleet)
   {
-    cCabby.ChangeRoom(6, 111, 183, eDirectionRight);
-    cHorse1.ChangeRoom(6, 171, 183, eDirectionRight);
+    cCabby.ChangeRoom(6, 141, 183, eDirectionRight);
+    cHorse1.ChangeRoom(6, 201, 183, eDirectionRight);
     cHorse1.Transparency = 0;
     cCabby.Transparency = 0;
+    player.Transparency = 100;
   }
   travel(stringAsZone(getCabPropositionByIndex(2)));
 stop
@@ -10358,13 +10570,13 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="184" Width="5" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="184" Width="13" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Ledger.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
-                      <ImportHeight>240</ImportHeight>
-                      <ImportWidth>320</ImportWidth>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
@@ -10498,6 +10710,21 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="221" Width="95" Height="58" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/wagonTrain.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="WaterlooStation">
@@ -10565,6 +10792,26 @@ return
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="BritishMuseum">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="220" Width="77" Height="48" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/BritishMuseum/BritishMuseum_Library_Doors.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>400</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>NoTransparency</ImportMethod>
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
@@ -10964,6 +11211,66 @@ return
                   <OffsetY>0</OffsetY>
                   <ImportHeight>104</ImportHeight>
                   <ImportWidth>258</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="217" Width="7" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/littleArrow_left.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>7</ImportHeight>
+                  <ImportWidth>7</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="218" Width="7" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/littleArrow_right.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>7</ImportHeight>
+                  <ImportWidth>7</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="222" Width="291" Height="125" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/Large2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>240</ImportHeight>
+                  <ImportWidth>320</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="223" Width="294" Height="159" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/ledger.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>165</ImportHeight>
+                  <ImportWidth>300</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -11813,6 +12120,21 @@ return
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>20</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="219" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/BritishMuseum/MuseumClerk_32_u.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>32</ImportHeight>
                   <ImportWidth>32</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
@@ -12954,7 +13276,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>204</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -12967,7 +13289,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>204</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -12975,7 +13297,15 @@ return
               <Loop>
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>204</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>
@@ -13016,7 +13346,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>205</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -13029,7 +13359,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>205</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -13037,7 +13367,15 @@ return
               <Loop>
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>205</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>
@@ -13074,7 +13412,15 @@ return
               <Loop>
                 <ID>0</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>219</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
               <Loop>
                 <ID>1</ID>
@@ -13084,7 +13430,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>219</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -13097,7 +13443,7 @@ return
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>219</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -13105,7 +13451,15 @@ return
               <Loop>
                 <ID>3</ID>
                 <RunNextLoop>False</RunNextLoop>
-                <Frames />
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>219</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>

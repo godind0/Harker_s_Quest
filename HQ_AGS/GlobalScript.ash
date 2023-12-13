@@ -85,10 +85,14 @@ import int getIndexOfElementUsed();
 import elementType getETOfElementUsed();
 import bool alphaOrder_isThisBeforeThat(String, String);
 import function giveScoreOnce(String, int);
+
 import function createTrainTimetables();
 import function show_trainTicket_GUI(city, city);
 import String getTrainArrivalTime(String);
 import String getTrainDepartureTime();
+import bool canPlayerBoardTrain(String);
+import function isAnyTrainInStation(bool);
+import String getTrainInStation();
 
 import String getNoteDescription(String);
 import String whatTimeIsIt(bool);
@@ -105,10 +109,13 @@ import function applyWait(bool);
 
 import function adjustTravelDestinations();
 import function addTravelDestination(zone);
+import bool playerHasTravelDestination(zone);
 import function removeTravelDestination(zone);
+import function changeArrival_X_Y(int, int, int);
 import zone stringAsZone(String);
 import function travel_movePlayer(zone);
 import function travel(zone);
+
 import function addFood(String, String, String);
 import bool playerHasSpoiledFood();
 import function cleanAllSpoiledFood();
@@ -126,8 +133,11 @@ import String getPropertyRequestMessage(String);
 import String getPropertyRequesterName();
 import Set* getHawkinsSellerList();
 import function createAllHawkinsFiles();
+import String getLedgerReadText();
+import function setLedgerReadText(String);
 import String getProposedSeller();
 import String getCarfaxSeller();
+import bool playerHasAllCarfaxPictures();
 
 import String findTelegramRecipientByName(String);
 import function addPlannedTelegram(String, String,  String, String);
