@@ -77,10 +77,13 @@ enum parentItemDict
 
 import function setStoryBeat(storyBeat);
 import storyBeat getStoryBeat();
+import bool getSkipCutscene();
 import function gameIsOver(String);
 import int arrival_x[];
 import int arrival_y[];
 import String carfaxSeller;
+import function setOpeningAndClosingTimes();
+import function setupTravelDestinations();
 
 import String[] roomSpecificParse(String);
 import function musicInRoom(AudioClip*);
@@ -117,6 +120,10 @@ import String translateMinutesToHHMMAM(int);
 import function show_wait_GUI(String);
 import function applyWait(bool);
 import function addTime(int, int, int, int);
+import bool getGottaSleep();
+import function hasSlept();
+import function addTimedEventInXMinutes(int, String);
+import bool playerHasTimedEventByWhatHappens(String);
 
 import function adjustTravelDestinations();
 import function addTravelDestination(zone);
@@ -130,6 +137,7 @@ import String isThisPlaceOpened(commerce);
 import bool isThisPlaceOpened_bool(commerce);
 import commerce getCommerceType(zone);
 import zone getCurrentZone();
+import function setCurrentZone(zone);
 import zone getWantedDestination();
 import zone getRealDestination();
 import function setTravellingBool(bool);
@@ -159,6 +167,7 @@ import function setLedgerReadText(String);
 import String getProposedSeller();
 import String getCarfaxSeller();
 import bool playerHasAllCarfaxPictures();
+import bool isThisSigned(InventoryItem*);
 
 import String findTelegramRecipientByName(String);
 import function addPlannedTelegram(String, String,  String, String);
@@ -173,6 +182,7 @@ import function takeAPicture(String, String, int);
 
 import function createBook(String, String,  String, String);
 import bool getProposedArchiveBook(int);
+import function show_book_gui(String);
 import function setProposedArchiveBook(int);
 
 import function readThis(String, String);
