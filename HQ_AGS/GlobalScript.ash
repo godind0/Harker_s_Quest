@@ -126,8 +126,8 @@ import function changeArrival_X_Y(int, int, int);
 import zone stringAsZone(String);
 import function travel_movePlayer(zone);
 import function travel(zone);
-import bool isThisPlaceClosingOnThePlayer(commerce,  Character*, bool, bool,  int,  int);
 import String isThisPlaceOpened(commerce);
+import bool isThisPlaceOpened_bool(commerce);
 import commerce getCommerceType(zone);
 import zone getCurrentZone();
 import zone getWantedDestination();
@@ -139,6 +139,7 @@ import int travelDestinationTimeInMinutes(zone, zone);
 import function addFood(String, String, String);
 import bool playerHasSpoiledFood();
 import function cleanAllSpoiledFood();
+import bool isFoodSpoiled(String);
 
 import function setThreeLondonCabRides(bool);
 import Dictionary* cabSellMsg_TravelDestinations;
@@ -170,7 +171,9 @@ import int getNbMissingNegatives();
 import function resetNbNegativesToMax();
 import function takeAPicture(String, String, int);
 
-import function createBook(String, String, bool);
+import function createBook(String, String,  String, String);
+import bool getProposedArchiveBook(int);
+import function setProposedArchiveBook(int);
 
 import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);
@@ -187,13 +190,16 @@ import function standUp(Character*,  int);
 import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);
+import function notableWhisper(Character*, String, String,  int);
 import function show_simpleTextBox(String);
 import function enterMap();
 import function exitMap();
 
 import function addSubitem(InventoryItem*, String, String, String);
+import bool playerHasSubitem(String, InventoryItem*);
 import function tranfertAllSubitemFromOneParentToAnother(InventoryItem*, InventoryItem*);
 import function changeAllSubItemNoteInParent(InventoryItem*, String);
+import function removeSubitem(InventoryItem*, String,  bool);
 
 import function open_gui(GUI*);
 import function close_gui(GUI*);

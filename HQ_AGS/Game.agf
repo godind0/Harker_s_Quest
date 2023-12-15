@@ -875,7 +875,7 @@
             <Number>3</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">City Map - Exeter</Description>
+            <Description xml:space="preserve">UNUSED - exeter map</Description>
             <Number>4</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -887,7 +887,7 @@
             <Number>6</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">Asylum - Inside - Purfleet</Description>
+            <Description xml:space="preserve">UNUSED - asylum - Inside - Purfleet</Description>
             <Number>7</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -4657,6 +4657,52 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Archive Books</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>33</ID>
+            <Image>0</Image>
+            <Name>iBooksArchives</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">These are the books I burrowed from the British Museum. I must give them back before exiting</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Key</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>34</ID>
+            <Image>0</Image>
+            <Name>iArchiveKey</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is the key to the lock bookshelf in the British Museum Archives</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -7187,10 +7233,10 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-TELEGRAMOPERATOR: Good day to you too. STOP
+TELEGRAMOPERATOR: Hello to you too. STOP
 TELEGRAMOPERATOR: Oh! Look at me go! I am talking like a telegram!
 HARKER: Ha, that is amusing.
-TELEGRAMOPERATOR: Waht can I do for you...
+TELEGRAMOPERATOR: What can I do for you?
 HARKER: Well, I...
 TELEGRAMOPERATOR: ...STOP!
 TELEGRAMOPERATOR: Ha ha ha!
@@ -7207,20 +7253,373 @@ TELEGRAMOPERATOR: I'm just being silly of course
 HARKER: Of course
 TELEGRAMOPERATOR: Who is the recipient?
   show_simpleTextBox("Telegram recipient");
-return
+stop
+@3
+TELEGRAMOPERATOR: Good day !
+stop
 ]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Good day</Text>
+                <Text>Hello</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">I need to send a telegram</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Good bye</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>11</ID>
+            <Name>dLibrarian</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+HARKER: Hello
+LIBRARIAN: *whispering*[Low voice in the museum please
+HARKER: *whispering*[Oh, of course
+return
+@1
+LIBRARIAN: *whispering*[What a wonderful coincidence
+LIBRARIAN: *whispering*[We are holding an exhibit in the Collection room about that region!
+LIBRARIAN: *whispering*[We also have a number of book on the subject
+LIBRARIAN: *whispering*[Mainly travel narratives, very interesting volumes, indeed
+LIBRARIAN: *whispering*[What type of information are you lookinf for
+  dLibrarian.SetOptionState(1, eOptionOff);
+  dLibrarian.SetOptionState(2, eOptionOn);
+  dLibrarian.SetOptionState(3, eOptionOn);
+  dLibrarian.SetOptionState(4, eOptionOn);
+return
+@2
+LIBRARIAN: *whispering*[Ah yes, Transylvania is a very interesting region
+LIBRARIAN: *whispering*[We have volumes on the Carpathians, Hungary, and the Crescent region
+  dLibrarian.SetOptionState(2, eOptionOff);
+  dLibrarian.SetOptionState(5, eOptionOn);
+  dLibrarian.SetOptionState(7, eOptionOn);
+  dLibrarian.SetOptionState(8, eOptionOn);
+return
+@3
+LIBRARIAN: *whispering*[Ah yes, the culture of the region is fascinating
+LIBRARIAN: *whispering*[We have book on the regional industries
+  dLibrarian.SetOptionState(3, eOptionOff);
+  dLibrarian.SetOptionState(9, eOptionOn);
+return
+@4
+LIBRARIAN: *whispering*[Oh that is interesting
+LIBRARIAN: *whispering*[We only have one book about the history of Wallachia and Moldavia
+  dLibrarian.SetOptionState(4, eOptionOff);
+  dLibrarian.SetOptionState(6, eOptionOn);
+return
+@5
+LIBRARIAN: *whispering*[Yes, yes, the Carpathians
+  notableWhisper(cLibrarian,"Carpathian book","Look for 'Round About the Carpathians'[It is a travel book written by Andrew F. Crosse in 1878",0);
+  setProposedArchiveBook(2);
+return
+@6
+LIBRARIAN: *whispering*[Two very intriguing regions indeed!
+  notableWhisper(cLibrarian,"History book","Look for 'An Account of the Principalities of Wallachia and Moldavia'[By William W. Coxe",0);
+  setProposedArchiveBook(3);
+return
+@7
+LIBRARIAN: *whispering*[The Crescent... The old Ottoman Empire!
+  notableWhisper(cLibrarian,"Crescent Region book","Look for 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'[By Charles Frederick Hoffmeister",0);
+  setProposedArchiveBook(4);
+return
+@8
+LIBRARIAN: *whispering*[Very intriguing area and culture!
+LIBRARIAN: *whispering*[The Magyars have the most fascinating folklore as well!
+  notableWhisper(cLibrarian,"Hungary book","Look for 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'[By husband-and-wife team, Nina Elizabeth Mazuchelli and Otto William Mazuchelli",0);
+  setProposedArchiveBook(5);
+  dLibrarian.SetOptionState(10, eOptionOn);
+return
+@9
+LIBRARIAN: *whispering*[An essential angle on the lives of the people!
+  notableWhisper(cLibrarian,"Industry book","Look for 'Transylvania: Its Products and Its People'[By Charles Boner",0);
+  setProposedArchiveBook(1);
+return
+@10
+LIBRARIAN: *whispering*[Ah, yes! What you believe makes you who you are!
+  notableWhisper(cLibrarian,"Industry book","Look for 'The Folktales of the Magyars'[Edited by Elena Schanta",0);
+  setProposedArchiveBook(6);
+return
+@11
+LIBRARIAN: *whispering*[To you as well!
+stop
+
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I am looking for information on Transylvania</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">The region</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">The local economy</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">The history</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Carpathians</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the history of Wallachia and Moldavia</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Crescent Region</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About Hungary</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the regional industries</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Magyar folklore</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Have a good day!</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>12</ID>
+            <Name>dBookshelves</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+HARKER: This is Charles Boner's travelogue in Transylvania
+HARKER: Its description of the region's industry is impressively detailed for this type of book
+HARKER: The author really gets into the people's agricultural practices and other crafts
+  if(Game.DoOnceOnly("People of Transylvania"))
+  {
+    player.Say("In the population of Transylvania there are four distinct nationalities");
+    player.Say("Saxons in the South, and mixed with them the Wallachs, who are the descendants of the Dacians");
+    player.Say("Magyars in the West, and Szekelys in the East and North.");
+    player.Say("I am going among the latter, who claim to be descended from Attila and the Huns");
+    player.Say("This may be so, for when the Magyars conquered the country in the eleventh century");
+    player.Say("They found the Huns settled in it.");
+    GiveScore(3);
+  }
+  giveScoreOnce("Boner's 'Transylvania: Its Products and Its People'",1);
+return
+@2
+HARKER: Crosse's description of his travels around the Carpathian Mountains
+HARKER: The descriptions of the landscapes and atmosphere are brilliant
+HARKER: Crosse also describes his experiences with local people of the Carpathian's different regions
+  if(Game.DoOnceOnly("District"))
+  {
+    player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
+    player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
+    player.Say("One of the wildest and least known portions of Europe");
+    GiveScore(3);
+  }
+  giveScoreOnce("Crosse's 'Round About the Carpathians'",1);
+return
+@3
+HARKER: This is an historical book about Wallachia and Moldavia
+HARKER: It describes the visual architecture of the region, but Coxe mainly tells the cultural and political history of the people
+HARKER: The relationships between the two regions is also discussed in details
+HARKER: The book covers most the the 18th and 19th century
+  if(Game.DoOnceOnly("District"))
+  {
+    player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
+    player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
+    player.Say("One of the wildest and least known portions of Europe");
+    GiveScore(3);
+  }
+  giveScoreOnce("Coxe's 'An Account of the Principalities of Wallachia and Moldavia'",1);
+return
+@4
+HARKER: This is a recent travelogue about Hoffmeister's voyage from Greece to Buda-Pesh
+HARKER: The author spends a few chapters on the different romanian cultures
+  giveScoreOnce("Hoffmeister's 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'",1);
+return
+@5
+HARKER: Although this book focuses on Hungarian history and people, the Magyar seem to be especially relevant to the region where I am headed
+  if(Game.DoOnceOnly("District"))
+  {
+    player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
+    player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
+    player.Say("One of the wildest and least known portions of Europe");
+    GiveScore(3);
+  }
+  giveScoreOnce("Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'",1);
+HARKER: This is a book written by a couple going through the Hungarian lands, retelling their experience
+return
+@6
+HARKER: Superstitions seem to be rampant in the lands where I am headed...
+HARKER: This book is composed of a written retelling of Magyar folktales and myths
+HARKER: I think knowing a bit more about their beliefs will help me understand the people
+HARKER: I see references to many figures, most notably the Táltos, the Lidérc, witches, the Ördög, and the Tündérek
+  giveScoreOnce("Schanta's 'The Folktales of the Magyars'",1);
+return
+@7
+HARKER: The Táltos is a mythical figure in Hungarian folklore, often depicted as a magical horseman 
+HARKER: They are known for their wisdom and connection to the spirit world
+  if(Game.DoOnceOnly("Táltos"))
+  {
+    CallRoomScript(2);
+  }
+return
+@8
+HARKER: The Lidérc is a spirit associated with supernatural occurrences 
+HARKER: It is said to have the ability to shape-shift into different forms. 
+HARKER: Some stories depict Lidérc as a mischievous being, while others portray it as more malevolent
+  if(Game.DoOnceOnly("Lidérc"))
+  {
+    CallRoomScript(2);
+  }
+return
+@9
+HARKER: A few tales feature witch-like characters resembling Baba Yaga
+HARKER: These characters are often portrayed as old, wise, and possessing magical powers. 
+HARKER: They may help or hinder protagonists in the stories.
+  if(Game.DoOnceOnly("witch"))
+  {
+    CallRoomScript(2);
+  }
+return
+@10
+HARKER: The Ördög is a common figure in folktales, which seems to be a devil
+HARKER: These stories often involve clever protagonists outwitting the devil through wit or cunning.
+  if(Game.DoOnceOnly("Ördög"))
+  {
+    CallRoomScript(2);
+  }
+return
+@11
+HARKER: Tündérek are fairies depicted as beautiful, magical beings associated with nature. 
+HARKER: They may play various roles in folktales, from helping humans to testing their morality.
+HARKER: Namely, the Zöld Szemű Tündér, which loosely translates to Green-Eyed Fairy is a fairy with green eyes
+HARKER: It is often associated with nature and the magical realm. 
+HARKER: The presence of the Green-Eyed Fairy in a story may signify a connection between the human and magical worlds.
+  if(Game.DoOnceOnly("Tündérek"))
+  {
+    CallRoomScript(2);
+  }
+return
+@12
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Boner's 'Transylvania: Its Products and Its People'</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Crosse's 'Round About the Carpathians'</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Coxe's 'An Account of the Principalities of Wallachia and Moldavia'</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Hoffmeister's 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Schanta's 'The Folktales of the Magyars'</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Táltos</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Lidérc</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the witches</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Ördög</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the Tündérek</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>12</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I don't need any book on these shelves</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
