@@ -84,6 +84,9 @@ import int arrival_y[];
 import String carfaxSeller;
 import function setOpeningAndClosingTimes();
 import function setupTravelDestinations();
+import function playConfirm();
+import function playSelect();
+import function playCancel();
 
 import String[] roomSpecificParse(String);
 import function musicInRoom(AudioClip*);
@@ -121,6 +124,8 @@ import function show_wait_GUI(String);
 import function applyWait(bool);
 import function addTime(int, int, int, int);
 import bool getGottaSleep();
+import bool isPlayerHungry();
+import function hasEaten();
 import function hasSlept();
 import function addTimedEventInXMinutes(int, String);
 import bool playerHasTimedEventByWhatHappens(String);
@@ -168,12 +173,13 @@ import String getProposedSeller();
 import String getCarfaxSeller();
 import bool playerHasAllCarfaxPictures();
 import bool isThisSigned(InventoryItem*);
+import bool areAllExamQuestionsAnswered();
+import int howManyCorrectExamAnswers();
+import int howManyExamAnswers();
 
-import String findTelegramRecipientByName(String);
-import function addPlannedTelegram(String, String,  String, String);
-import function updateTelegramMessage(String, String, String, String, String);
-import function addHotelPackage(String,  int);
-import Set* getHotelPackages();
+import function addHotelPackage(String, String, String);
+import function getHotelPackages();
+import function setTelegramInclusionByIndex(String, int, bool);
 
 import int getNbNegative();
 import int getNbMissingNegatives();

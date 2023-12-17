@@ -3642,14 +3642,14 @@
               <BackgroundImage>223</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>190</Height>
+              <Height>215</Height>
               <ID>22</ID>
               <Left>13</Left>
               <Name>gBook</Name>
               <OnClick />
-              <PopupStyle>Normal</PopupStyle>
+              <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>10</Top>
+              <Top>20</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>294</Width>
@@ -3747,7 +3747,7 @@
                 <Height>26</Height>
                 <ID>4</ID>
                 <Image>42</Image>
-                <Left>174</Left>
+                <Left>102</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnCloseBook</Name>
@@ -3757,7 +3757,7 @@
                 <Text xml:space="preserve">Close book</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>161</Top>
+                <Top>185</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>4</ZOrder>
@@ -3836,6 +3836,227 @@
                 <Visible>True</Visible>
                 <Width>106</Width>
                 <ZOrder>8</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>223</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>195</Height>
+              <ID>23</ID>
+              <Left>13</Left>
+              <Name>gExam</Name>
+              <OnClick />
+              <PopupStyle>PopupModal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>41</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>294</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>40</Height>
+                <ID>0</ID>
+                <Left>18</Left>
+                <Locked>False</Locked>
+                <Name>lblPageTitle</Name>
+                <Text xml:space="preserve">Law Society of London</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>7</Top>
+                <Visible>True</Visible>
+                <Width>116</Width>
+                <ZOrder>0</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>1</ID>
+                <Left>18</Left>
+                <Locked>False</Locked>
+                <Name>lblExamTitle2</Name>
+                <Text xml:space="preserve">Sollicitor's Exam</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>48</Top>
+                <Visible>True</Visible>
+                <Width>116</Width>
+                <ZOrder>1</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>40</Height>
+                <ID>2</ID>
+                <Left>18</Left>
+                <Locked>False</Locked>
+                <Name>lblName</Name>
+                <Text xml:space="preserve">ATTN: J. Harker[OF: Hawkins. Esq. Exeter</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>113</Top>
+                <Visible>True</Visible>
+                <Width>116</Width>
+                <ZOrder>2</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>45</Height>
+                <ID>3</ID>
+                <Image>228</Image>
+                <Left>53</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>image_Logo</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>65</Top>
+                <Visible>True</Visible>
+                <Width>46</Width>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>4</ID>
+                <Image>217</Image>
+                <Left>160</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnExam_prev</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnExam_prev_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>142</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>5</ID>
+                <Image>218</Image>
+                <Left>272</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnExam_next</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnExam_next_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>142</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>6</ID>
+                <Image>42</Image>
+                <Left>105</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnCloseExam</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnCloseExam_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Close Exam</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>161</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>6</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>90</Height>
+                <ID>7</ID>
+                <Left>162</Left>
+                <Locked>False</Locked>
+                <Name>lblExam_question</Name>
+                <Text>Question</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>12686</TextColor>
+                <Top>7</Top>
+                <Visible>True</Visible>
+                <Width>117</Width>
+                <ZOrder>7</ZOrder>
+              </GUILabel>
+              <GUITextBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>18</Height>
+                <ID>8</ID>
+                <Left>162</Left>
+                <Locked>False</Locked>
+                <Name>tbExam_Answer</Name>
+                <OnActivate />
+                <ShowBorder>True</ShowBorder>
+                <Text />
+                <TextColor>0</TextColor>
+                <Top>118</Top>
+                <Visible>True</Visible>
+                <Width>117</Width>
+                <ZOrder>8</ZOrder>
+              </GUITextBox>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>9</ID>
+                <Left>162</Left>
+                <Locked>False</Locked>
+                <Name>lblExam_answerTag</Name>
+                <Text xml:space="preserve">Your answer:</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>104</Top>
+                <Visible>True</Visible>
+                <Width>116</Width>
+                <ZOrder>9</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -4431,17 +4652,21 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">London Map</Description>
+            <Description xml:space="preserve">Sollicitor Exam</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>12</ID>
             <Image>0</Image>
-            <Name>iLondonMap</Name>
+            <Name>iExam</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">A detailed map of London with important sites and businesses noted on it</Value>
+                <Value xml:space="preserve">The Law Society's Sollicitor Exam, including questions of my chosen region: Transylvania</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">exam, question, test, sollicitor</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4708,17 +4933,21 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description>Key</Description>
+            <Description>Procedures</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>34</ID>
             <Image>0</Image>
-            <Name>iArchiveKey</Name>
+            <Name>iProcedures</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">This is the key to the lock bookshelf in the British Museum Archives</Value>
+                <Value xml:space="preserve">This is my procedure handbook to guide me in my job</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">law, procedure, book</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4746,6 +4975,29 @@
               <CustomProperty>
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">This is my personnal diary, where I chronicle my thoughts and events of my life</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Hotel packages</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>36</ID>
+            <Image>0</Image>
+            <Name>iHotelPackages</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>invContext</Name>
+                <Value>Contains</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -6726,13 +6978,29 @@ RECEPTIONIST: There you are, the 'Carfax Estate Sales details'
   addSubitem(iSalesDossier,"Conditions","A form for me to fill about the conditions of the sale","Those concern the actual sale (biddings, payment of a deposit and signing of a contract), the quantum of interest sold, the title of property, the completion of the purchase, misdescription of particulars, forfeiture of the deposit and resale of the property");
   addSubitem(iSalesDossier,"Title page","The introductory page of the dossier","");
 HARKER: That looks complete, but it is missing the pictures and a bit of classification
-HARKER: How did it go again?
-  notableSay(player,"Contract order","Introduction, Current sale agreements, Proof of ownership, Proof of current state, Annexes of previous paperwork. Each section should be arranged by date first, then alphabetically",2);
 HARKER: Thank you, you've been very helpful
 RECEPTIONIST: Of course, sir
-  giveScoreOnce("Carfax sales papers",1);  
-return
+  giveScoreOnce("Carfax sales papers",1);
+  setTelegramInclusionByIndex(getCarfaxSeller(), 2, true);
+  player.FaceDirection(eDirectionDown);
+HARKER: That is a lot of documents...
+  if(player.HasInventory(iProcedures))
+  {
+    player.Say("I better double check with my procedures book to classify them");
+  }
 @12
+RECEPTIONIST: I am sorry, sir
+RECEPTIONIST: I do not have my eligibility list yet, please come back later.
+return
+@13
+RECEPTIONIST: Outstanding, sir
+RECEPTIONIST: Let me send your booklet for revision.
+RECEPTIONIST: The revisor is exceptionally free at the moment.
+RECEPTIONIST: May I suggest you wait for the results here?
+HARKER: Absolutely.
+  CallRoomScript(14);
+return
+@14
 RECEPTIONIST: Of course, sir
 RECEPTIONIST: Have a good day
 stop
@@ -6742,13 +7010,13 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve"> Were you avoiding me, just now?</Text>
+                <Text xml:space="preserve">Were you avoiding me, just now?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">I want my sollicitor exam results</Text>
+                <Text xml:space="preserve">I want to setup a sollicitor exam</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
@@ -6806,6 +7074,18 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>12</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I want to setup a sollicitor exam</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>13</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I am done with the exam</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>14</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Good bye</Text>
@@ -7503,14 +7783,14 @@ return
 HARKER: This is Charles Boner's travelogue in Transylvania
 HARKER: Its description of the region's industry is impressively detailed for this type of book
 HARKER: The author really gets into the people's agricultural practices and other crafts
-  if(Game.DoOnceOnly("People of Transylvania"))
-  {
     player.Say("In the population of Transylvania there are four distinct nationalities");
     player.Say("Saxons in the South, and mixed with them the Wallachs, who are the descendants of the Dacians");
     player.Say("Magyars in the West, and Szekelys in the East and North.");
     player.Say("I am going among the latter, who claim to be descended from Attila and the Huns");
     player.Say("This may be so, for when the Magyars conquered the country in the eleventh century");
     player.Say("They found the Huns settled in it.");
+  if(Game.DoOnceOnly("People of Transylvania"))
+  {
     GiveScore(3);
   }
   giveScoreOnce("Boner's 'Transylvania: Its Products and Its People'",1);
@@ -7519,11 +7799,11 @@ return
 HARKER: Crosse's description of his travels around the Carpathian Mountains
 HARKER: The descriptions of the landscapes and atmosphere are brilliant
 HARKER: Crosse also describes his experiences with local people of the Carpathian's different regions
-  if(Game.DoOnceOnly("District"))
-  {
     player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
     player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
     player.Say("One of the wildest and least known portions of Europe");
+  if(Game.DoOnceOnly("District"))
+  {
     GiveScore(3);
   }
   giveScoreOnce("Crosse's 'Round About the Carpathians'",1);
@@ -7533,11 +7813,11 @@ HARKER: This is an historical book about Wallachia and Moldavia
 HARKER: It describes the visual architecture of the region, but Coxe mainly tells the cultural and political history of the people
 HARKER: The relationships between the two regions is also discussed in details
 HARKER: The book covers most the the 18th and 19th century
-  if(Game.DoOnceOnly("District"))
-  {
     player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
     player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
     player.Say("One of the wildest and least known portions of Europe");
+  if(Game.DoOnceOnly("District"))
+  {
     GiveScore(3);
   }
   giveScoreOnce("Coxe's 'An Account of the Principalities of Wallachia and Moldavia'",1);
@@ -7549,11 +7829,11 @@ HARKER: The author spends a few chapters on the different romanian cultures
 return
 @5
 HARKER: Although this book focuses on Hungarian history and people, the Magyar seem to be especially relevant to the region where I am headed
-  if(Game.DoOnceOnly("District"))
-  {
     player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
     player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
     player.Say("One of the wildest and least known portions of Europe");
+  if(Game.DoOnceOnly("District"))
+  {
     GiveScore(3);
   }
   giveScoreOnce("Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'",1);
@@ -7711,10 +7991,10 @@ stop
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>1</HotspotX>
-        <HotspotY>1</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>1</ID>
-        <Image>2056</Image>
+        <Image>2061</Image>
         <Name xml:space="preserve">Look at</Name>
         <StandardMode>True</StandardMode>
         <View>0</View>
@@ -7724,10 +8004,10 @@ stop
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>1</HotspotX>
-        <HotspotY>1</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>2</ID>
-        <Image>2057</Image>
+        <Image>2061</Image>
         <Name>Interact</Name>
         <StandardMode>True</StandardMode>
         <View>0</View>
@@ -7737,10 +8017,10 @@ stop
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>1</HotspotX>
-        <HotspotY>1</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>3</ID>
-        <Image>2058</Image>
+        <Image>2061</Image>
         <Name xml:space="preserve">Talk to</Name>
         <StandardMode>True</StandardMode>
         <View>0</View>
@@ -7750,10 +8030,10 @@ stop
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>1</HotspotX>
-        <HotspotY>1</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>4</ID>
-        <Image>2059</Image>
+        <Image>2061</Image>
         <Name xml:space="preserve">Use inv</Name>
         <StandardMode>False</StandardMode>
         <View>0</View>
@@ -7763,10 +8043,10 @@ stop
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>8</HotspotX>
-        <HotspotY>8</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>5</ID>
-        <Image>2060</Image>
+        <Image>2061</Image>
         <Name xml:space="preserve">Pick up</Name>
         <StandardMode>False</StandardMode>
         <View>0</View>
@@ -7818,7 +8098,7 @@ stop
         <HotspotX>0</HotspotX>
         <HotspotY>0</HotspotY>
         <ID>9</ID>
-        <Image>2054</Image>
+        <Image>2061</Image>
         <Name>Usermode2</Name>
         <StandardMode>False</StandardMode>
         <View>0</View>
@@ -10363,6 +10643,21 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="229" Width="10" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Apartment_Harker/procedureBook.png</FileName>
+                      <OffsetX>92</OffsetX>
+                      <OffsetY>132</OffsetY>
+                      <ImportHeight>39</ImportHeight>
+                      <ImportWidth>40</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Hawkins Office">
@@ -11920,6 +12215,21 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>190</ImportHeight>
                   <ImportWidth>300</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="228" Width="46" Height="45" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/LawSociety/LawSocietyLogo.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>240</ImportHeight>
+                  <ImportWidth>320</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
