@@ -943,7 +943,7 @@
               <BackgroundImage>0</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>30</Height>
+              <Height>60</Height>
               <ID>0</ID>
               <Left>0</Left>
               <Name>gStatusline</Name>
@@ -997,7 +997,7 @@
                 <Font>1</Font>
                 <Height>50</Height>
                 <ID>2</ID>
-                <Left>110</Left>
+                <Left>100</Left>
                 <Locked>False</Locked>
                 <Name>lblCurrentThought</Name>
                 <Text xml:space="preserve">33:33 PM</Text>
@@ -1005,7 +1005,7 @@
                 <TextColor>63488</TextColor>
                 <Top>1</Top>
                 <Visible>True</Visible>
-                <Width>100</Width>
+                <Width>120</Width>
                 <ZOrder>2</ZOrder>
               </GUILabel>
             </Controls>
@@ -2847,6 +2847,30 @@
                 <Width>186</Width>
                 <ZOrder>4</ZOrder>
               </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>5</ID>
+                <Image>42</Image>
+                <Left>213</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnCredits</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnCredits_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Credits</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>165</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -4251,7 +4275,7 @@
                   </CustomProperty>
                   <CustomProperty>
                     <Name>invContext</Name>
-                    <Value>Constains</Value>
+                    <Value>Contains</Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -4695,6 +4719,10 @@
                 <Name>invContext</Name>
                 <Value>Classify</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>invContext_classifiedName</Name>
+                <Value xml:space="preserve">Carfax Dossier</Value>
+              </CustomProperty>
             </Properties>
             <Interactions>
               <Event Index="0" />
@@ -4966,7 +4994,7 @@
             <ID>35</ID>
             <Image>0</Image>
             <Name>iDiary</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>alternateNames</Name>
@@ -5786,7 +5814,7 @@
             <Properties>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value>woman,attendant,secretary</Value>
+                <Value xml:space="preserve">woman, attendant, secretary, reception</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
@@ -6463,6 +6491,8 @@ EXETERTRAINOFFICER: All you have to do is walk in this direction to reach the tr
 EXETERTRAINOFFICER: But, careful, sir!
 EXETERTRAINOFFICER: You will only be let aboard the train 20 minutes before your departure, sir!
 EXETERTRAINOFFICER: Not before, sir!
+EXETERTRAINOFFICER: And do not stay too close to the rails when train arrives or leaves
+EXETERTRAINOFFICER: In fact, do not go there unless you are embarking a train
 EXETERTRAINOFFICER: Anything else, sir?
 return
 @3
@@ -6510,6 +6540,7 @@ MINA: I am so pleased we can meet this morning
       dMina.SetOptionState(5,eOptionOff);
     }
   }
+  CallRoomScript(4);
 return
 @1
 MINA: We are incredibly busy at the school
@@ -6610,7 +6641,8 @@ HARKER: No worries
 HARKER: I will only be gone a day
   if(Game.DoOnceOnly("darkerWithMina"))
   {
-    gDark.Transparency = gDark.Transparency - 10;
+    //gDark.Transparency = gDark.Transparency - 10;
+    modifyCloudiness(10);
     Wait(15);
     player.Say("I keeps getting cloudier");
     cMina.Say("Yes, I even saw lightning earlier");
@@ -6631,8 +6663,6 @@ MINA: I will finish my tea and head over to the school
 HARKER: Have a great afternoon, my love
 MINA: Same to you
 MINA: I love you, Jonathan
-  dMina.SetOptionState(6,eOptionOffForever);
-  dMina.SetOptionState(7,eOptionOn);
 stop
 ]]></Script>
             <DialogOptions>
@@ -6695,6 +6725,7 @@ CABBY: Not rainy
 CABBY: Not freezy
 CABBY: Good day indeed
   setThreeLondonCabRides(false);
+  CallRoomScript(4);
   dCabby.SetOptionState(1,eOptionOn);
   dCabby.SetOptionState(2,eOptionOff);
   dCabby.SetOptionState(3,eOptionOff);
@@ -6759,6 +6790,22 @@ CABBY: Oh I can't do it, mate
 CABBY: The road are too bumpy, the horse will hurt themselves
 return
 @8
+CABBY: I do
+HARKER: Brilliant, what is it?
+CABBY: Not so fast, mate
+CABBY: What's in it for me?
+HARKER: What do you want?
+  notableSay(cCabby, "Butty mission", "I'm hungry, I want a butty", 0);
+HARKER: You want a sandwich in exchange for the seller's name?
+CABBY: Yup, a butty sandwich
+HARKER: Understood
+  CallRoomScript(2);
+  CallRoomScript(4);
+return
+@9
+  CallRoomScript(5);
+return
+@10
 CABBY: Alright, mate
 stop
 ]]></Script>
@@ -6807,6 +6854,18 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Do you remember Carfax's seller's name?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">*give sandwich*</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Sorry to have disturbed you</Text>
@@ -6943,7 +7002,8 @@ RECEPTIONIST: The corridor to your right lead East, the one to your left is West
 RECEPTIONIST: If you go behind you, this is South. The opposite, behind me, would be North.
 RECEPTIONIST: With that in mind, this is the way to the photo desk...
   notableSay(cReceptionist,"To the photo desk","From the reception, East, North, West, North, North.",1);
-RECEPTIONIST: If you go South enough times, you'll get to the exit walkway leading you back here.");
+  loseThought();
+RECEPTIONIST: If you go South enough times, you'll get to the exit walkway leading you back here
 return
 @10
 RECEPTIONIST: Of course, sir
@@ -6973,7 +7033,7 @@ RECEPTIONIST: There you are, the 'Carfax Estate Sales details'
   addSubitem(iSalesDossier,"Property deed","The official title of ownership of the land","It was acquired 167 years ago");
   addSubitem(iSalesDossier,"Tenants and Leases","An old list of people who rented to property","I was rented than 200 years ago");
   addSubitem(iSalesDossier,"Labour book","A list of the prior owner's employees, who were hired to maintain the house","");
-  addSubitem(iSalesDossier,"Signatures","The signature page, to sign by the assigned sollicitor representative and by the client.","I should sign this page as the sollicitor representative");//HEREE
+  addSubitem(iSalesDossier,"Signatures","The signature page, to sign by the assigned sollicitor representative and by the client.","I should sign this page as the sollicitor representative");
   addSubitem(iSalesDossier,"Sales and advertisement","A collection of flyer advertising the sale of the house by the prior owners","");
   addSubitem(iSalesDossier,"Conditions","A form for me to fill about the conditions of the sale","Those concern the actual sale (biddings, payment of a deposit and signing of a contract), the quantum of interest sold, the title of property, the completion of the purchase, misdescription of particulars, forfeiture of the deposit and resale of the property");
   addSubitem(iSalesDossier,"Title page","The introductory page of the dossier","");
@@ -7164,9 +7224,16 @@ PHOTOPRO: No, these are negatives
 HARKER: Right
 PHOTOPRO: ...
 HARKER: But you can develop these negative into photos
-PHOTOPRO: I can print them
-  dPhotoPro.SetOptionState(10,eOptionOn);
+PHOTOPRO: It is possible for me to print them
+  dPhotoPro.SetOptionState(1,eOptionOff);
+  dPhotoPro.SetOptionState(2,eOptionOff);
+  dPhotoPro.SetOptionState(3,eOptionOff);
+  dPhotoPro.SetOptionState(4,eOptionOff);
+  dPhotoPro.SetOptionState(5,eOptionOff);
   dPhotoPro.SetOptionState(6,eOptionOff);
+  dPhotoPro.SetOptionState(7,eOptionOff);
+  dPhotoPro.SetOptionState(8,eOptionOff);
+  dPhotoPro.SetOptionState(10,eOptionOn);
 return
 @7
 PHOTOPRO: Yes
@@ -7294,6 +7361,7 @@ return
     cPhotoPro.Say("That is where I normally get them");
     player.Say("Terrific. Where is the cantine");
     notableSay(cPhotoPro,"Cantine location","From here, go East twice and South three times",1);
+    loseThought();
     player.Say("Understood");
   }
 return
@@ -7324,7 +7392,7 @@ PHOTOPRO: How many?
     cPhotoPro.Say("There you go");
     player.Say("Oh. Thank you");
     resetNbNegativesToMax();
-  } if(getNbMissingNegatives() == 1)
+  } else if(getNbMissingNegatives() == 1)
   {
     player.Say("I think just one negative will do");
     cPhotoPro.Say("There you go");
@@ -8470,6 +8538,11 @@ stop
         <GlobalVariable>
           <DefaultValue>false</DefaultValue>
           <Name>debugFromHere</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>false</DefaultValue>
+          <Name>seenDraculaLetter</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
@@ -11724,6 +11797,36 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="230" Width="16" Height="40" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Carfax/curtain.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="231" Width="17" Height="40" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Carfax/Carfax_RightSide_FenetreFermee_.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="BritishMuseum">
@@ -14738,7 +14841,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aUpAndDown</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT05 - GP Ensemble - 4 4 - C  minor - 80BPM.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -14751,7 +14854,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aHighStress</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT08 - GP Ensemble - 4 4 - D minor - 90BPM.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -14764,7 +14867,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aIntrigue</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT11 - GP Ensemble - 4 4 - G minor - 105BPM.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -14777,7 +14880,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aDeambulation</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT12 - GP Ensemble - 4 4 - D  minor - 80BPM.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -14790,7 +14893,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>ALostInThought</ScriptName>
                 <SourceFileName>Assets/Audio/Music/Lost_in_thought.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>

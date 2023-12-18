@@ -26,7 +26,8 @@ enum storyBeat
   packYourThings, 
   goToLondon, 
   HarkerinLondon, 
-  PurfleetDone
+  PurfleetDone, 
+  LondonComplete
 };
 
 enum zone
@@ -136,7 +137,7 @@ import bool playerHasTravelDestination(zone);
 import function removeTravelDestination(zone);
 import function changeArrival_X_Y(int, int, int);
 import zone stringAsZone(String);
-import function travel_movePlayer(zone);
+import function travel_movePlayer(zone, bool);
 import function travel(zone);
 import String isThisPlaceOpened(commerce);
 import bool isThisPlaceOpened_bool(commerce);
@@ -148,6 +149,7 @@ import zone getRealDestination();
 import function setTravellingBool(bool);
 import bool getTravellingBool();
 import int travelDestinationTimeInMinutes(zone, zone);
+import function modifyCloudiness(int);
 
 import function addFood(String, String, String);
 import bool playerHasSpoiledFood();
@@ -195,9 +197,11 @@ import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);
 import bool isCharacterNearCharacter(Character*, float,  Character*);
 import bool isCharacterNearHotspot(Hotspot*, float,  Character*);
+import float calculateDistanceFromCharacter(int, int,  Character*);
 import bool isThisOpened(Object*);
 import function memorize(String);
 import String getMemorisedThought();
+import function loseThought();
 
 import function debugDisplay(String);
 import function triggerCutscene(cutsceneIndex);
