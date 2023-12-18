@@ -90,8 +90,8 @@ import function playSelect();
 import function playCancel();
 
 import String[] roomSpecificParse(String);
-import function musicInRoom(AudioClip*);
-import function musicFirstSetup(AudioClip*);
+import function musicInRoom(AudioClip*,  int);
+import function musicFirstSetup(AudioClip*,  int);
 import String findVerbInDictionary(String);
 import bool interact(String[]);
 import String[] findElementIndexByName(String);

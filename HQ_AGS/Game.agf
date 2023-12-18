@@ -1329,7 +1329,7 @@
                 <Height>26</Height>
                 <ID>5</ID>
                 <Image>42</Image>
-                <Left>51</Left>
+                <Left>4</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnDefault</Name>
@@ -1339,7 +1339,7 @@
                 <Text>Default</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>150</Top>
+                <Top>149</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>5</ZOrder>
@@ -1493,6 +1493,30 @@
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>12</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>13</ID>
+                <Image>42</Image>
+                <Left>98</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>BtnMultClickSpeed</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>BtnMultClickSpeed_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">2-Click Run</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>149</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>13</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -7016,6 +7040,7 @@ HARKER: Understood
   iPenInk.SetTextProperty("TextDescription","A monogrammed pen with the Law Society logo and a bottle of ink");
   player.AddInventory(iPenInk);
   dLawSocietyReceptionist.SetOptionState(10,eOptionOffForever);
+return
 @11
 RECEPTIONIST: Of course, sir
 RECEPTIONIST: Under whose name?
@@ -7048,6 +7073,7 @@ HARKER: That is a lot of documents...
   {
     player.Say("I better double check with my procedures book to classify them");
   }
+return
 @12
 RECEPTIONIST: I am sorry, sir
 RECEPTIONIST: I do not have my eligibility list yet, please come back later.
@@ -7380,6 +7406,7 @@ return
     player.Say("Right");
     cPhotoPro.Say("Free publicity");
   }
+  dPhotoPro.SetOptionState(12, eOptionOff);
 return
 @13
   CallRoomScript(13);
@@ -11332,7 +11359,7 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="128" Width="10" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="128" Width="10" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Clerk chair.png</FileName>
                       <OffsetX>0</OffsetX>
@@ -11347,7 +11374,7 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="129" Width="15" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="129" Width="21" Height="23" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Clerk desk.png</FileName>
                       <OffsetX>0</OffsetX>
@@ -11512,7 +11539,7 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="181" Width="3" Height="2" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="181" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Notebook.png</FileName>
                       <OffsetX>0</OffsetX>
@@ -11565,6 +11592,21 @@ stop
                       <ImportHeight>240</ImportHeight>
                       <ImportWidth>320</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="233" Width="4" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/inkAndPen_office.png</FileName>
+                      <OffsetX>99</OffsetX>
+                      <OffsetY>153</OffsetY>
+                      <ImportHeight>31</ImportHeight>
+                      <ImportWidth>15</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
@@ -11844,6 +11886,26 @@ stop
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>NoTransparency</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="LawSociety">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="232" Width="23" Height="9" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/LawSociety/ExitChanceryLane.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>33</ImportHeight>
+                      <ImportWidth>65</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
@@ -14837,32 +14899,6 @@ See KeyboardMovement.txt for details.
                 <DefaultVolume>-1</DefaultVolume>
                 <FileType>MP3</FileType>
                 <ID>0</ID>
-                <Index>1</Index>
-                <ScriptName>aUpAndDown</ScriptName>
-                <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT05 - GP Ensemble - 4 4 - C  minor - 80BPM.mp3</SourceFileName>
-                <Type>2</Type>
-                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
-              </AudioClip>
-              <AudioClip>
-                <BundlingType>InSeparateVOX</BundlingType>
-                <DefaultPriority>Inherit</DefaultPriority>
-                <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>-1</DefaultVolume>
-                <FileType>MP3</FileType>
-                <ID>1</ID>
-                <Index>2</Index>
-                <ScriptName>aHighStress</ScriptName>
-                <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT08 - GP Ensemble - 4 4 - D minor - 90BPM.mp3</SourceFileName>
-                <Type>2</Type>
-                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
-              </AudioClip>
-              <AudioClip>
-                <BundlingType>InSeparateVOX</BundlingType>
-                <DefaultPriority>Inherit</DefaultPriority>
-                <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>-1</DefaultVolume>
-                <FileType>MP3</FileType>
-                <ID>2</ID>
                 <Index>3</Index>
                 <ScriptName>aIntrigue</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT11 - GP Ensemble - 4 4 - G minor - 105BPM.mp3</SourceFileName>
@@ -14875,7 +14911,7 @@ See KeyboardMovement.txt for details.
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <DefaultVolume>-1</DefaultVolume>
                 <FileType>MP3</FileType>
-                <ID>3</ID>
+                <ID>1</ID>
                 <Index>4</Index>
                 <ScriptName>aDeambulation</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT12 - GP Ensemble - 4 4 - D  minor - 80BPM.mp3</SourceFileName>
@@ -14888,7 +14924,7 @@ See KeyboardMovement.txt for details.
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <DefaultVolume>-1</DefaultVolume>
                 <FileType>MP3</FileType>
-                <ID>4</ID>
+                <ID>2</ID>
                 <Index>5</Index>
                 <ScriptName>ALostInThought</ScriptName>
                 <SourceFileName>Assets/Audio/Music/Lost_in_thought.mp3</SourceFileName>
@@ -14913,7 +14949,7 @@ See KeyboardMovement.txt for details.
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <DefaultVolume>-1</DefaultVolume>
                 <FileType>MP3</FileType>
-                <ID>5</ID>
+                <ID>3</ID>
                 <Index>6</Index>
                 <ScriptName>aCancel</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Cancel 1.mp3</SourceFileName>
@@ -14926,7 +14962,7 @@ See KeyboardMovement.txt for details.
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <DefaultVolume>-1</DefaultVolume>
                 <FileType>MP3</FileType>
-                <ID>6</ID>
+                <ID>4</ID>
                 <Index>7</Index>
                 <ScriptName>aConfirm</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Confirm 1.mp3</SourceFileName>
@@ -14939,7 +14975,7 @@ See KeyboardMovement.txt for details.
                 <DefaultRepeat>Inherit</DefaultRepeat>
                 <DefaultVolume>-1</DefaultVolume>
                 <FileType>MP3</FileType>
-                <ID>7</ID>
+                <ID>5</ID>
                 <Index>8</Index>
                 <ScriptName>aSelect</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Select 1.mp3</SourceFileName>
