@@ -2730,9 +2730,9 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>159</Height>
+                <Height>150</Height>
                 <ID>3</ID>
-                <Left>100</Left>
+                <Left>99</Left>
                 <Locked>False</Locked>
                 <Name>lblSubitemDescription</Name>
                 <Text xml:space="preserve">Item description</Text>
@@ -2742,6 +2742,71 @@
                 <Visible>True</Visible>
                 <Width>176</Width>
                 <ZOrder>3</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>4</ID>
+                <Image>217</Image>
+                <Left>99</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>217</MouseoverImage>
+                <Name>btnSubitemDescription_prev</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnSubitemDescription_prev_OnClick</OnClick>
+                <PushedImage>217</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>186</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>5</ID>
+                <Image>218</Image>
+                <Left>268</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>218</MouseoverImage>
+                <Name>btnSubitemDescription_next</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnSubitemDescription_next_OnClick</OnClick>
+                <PushedImage>218</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>186</Top>
+                <Visible>False</Visible>
+                <Width>7</Width>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>6</ID>
+                <Left>109</Left>
+                <Locked>False</Locked>
+                <Name>lblSubitem_pageNb</Name>
+                <Text xml:space="preserve">Page #/@</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>182</Top>
+                <Visible>True</Visible>
+                <Width>156</Width>
+                <ZOrder>6</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -4758,7 +4823,7 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">Letters &amp; Telegrams</Description>
+            <Description>Packages</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>21</ID>
@@ -6064,7 +6129,7 @@ HAWKINS: Jonathan.
 return
 @1
 HAWKINS: I am not great. My joints have been hurting more than usual.
-HAWKINS: My physician says I should not travel...
+HAWKINS: My physician says I should not travel. . .
 HAWKINS: But I have this estate sale coming up.
 HARKER: Right
 option-off-forever 1
@@ -6088,7 +6153,7 @@ return
       cHawkins.Say("Everything is in here, at least. Good");
     } else if (!isThisSigned(iLegalPapers))
     {
-      cHawkins.Say("Neatly arranged...");
+      cHawkins.Say("Neatly arranged. . .");
       cHawkins.Say("But not signed");
       cHawkins.Say("Fine, I'll sign them later");
       giveScoreOnce("HandedInALegalDossier", -1);
@@ -6183,23 +6248,23 @@ HARKER: The property's age is on the seller's file.
   }
 return
 @2
-HARKER: Central London sellers are...
+HARKER: Central London sellers are. . .
   notableSay(player, "Central London", getClientListPerCitySector("London", "City center"),  0);
 return
 @3
-HARKER: Northern London sellers are...
+HARKER: Northern London sellers are. . .
   notableSay(player, "Northern London", getClientListPerCitySector("London", "North"),  0);
 return
 @4
-HARKER: Western London sellers are...
+HARKER: Western London sellers are. . .
   notableSay(player, "Western London", getClientListPerCitySector("London", "West"),  0);
 return
 @5
-HARKER: Southern London sellers are...
+HARKER: Southern London sellers are. . .
   notableSay(player, "Southern London", getClientListPerCitySector("London", "South"),  0);
 return
 @6
-HARKER: Eastern London sellers are...
+HARKER: Eastern London sellers are. . .
   notableSay(player, "Eastern London", getClientListPerCitySector("London", "East"),  0);
 return
 @7
@@ -6275,23 +6340,23 @@ HARKER: The property's age is on the seller's file.
   }
 return
 @2
-HARKER: Central Exeter sellers are...
+HARKER: Central Exeter sellers are. . .
   notableSay(player, "Central Exeter", getClientListPerCitySector("Exeter", "City center"),  0);
 return
 @3
-HARKER: Northern Exeter sellers are...
+HARKER: Northern Exeter sellers are. . .
   notableSay(player, "Northern Exeter", getClientListPerCitySector("Exeter", "North"),  0);
 return
 @4
-HARKER: Western Exeter sellers are...
+HARKER: Western Exeter sellers are. . .
   notableSay(player, "Western Exeter", getClientListPerCitySector("Exeter", "West"),  0);
 return
 @5
-HARKER: Southern Exeter sellers are...
+HARKER: Southern Exeter sellers are. . .
   notableSay(player, "Southern Exeter", getClientListPerCitySector("Exeter", "South"),  0);
 return
 @6
-HARKER: Eastern Exeter sellers are...
+HARKER: Eastern Exeter sellers are. . .
   notableSay(player, "Eastern Exeter", getClientListPerCitySector("Exeter", "East"),  0);
 return
 @7
@@ -6643,7 +6708,7 @@ MINA: I understand, of course
 MINA: That is a remarkable demonstration of trust
 MINA: Oh! I was waiting for a special occasion to give you this
 MINA: But such an assignment need celebration!
-MINA: I had this engraved for you...
+MINA: I had this engraved for you. . .
   player.AddInventory(iKnife);
   giveScoreOnce(iKnife.Name, 1);
 HARKER: A pocket knife! It is beautiful.
@@ -6801,7 +6866,7 @@ stop
 @6
 CABBY: Oh, do you?
 CABBY: How about them places then
-HARKER: Maybe I can tell you where I...
+HARKER: Maybe I can tell you where I. . .
   setThreeLondonCabRides(true);
   cabTellPropositions();
   if(getStoryBeat() >= PurfleetDone)
@@ -7021,10 +7086,10 @@ RECEPTIONIST: Of course, sir
 return
 @9
 RECEPTIONIST: Of course, sir
-RECEPTIONIST: First, you have to know this...
+RECEPTIONIST: First, you have to know this. . .
 RECEPTIONIST: The corridor to your right lead East, the one to your left is West
 RECEPTIONIST: If you go behind you, this is South. The opposite, behind me, would be North.
-RECEPTIONIST: With that in mind, this is the way to the photo desk...
+RECEPTIONIST: With that in mind, this is the way to the photo desk. . .
   notableSay(cReceptionist,"To the photo desk","From the reception, East, North, West, North, North.",1);
   loseThought();
 RECEPTIONIST: If you go South enough times, you'll get to the exit walkway leading you back here
@@ -7048,7 +7113,7 @@ RECEPTIONIST: Under whose name?
 RECEPTIONIST: Carfax? The old house by the Asylum?
 HARKER: Yes, that is the one
 RECEPTIONIST: Of course, sir
-RECEPTIONIST: Let me see, here...
+RECEPTIONIST: Let me see, here. . .
   cReceptionist.Walk(78,cReceptionist.y,eBlock,eAnywhere);
   Wait(60);
 RECEPTIONIST: Here we are!
@@ -7068,7 +7133,7 @@ RECEPTIONIST: Of course, sir
   giveScoreOnce("Carfax sales papers",1);
   setTelegramInclusionByIndex(getCarfaxSeller(), 2, true);
   player.FaceDirection(eDirectionDown);
-HARKER: That is a lot of documents...
+HARKER: That is a lot of documents. . .
   if(player.HasInventory(iProcedures))
   {
     player.Say("I better double check with my procedures book to classify them");
@@ -7185,7 +7250,7 @@ stop
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 HARKER: Hi
-PHOTOPRO: ...
+PHOTOPRO: . . .
   if(player.HasInventory(iPhotos))
   {
     dPhotoPro.SetOptionState(6,eOptionOn);
@@ -7200,13 +7265,13 @@ PHOTOPRO: ...
 return
 @1
 PHOTOPRO: Ok
-HARKER: ...
-PHOTOPRO: ...
+HARKER: . . .
+PHOTOPRO: . . .
   dPhotoPro.SetOptionState(8,eOptionOn);
 return
 @2
 PHOTOPRO: That is not how it works
-HARKER: Right, no...
+HARKER: Right, no. . .
 HARKER: How do I get you to do it
 PHOTOPRO: I don't turn negatives into photo
   dPhotoPro.SetOptionState(3,eOptionOn);
@@ -7217,8 +7282,8 @@ HARKER: Is this the photo desk?
 PHOTOPRO: Yes
 HARKER: Do you develop photos?
 PHOTOPRO: No
-HARKER: ...
-PHOTOPRO: ...
+HARKER: . . .
+PHOTOPRO: . . .
 HARKER: What do you do?
 PHOTOPRO: We print photographs from negatives
 HARKER: Right
@@ -7228,8 +7293,8 @@ return
 PHOTOPRO: If you don't know how, you can take a course
 HARKER: I need to take a course for you to develop my photos?
 PHOTOPRO: No, I print photos
-HARKER: ...
-PHOTOPRO: ...
+HARKER: . . .
+PHOTOPRO: . . .
 HARKER: So you can do it?
 PHOTOPRO: I have done the course
   dPhotoPro.SetOptionState(5,eOptionOn);
@@ -7244,11 +7309,11 @@ return
 @6
   player.LoseInventory(iFilm);
   cPhotoPro.AddInventory(iFilm);
-PHOTOPRO: ...
-HARKER: My pictures are on there...
+PHOTOPRO: . . .
+HARKER: My pictures are on there. . .
 PHOTOPRO: No, these are negatives
 HARKER: Right
-PHOTOPRO: ...
+PHOTOPRO: . . .
 HARKER: But you can develop these negative into photos
 PHOTOPRO: It is possible for me to print them
   dPhotoPro.SetOptionState(1,eOptionOff);
@@ -7279,19 +7344,19 @@ PHOTOPRO: No
 HARKER: You do not?
 PHOTOPRO: We have equipment to print photos
 HARKER: Ok good
-PHOTOPRO: ...
-HARKER: ...
+PHOTOPRO: . . .
+HARKER: . . .
 PHOTOPRO: Do you want to know how to use it?
 HARKER: Oh. Do I need to know how to use it?
 PHOTOPRO: I don't know you
 HARKER: Right.
-HARKER: I meant: Do I need to know how to use it for you to dev... PRINT my negatives?
+HARKER: I meant: Do I need to know how to use it for you to dev. . . PRINT my negatives?
 PHOTOPRO: No
 HARKER: Understood
 return
 @9
 PHOTOPRO: The weather is pretty cloudy, today
-HARKER: What? I mean it is, but what...
+HARKER: What? I mean it is, but what. . .
 PHOTOPRO: My guess is somewhere between 2 to 3 hours
 HARKER: Understood
 return
@@ -7299,15 +7364,15 @@ return
   if(!cPhotoPro.HasInventory(iEggs))
   {
     cPhotoPro.Say("We are out of eggs");
-    player.Say("...");
+    player.Say(". . .");
     player.Say("I am sorry to hear that");
     cPhotoPro.Say("I cannot print photos without eggs");
-    player.Say("...");
-    cPhotoPro.Say("...");
+    player.Say(". . .");
+    cPhotoPro.Say(". . .");
     player.Say("Because of all that energy eggs provide you?");
     cPhotoPro.Say("Because eggs are an essential part of the albumen process");
-    player.Say("...");
-    cPhotoPro.Say("...");
+    player.Say(". . .");
+    cPhotoPro.Say(". . .");
     player.Say("So bottom line: You cannot print the picture without eggs?");
     cPhotoPro.Say("Correct");
     player.Say("What if I could get you eggs");
@@ -7348,15 +7413,15 @@ return
     player.LoseInventory(iEggs);
     cPhotoPro.AddInventory(iEggs);
     cPhotoPro.Say("Thank you");
-    player.Say("...");
-    cPhotoPro.Say("...");
-    player.Say("So you can devel... print my pictures now?");
+    player.Say(". . .");
+    cPhotoPro.Say(". . .");
+    player.Say("So you can devel. . . print my pictures now?");
     cPhotoPro.Say("I can");
     player.Say("Terrific");
     giveScoreOnce("Albumen print enabled",1);
     cPhotoPro.Say("Just sign here to confirm you have read our quality insurance and confidentiality policy");
     player.Say("Your what policy?");
-    cPhotoPro.Say("The Society of Attorneys, Solicitors, Proctors and others not being Barristers, practising in...");
+    cPhotoPro.Say("The Society of Attorneys, Solicitors, Proctors and others not being Barristers, practising in. . .");
     player.Say("Nevermind, I'll sign it");
     cPhotoPro.Say("I don't have ink");
     if(player.HasInventory(iPenInk))
@@ -7535,7 +7600,7 @@ stop
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
   player.Transparency = 100;
-HARKER: Hello, I would like to order a tea and...
+HARKER: Hello, I would like to order a tea and. . .
   if(playerHasSpoiledFood())
   {
     dMenu.SetOptionState(9,eOptionOn);
@@ -7596,7 +7661,7 @@ stop
 @9
   cleanAllSpoiledFood();
 HARKER: Voila, thank you
-HARKER: Also, I would like to order a tea and...
+HARKER: Also, I would like to order a tea and. . .
 return
 @10
   player.FaceDirection(eDirectionDown);
@@ -7678,8 +7743,8 @@ TELEGRAMOPERATOR: Hello to you too. STOP
 TELEGRAMOPERATOR: Oh! Look at me go! I am talking like a telegram!
 HARKER: Ha, that is amusing.
 TELEGRAMOPERATOR: What can I do for you?
-HARKER: Well, I...
-TELEGRAMOPERATOR: ...STOP!
+HARKER: Well, I. . .
+TELEGRAMOPERATOR: . . .STOP!
 TELEGRAMOPERATOR: Ha ha ha!
 HARKER: Ah yes, funny!
 TELEGRAMOPERATOR: I'm sorry, I'm just being silly.
@@ -7687,11 +7752,14 @@ TELEGRAMOPERATOR: I'm sorry, I'm just being silly.
   dTelegram.SetOptionState(2,eOptionOn);
 return
 @2
-TELEGRAMOPERATOR: A telegram? What is that?
-HARKER: ...
-TELEGRAMOPERATOR: Ha ha ha!
-TELEGRAMOPERATOR: I'm just being silly of course
-HARKER: Of course
+  if(Game.DoOnceOnly("Telegram what's that"))
+  {
+    cTelegramOperator.Say("A telegram? What is that?");
+    player.Say(". . .");
+    cTelegramOperator.Say("Ha ha ha!");
+    cTelegramOperator.Say("I'm just being silly of course");
+    player.Say("Of course");
+  }
 TELEGRAMOPERATOR: Who is the recipient?
   show_simpleTextBox("Telegram recipient");
 stop
@@ -7772,7 +7840,7 @@ LIBRARIAN: *whispering*[Two very intriguing regions indeed!
   setProposedArchiveBook(3);
 return
 @7
-LIBRARIAN: *whispering*[The Crescent... The old Ottoman Empire!
+LIBRARIAN: *whispering*[The Crescent. . . The old Ottoman Empire!
   notableWhisper(cLibrarian,"Crescent Region book","Look for 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'[By Charles Frederick Hoffmeister",0);
   setProposedArchiveBook(4);
 return
@@ -7935,7 +8003,7 @@ HARKER: Although this book focuses on Hungarian history and people, the Magyar s
 HARKER: This is a book written by a couple going through the Hungarian lands, retelling their experience
 return
 @6
-HARKER: Superstitions seem to be rampant in the lands where I am headed...
+HARKER: Superstitions seem to be rampant in the lands where I am headed. . .
 HARKER: This book is composed of a written retelling of Magyar folktales and myths
 HARKER: I think knowing a bit more about their beliefs will help me understand the people
 HARKER: I see references to many figures, most notably the Táltos, the Lidérc, witches, the Ördög, and the Tündérek
@@ -8210,7 +8278,7 @@ stop
         <OutlineStyle>UseOutlineFont</OutlineStyle>
         <PointSize>12</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/Gontserrat-Light.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/josefin-sans-font/JosefinSansBold-OVA7o.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -8224,7 +8292,7 @@ stop
         <OutlineStyle>Automatic</OutlineStyle>
         <PointSize>12</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/Gontserrat-Light.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/josefin-sans-font/JosefinSansBold-OVA7o.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -8238,7 +8306,7 @@ stop
         <OutlineStyle>Automatic</OutlineStyle>
         <PointSize>12</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>Assets/Font/Gontserrat-Light.ttf</SourceFilename>
+        <SourceFilename>Assets/Font/josefin-sans-font/JosefinSansBold-OVA7o.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -8254,6 +8322,20 @@ stop
         <SizeMultiplier>1</SizeMultiplier>
         <SourceFilename>Assets/Font/gothica_2/Gothica-Book.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
+        <VerticalOffset>0</VerticalOffset>
+      </Font>
+      <Font>
+        <AutoOutlineStyle>Squared</AutoOutlineStyle>
+        <AutoOutlineThickness>1</AutoOutlineThickness>
+        <ID>4</ID>
+        <LineSpacing>0</LineSpacing>
+        <Name xml:space="preserve">Font 4</Name>
+        <OutlineFont>0</OutlineFont>
+        <OutlineStyle>None</OutlineStyle>
+        <PointSize>12</PointSize>
+        <SizeMultiplier>1</SizeMultiplier>
+        <SourceFilename>Assets/Font/josefin-sans-font/JosefinSansBold-OVA7o.ttf</SourceFilename>
+        <TTFMetricsFixup>None</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
     </Fonts>
@@ -11607,6 +11689,21 @@ stop
                       <ImportHeight>31</ImportHeight>
                       <ImportWidth>15</ImportWidth>
                       <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="234" Width="25" Height="14" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/CameraTable.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
