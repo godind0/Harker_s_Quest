@@ -65,7 +65,28 @@ enum city
   Vienna, 
   Budapest, 
   Klausenburg, 
-  Bistritz
+  Bistritz, 
+  Plymouth, 
+  Salisbury, 
+  Andover, 
+  Yeovil, 
+  Hurstbourne, 
+  Woking, 
+  Templecombe
+};
+
+enum coachState
+{
+  Empty, 
+  HarkerInside, 
+  Full
+};
+
+enum horseState
+{
+  NormalHorse, 
+  HurtHorse, 
+  BandagedHorse
 };
 
 enum parentItemDict
@@ -75,6 +96,8 @@ enum parentItemDict
   subItemSpoiltime, 
   subItemAlternateName
 };
+
+import void sayBackgroundBacklog(this Character*, String addedMessage);
 
 import function setStoryBeat(storyBeat);
 import storyBeat getStoryBeat();
@@ -108,7 +131,7 @@ import function show_trainTicket_GUI(city, city);
 import String getTrainArrivalTime(String);
 import String getTrainDepartureTime();
 import bool canPlayerBoardTrain(String);
-import function isAnyTrainInStation(bool);
+import function isAnyTrainInStation(city, int, Character*, bool, int);
 import String getTrainInStation();
 
 import String getNoteDescription(String);
@@ -150,6 +173,10 @@ import function setTravellingBool(bool);
 import bool getTravellingBool();
 import int travelDestinationTimeInMinutes(zone, zone);
 import function modifyCloudiness(int);
+import function takeACab(zone);
+import function setHorseViews(horseState);
+import function setCoachView(coachState);
+import horseState getHorseState();
 
 import function addFood(String, String, String);
 import bool playerHasSpoiledFood();
@@ -192,6 +219,8 @@ import function createBook(String, String,  String, String);
 import bool getProposedArchiveBook(int);
 import function show_book_gui(String);
 import function setProposedArchiveBook(int);
+import int findPageByExpressionInCurrentBook(String);
+import bool isThisPageReadInCurrentBook(int);
 
 import function readThis(String, String);
 import bool isCharacterNearObject(Object*, float,  Character*);
@@ -204,6 +233,8 @@ import String getMemorisedThought();
 import function loseThought();
 
 import function debugDisplay(String);
+import function debugDisplayFromHere(String);
+import function setDebugFromHere(bool);
 import function triggerCutscene(cutsceneIndex);
 import function sit(elementType, int, Character*, int,  bool);
 import function standUp(Character*,  int);
@@ -220,6 +251,8 @@ import bool playerHasSubitem(String, InventoryItem*);
 import function tranfertAllSubitemFromOneParentToAnother(InventoryItem*, InventoryItem*);
 import function changeAllSubItemNoteInParent(InventoryItem*, String);
 import function removeSubitem(InventoryItem*, String,  bool);
+
+import Dictionary* makeAColorDictionary(int hair = 25388, int mustache = 27501, int skin = 58607, int skinShadow = 58444, int coat = 512, int coatLight = 736, int coatDark = 256, int neckTie = 0, int underShirt = 65535, int pants = 4290, int pantsDark = 32, int shoe = 20800, int shoeDark = 14528);
 
 import function open_gui(GUI*);
 import function close_gui(GUI*);
