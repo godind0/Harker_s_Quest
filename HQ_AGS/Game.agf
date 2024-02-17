@@ -4123,12 +4123,12 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>90</Height>
+                <Height>115</Height>
                 <ID>7</ID>
                 <Left>162</Left>
                 <Locked>False</Locked>
                 <Name>lblExam_question</Name>
-                <Text>Question</Text>
+                <Text xml:space="preserve">In Magyar folklore, which of these are devil-like creatures? A: Lidérc, B: Ördög, C: Táltos, D: Tündérek</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>12686</TextColor>
                 <Top>7</Top>
@@ -4142,16 +4142,16 @@
                 <Font>0</Font>
                 <Height>18</Height>
                 <ID>8</ID>
-                <Left>162</Left>
+                <Left>169</Left>
                 <Locked>False</Locked>
                 <Name>tbExam_Answer</Name>
                 <OnActivate />
                 <ShowBorder>True</ShowBorder>
                 <Text />
                 <TextColor>0</TextColor>
-                <Top>118</Top>
+                <Top>135</Top>
                 <Visible>True</Visible>
-                <Width>117</Width>
+                <Width>100</Width>
                 <ZOrder>8</ZOrder>
               </GUITextBox>
               <GUILabel>
@@ -4166,7 +4166,7 @@
                 <Text xml:space="preserve">Your answer:</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>104</Top>
+                <Top>121</Top>
                 <Visible>True</Visible>
                 <Width>116</Width>
                 <ZOrder>9</ZOrder>
@@ -4190,7 +4190,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>275</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>2</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -4202,7 +4202,7 @@
                 <Left>5</Left>
                 <Locked>False</Locked>
                 <Name>lblMorseAE</Name>
-                <Text xml:space="preserve">A •— [B —••• [C —•—• [D —••• [E •</Text>
+                <Text xml:space="preserve">A •— [B —••• [C —•—• [D —•• [E •</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
                 <Top>5</Top>
@@ -4282,15 +4282,15 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>75</Height>
+                <Height>62</Height>
                 <ID>5</ID>
                 <Left>5</Left>
                 <Locked>False</Locked>
                 <Name>lblCodedMessage</Name>
-                <Text xml:space="preserve">The telegram : [—•• • •—•• •• •••— • •—• / —•• •• •—• • —•—• — •—•• —•—— / — ——— / •—• / •——• •— •—• — ——— —• / —•—— • ••• / •• / •—— •• •—•• •—•• / —— •— •—• •—• —•—— / —•—— ——— ••— / •—•• ——— •••— • / •— ——• —• • •••</Text>
+                <Text xml:space="preserve">—•• • •—•• •• •••— • •—• / —•• •• •—• • —•—• — •—•• —•—— / — ——— / •—• / •——• •— •—• — ——— —• / —•—— • ••• / •• / •—— •• •—•• •—•• / —— •— •—• •—• —•—— / —•—— ——— ••— / •—•• ——— •••— • / •— ——• —• • •••</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>80</Top>
+                <Top>93</Top>
                 <Visible>True</Visible>
                 <Width>265</Width>
                 <ZOrder>5</ZOrder>
@@ -4341,7 +4341,7 @@
                 <ClickAction>RunScript</ClickAction>
                 <Clickable>True</Clickable>
                 <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
+                <Enabled>False</Enabled>
                 <Font>0</Font>
                 <Height>26</Height>
                 <ID>8</ID>
@@ -4361,6 +4361,23 @@
                 <Width>92</Width>
                 <ZOrder>8</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>14</Height>
+                <ID>9</ID>
+                <Left>5</Left>
+                <Locked>False</Locked>
+                <Name>lblMorseTelegramTitle</Name>
+                <Text xml:space="preserve">The telegram:</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>80</Top>
+                <Visible>True</Visible>
+                <Width>82</Width>
+                <ZOrder>9</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -4974,7 +4991,7 @@
             </Properties>
             <Interactions>
               <Event Index="0" />
-              <Event Index="1" />
+              <Event Index="1">iExam_Interact</Event>
               <Event Index="2" />
               <Event Index="3" />
               <Event Index="4" />
@@ -5397,7 +5414,7 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">This is a telegram I intercepted on behalf of the receptionist at the Law society. She said she'll exchaned it for an archive access ticket to the British Museum</Value>
+                <Value xml:space="preserve">This is a telegram I intercepted on behalf of the receptionist at the Law society. She said she will exchanged it for an archive access ticket to the British Museum</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -7218,6 +7235,15 @@ stop
   {
     cReceptionist.Say("Good day to you!");
   }
+  if(dLawSocietyReceptionist.GetOptionState(2) == eOptionOn)
+  {
+    dLawSocietyReceptionist.SetOptionState(12,eOptionOff);
+  }
+  if(player.HasInventory(iExam) || player.HasInventory(iDiploma))
+  {
+    dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
+    dLawSocietyReceptionist.SetOptionState(12,eOptionOff);
+  }
 RECEPTIONIST: Welcome to the London Law Society Offices
 RECEPTIONIST: What can I help you with?
 return
@@ -7227,106 +7253,32 @@ RECEPTIONIST: Of course I was not avoiding you
   dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
 return
 @2
-RECEPTIONIST: Of course, sir
-RECEPTIONIST: May I have your last name?
-  CallRoomScript(9);//remember if photo desk destination is known
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
-return
+  dLawSocietyReceptionist_identify.Start();
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
+stop
 @3
 RECEPTIONIST: Of course, sir
-RECEPTIONIST: May I have your employer's name?
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
-  CallRoomScript (2);
+RECEPTIONIST: Innit, sir
 return
 @4
 RECEPTIONIST: Of course, sir
-RECEPTIONIST: May I have your employer's name?
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
-  CallRoomScript (3);
+RECEPTIONIST: Never stops, sir
 return
 @5
 RECEPTIONIST: Of course, sir
-RECEPTIONIST: May I have your employer's name?
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(9,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(10,eOptionOff);
-  CallRoomScript (4);
+RECEPTIONIST: Innit, sir
 return
 @6
 RECEPTIONIST: Of course, sir
-  CallRoomScript (5);
-  CallRoomScript (8);
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
-  CallRoomScript(10);
+RECEPTIONIST: Most people do, sir
 return
 @7
 RECEPTIONIST: Of course, sir
-  CallRoomScript (6);
-  CallRoomScript (8);
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
-  CallRoomScript(10);
+RECEPTIONIST: I am a receptionsit by trade, sir
 return
 @8
 RECEPTIONIST: Of course, sir
-  CallRoomScript (7);
-  CallRoomScript (8);
-  dLawSocietyReceptionist.SetOptionState(1,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(2,eOptionOn);
-  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(5,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(6,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(7,eOptionOff);
-  dLawSocietyReceptionist.SetOptionState(8,eOptionOff);
-  CallRoomScript(10);
+RECEPTIONIST: You can do that anywhere but not at my desk, sir
 return
 @9
 RECEPTIONIST: Of course, sir
@@ -7335,6 +7287,7 @@ RECEPTIONIST: The corridor to your right lead East, the one to your left is West
 RECEPTIONIST: If you go behind you, this is South. The opposite, behind me, would be North.
 RECEPTIONIST: With that in mind, this is the way to the photo desk. . .
   notableSay(cReceptionist,"To the photo desk","From the reception, East, North, West, North, North.",1);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
   loseThought();
 RECEPTIONIST: If you go South enough times, you'll get to the exit walkway leading you back here
 return
@@ -7349,6 +7302,7 @@ HARKER: Understood
   iPenInk.SetTextProperty("TextDescription","A monogrammed pen with the Law Society logo and a bottle of ink");
   player.AddInventory(iPenInk);
   dLawSocietyReceptionist.SetOptionState(10,eOptionOffForever);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
 return
 @11
 RECEPTIONIST: Of course, sir
@@ -7382,6 +7336,9 @@ HARKER: That is a lot of documents. . .
   {
     player.Say("I better double check with my procedures book to classify them");
   }
+  player.FaceDirection(eDirectionUp);
+  dLawSocietyReceptionist.SetOptionState(11,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
 return
 @12
 RECEPTIONIST: I am sorry, sir
@@ -7394,6 +7351,7 @@ RECEPTIONIST: The revisor is exceptionally free at the moment.
 RECEPTIONIST: May I suggest you wait for the results here?
 HARKER: Absolutely.
   CallRoomScript(14);
+  dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
 return
 @14
   if(!player.HasInventory(iInterceptedtelegram))
@@ -7415,11 +7373,13 @@ return
     cReceptionist.Say("Hahaha! Yes! Sorry Agnes. Better luck next time");
     player.Say("Wait, what?");
     cReceptionist.Say("Nevermind Mr. Harker");
-    cReceptionist.Say("Here is the archive access ticket to the Bristish Museum as promised");
+    cReceptionist.Say("Here is the archive access ticket to the British Museum as promised");
     player.AddInventory(iBritishMuseumTicket);
     player.Say("But. . .");
     cReceptionist.Say("On your way, now. That exam is not going to complete itself");
+    dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
   }
+return
 @15
 RECEPTIONIST: Of course, sir
 RECEPTIONIST: Have a good day
@@ -7442,37 +7402,37 @@ stop
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Murray</Text>
+                <Text xml:space="preserve">Cloudy outside</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Harker</Text>
+                <Text>Busy?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Parker</Text>
+                <Text xml:space="preserve">It is beautiful here</Text>
               </DialogOption>
               <DialogOption>
                 <ID>6</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Parton</Text>
+                <Text xml:space="preserve">I could get lost in here</Text>
               </DialogOption>
               <DialogOption>
                 <ID>7</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Mason</Text>
+                <Text xml:space="preserve">I am a lawyer by trade</Text>
               </DialogOption>
               <DialogOption>
                 <ID>8</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Hawkins</Text>
+                <Text xml:space="preserve">I have time to waste</Text>
               </DialogOption>
               <DialogOption>
                 <ID>9</ID>
@@ -7726,7 +7686,7 @@ return
     dMenu.SetOptionState(8, eOptionOn);
     cPhotoPro.Say("That is where I normally get them");
     player.Say("Terrific. Where is the cantine");
-    notableSay(cPhotoPro,"Cantine location","From here, go East twice and South three times",1);
+    notableSay(cPhotoPro,"Cantine location","From here, go South twice and East twice",1);
     loseThought();
     player.Say("Understood");
   }
@@ -8035,7 +7995,9 @@ return
     cTelegramOperator.Say("I'm just being silly of course");
     player.Say("Of course");
   }
-TELEGRAMOPERATOR: Who is the recipient?
+  dTelegram.SetOptionState(2,eOptionOff);
+  dTelegram.SetOptionState(5,eOptionOn);
+TELEGRAMOPERATOR: Who is the recipient?  
   show_simpleTextBox("Telegram recipient");
 stop
 @3
@@ -8064,6 +8026,10 @@ TELEGRAMOPERATOR: I will be back to close up
   CallRoomScript(3);
 stop
 @5
+TELEGRAMOPERATOR: Who is the recipient?  
+  show_simpleTextBox("Telegram recipient");
+stop
+@6
 TELEGRAMOPERATOR: Good day !
 stop
 ]]></Script>
@@ -8094,6 +8060,12 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I need to send another telegram</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Good bye</Text>
@@ -8180,6 +8152,9 @@ LIBRARIAN: *whispering*[I am Gerald, curator of the exhibit, at your service
   cLibrarian.FaceDirection(eDirectionUp);
   object[0].Graphic = 296;
   RestoreWalkableArea(2);
+  player.Walk(200, 135, eNoBlock, eWalkableAreas);
+  cLibrarian.Walk(215, 125, eBlock, eWalkableAreas);
+  cLibrarian.FaceDirection(eDirectionLeft);
   cLibrarian.FollowCharacter(player, 30, 80);
   object[0].SetProperty("Open_SpriteNumber", 296);
   object[0].SetProperty("Close_SpriteNumber", 295);
@@ -8189,6 +8164,7 @@ LIBRARIAN: *whispering*[I am Gerald, curator of the exhibit, at your service
   dLibrarian.SetOptionState(12, eOptionOn);
   dLibrarian.SetOptionState(13, eOptionOff);
   dLibrarian.SetOptionState(14, eOptionOn);
+stop
 @12
 LIBRARIAN: *whispering*[We have a number of book on the subject in the archive room
 LIBRARIAN: *whispering*[Mainly travel narratives, very interesting volumes, indeed
@@ -8573,6 +8549,100 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Stop reading</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>14</ID>
+            <Name>dLawSocietyReceptionist_identify</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your last name?
+return
+@1
+  dLawSocietyReceptionist_identify.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(4,eOptionOn);
+  dLawSocietyReceptionist_identify.SetOptionState(5,eOptionOn);
+  dLawSocietyReceptionist_identify.SetOptionState(6,eOptionOn);
+  CallRoomScript(2);
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your employer's name?
+return
+@2
+  dLawSocietyReceptionist_identify.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(4,eOptionOn);
+  dLawSocietyReceptionist_identify.SetOptionState(5,eOptionOn);
+  dLawSocietyReceptionist_identify.SetOptionState(6,eOptionOn);
+  CallRoomScript(3);
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your employer's name?
+return
+@3
+  dLawSocietyReceptionist_identify.SetOptionState(1,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(2,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist_identify.SetOptionState(4,eOptionOn);
+  dLawSocietyReceptionist_identify.SetOptionState(5,eOptionOn);
+  dLawSocietyReceptionist_identify.SetOptionState(6,eOptionOn);
+  CallRoomScript(4);
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: May I have your employer's name?
+return
+@4
+  CallRoomScript(5);
+  CallRoomScript(8);
+stop
+@5
+  CallRoomScript(6);
+  CallRoomScript(8);
+stop
+@6
+  CallRoomScript(7);
+  CallRoomScript(8);
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Murray</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Harker</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Parker</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Parton</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Mason</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Hawkins</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>

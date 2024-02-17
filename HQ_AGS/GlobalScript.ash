@@ -242,6 +242,8 @@ import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);
 import function notableWhisper(Character*, String, String,  int);
+import function isNoteTaken(String);
+import function takeNote();
 import function show_simpleTextBox(String);
 import function enterMap();
 import function exitMap();
@@ -253,6 +255,9 @@ import function changeAllSubItemNoteInParent(InventoryItem*, String);
 import function removeSubitem(InventoryItem*, String,  bool);
 
 import Dictionary* makeAColorDictionary(int hair = 25388, int mustache = 27501, int skin = 58607, int skinShadow = 58444, int coat = 512, int coatLight = 736, int coatDark = 256, int neckTie = 0, int underShirt = 65535, int pants = 4290, int pantsDark = 32, int shoe = 20800, int shoeDark = 14528);
+
+import function foundMorseClue(int);
+import bool getMorseClues(int);//-1 return true for "all done"
 
 import function open_gui(GUI*);
 import function close_gui(GUI*);
