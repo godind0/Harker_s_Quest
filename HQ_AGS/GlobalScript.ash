@@ -26,7 +26,8 @@ enum storyBeat
   packYourThings, 
   goToLondon, 
   HarkerinLondon, 
-  PurfleetDone, 
+  PurfleetDone,
+  GotOnePhotoBatch, 
   LondonComplete
 };
 
@@ -100,6 +101,7 @@ enum parentItemDict
 import void sayBackgroundBacklog(this Character*, String addedMessage);
 
 import function setStoryBeat(storyBeat);
+import bool hasSeenDraculaLetter();
 import storyBeat getStoryBeat();
 import bool getSkipCutscene();
 import function gameIsOver(String);
@@ -152,6 +154,7 @@ import bool isPlayerHungry();
 import function hasEaten();
 import function hasSlept();
 import function addTimedEventInXMinutes(int, String);
+import function removeTimedEventByWhatHappens(String);
 import bool playerHasTimedEventByWhatHappens(String);
 
 import function adjustTravelDestinations();

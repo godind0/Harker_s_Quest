@@ -2151,12 +2151,12 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>55</BackgroundImage>
+              <BackgroundImage>428</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>74</Height>
               <ID>9</ID>
-              <Left>63</Left>
+              <Left>16</Left>
               <Name>gParser</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
@@ -2164,7 +2164,7 @@
               <Top>160</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
-              <Width>194</Width>
+              <Width>288</Width>
               <ZOrder>1</ZOrder>
             </NormalGUI>
             <Controls>
@@ -2183,7 +2183,7 @@
                 <TextColor>63488</TextColor>
                 <Top>29</Top>
                 <Visible>True</Visible>
-                <Width>186</Width>
+                <Width>280</Width>
                 <ZOrder>0</ZOrder>
               </GUITextBox>
               <GUILabel>
@@ -2200,7 +2200,7 @@
                 <TextColor>63488</TextColor>
                 <Top>4</Top>
                 <Visible>True</Visible>
-                <Width>186</Width>
+                <Width>280</Width>
                 <ZOrder>1</ZOrder>
               </GUILabel>
               <GUILabel>
@@ -2217,7 +2217,7 @@
                 <TextColor>63488</TextColor>
                 <Top>52</Top>
                 <Visible>True</Visible>
-                <Width>186</Width>
+                <Width>280</Width>
                 <ZOrder>2</ZOrder>
               </GUILabel>
             </Controls>
@@ -2341,7 +2341,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>294</Width>
-              <ZOrder>3</ZOrder>
+              <ZOrder>5</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIListBox>
@@ -3240,12 +3240,12 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>50</BackgroundImage>
+              <BackgroundImage>427</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>200</Height>
               <ID>17</ID>
-              <Left>20</Left>
+              <Left>16</Left>
               <Name>gClassify</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
@@ -3253,7 +3253,7 @@
               <Top>20</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
-              <Width>280</Width>
+              <Width>288</Width>
               <ZOrder>3</ZOrder>
             </NormalGUI>
             <Controls>
@@ -3360,7 +3360,7 @@
                 <Height>26</Height>
                 <ID>4</ID>
                 <Image>42</Image>
-                <Left>184</Left>
+                <Left>192</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnClassifyFILEIT</Name>
@@ -3379,17 +3379,17 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>131</Height>
+                <Height>111</Height>
                 <ID>5</ID>
-                <Left>102</Left>
+                <Left>98</Left>
                 <Locked>False</Locked>
                 <Name>lblClassifyDescription</Name>
                 <Text />
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>37</Top>
+                <Top>58</Top>
                 <Visible>True</Visible>
-                <Width>173</Width>
+                <Width>185</Width>
                 <ZOrder>5</ZOrder>
               </GUILabel>
               <GUILabel>
@@ -3408,6 +3408,47 @@
                 <Visible>True</Visible>
                 <Width>272</Width>
                 <ZOrder>6</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>7</ID>
+                <Image>42</Image>
+                <Left>98</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnClassifyProcedures</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnProcedures_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Procedures</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>170</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>7</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>20</Height>
+                <ID>8</ID>
+                <Left>98</Left>
+                <Locked>False</Locked>
+                <Name>lblClassifySelectedItemName</Name>
+                <Text />
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>40</Top>
+                <Visible>True</Visible>
+                <Width>185</Width>
+                <ZOrder>8</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -3766,7 +3807,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>294</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>5</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -3969,7 +4010,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>294</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>2</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -4104,7 +4145,7 @@
                 <Height>26</Height>
                 <ID>6</ID>
                 <Image>42</Image>
-                <Left>105</Left>
+                <Left>173</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnCloseExam</Name>
@@ -4128,7 +4169,7 @@
                 <Left>162</Left>
                 <Locked>False</Locked>
                 <Name>lblExam_question</Name>
-                <Text xml:space="preserve">In Magyar folklore, which of these are devil-like creatures? A: Lidérc, B: Ördög, C: Táltos, D: Tündérek</Text>
+                <Text xml:space="preserve">In this ordered list, what is the '?' : Introduction, Current sale agreements, Proof of '?', Proof of current state, Annexes of previous paperwork</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>12686</TextColor>
                 <Top>7</Top>
@@ -4149,7 +4190,7 @@
                 <ShowBorder>True</ShowBorder>
                 <Text />
                 <TextColor>0</TextColor>
-                <Top>135</Top>
+                <Top>136</Top>
                 <Visible>True</Visible>
                 <Width>100</Width>
                 <ZOrder>8</ZOrder>
@@ -4171,6 +4212,30 @@
                 <Width>116</Width>
                 <ZOrder>9</ZOrder>
               </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>10</ID>
+                <Image>42</Image>
+                <Left>30</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnExamProcedures</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnExamProcedures_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Procedures</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>161</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>10</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -4379,6 +4444,27 @@
                 <ZOrder>9</ZOrder>
               </GUILabel>
             </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>12288</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>False</Clickable>
+              <Height>240</Height>
+              <ID>25</ID>
+              <Left>0</Left>
+              <Name>gGUIbg</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>0</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>320</Width>
+              <ZOrder>4</ZOrder>
+            </NormalGUI>
+            <Controls />
           </GUIMain>
         </GUIs>
       </GUIFolder>
@@ -4596,6 +4682,29 @@
                     <Name>TextDescription</Name>
                     <Value xml:space="preserve">The film from the camera. This can be developed into pictures by the professionals</Value>
                   </CustomProperty>
+                  <CustomProperty>
+                    <Name>invContext</Name>
+                    <Value>Contains</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">Submitted negatives</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>40</ID>
+                <Image>0</Image>
+                <Name>iSubmittedFilm</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
                   <CustomProperty>
                     <Name>invContext</Name>
                     <Value>Contains</Value>
@@ -4999,7 +5108,7 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">Sales papers for property</Description>
+            <Description xml:space="preserve">Carfax Papers</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>19</ID>
@@ -7257,12 +7366,71 @@ return
   dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
 stop
 @3
+RECEPTIONIST: We have Solicitor Procedures books indeed, sir
+RECEPTIONIST: But they are issued directly to solicitors offices when they hire a new clerk
+RECEPTIONIST: I cannot simply give them out
+HARKER: I forgot mine in Exeter
 RECEPTIONIST: Of course, sir
-RECEPTIONIST: Innit, sir
+HARKER: Maybe you can make an exception?
+RECEPTIONIST: Tell you what
+RECEPTIONIST: I have been trying to get to the British Museum to see this painting
+HARKER: A painting?
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: I hear it is a painting of a very. . . attractive man
+HARKER: Attractive. . .
+RECEPTIONIST: Of course, sir
+RECEPTIONIST: All stern-looking
+HARKER: . . .
+RECEPTIONIST: All rich-looking
+HARKER: . . .
+RECEPTIONIST: Very attractive man
+HARKER: I am not sure how to help
+RECEPTIONIST: I want to see it
+HARKER: I cannot possibly just steal it and bring it back here
+RECEPTIONIST: Of course not, sir
+RECEPTIONIST: Draw it, photograph it, do whatever you will
+RECEPTIONIST: If you manage to show that painting to me, I will remove a Procedure book from our inventory
+HARKER: I will see what I can do
+  dLawSocietyReceptionist.SetOptionState(3,eOptionOff);
+  dLawSocietyReceptionist.SetOptionState(4,eOptionOn);
+  addTravelDestination(BritishMuseum);
 return
 @4
-RECEPTIONIST: Of course, sir
-RECEPTIONIST: Never stops, sir
+  if(playerHasSubitem("Impaler Portrait", iPhotos))
+  {
+    player.Say("Here is a picture of Vlad III the Impaler at the British Museum");
+    cReceptionist.Say("Really!");
+    player.Say("I reckon it is the painting you wanted to see?");
+    cReceptionist.Say("Oh yes! Give it here!");
+    removeSubitem(iPhotos,"Impaler Portrait",true);
+    cReceptionist.Walk(78,cReceptionist.y,eBlock,eAnywhere);
+    Wait(40);
+    player.Walk(cReceptionist.x, player.y,eBlock,eWalkableAreas);
+    player.FaceDirection(eDirectionUp);
+    player.Say("About the the Solicitor Procedures book?");
+    cReceptionist.Say("Oh you're still here");
+    cReceptionist.Say("Of course, sir");
+    cReceptionist.Say("Here is a copy of the book");
+    cReceptionist.Say("You understand that this book was not given too you");
+    cReceptionist.Say("It was lost in inventory");
+    cReceptionist.Say("You happened to find it");
+    player.Say("Understood[Thank you");
+    player.AddInventory(iProcedures);
+    dLawSocietyReceptionist.SetOptionState(4,eOptionOff);
+  } else if (playerHasSubitem("Impaler Portrait", iFilm))
+  {
+    player.Say("Here is a picture of Vlad III the Impaler at the British Museum");
+    cReceptionist.Say("Really!");
+    player.Say("Well on this negative film");
+    cReceptionist.Say("What am I supposed to do with that?");
+    cReceptionist.Say("Stare lingeringly at it next to a window with two pairs of reading glasses on?");
+    player.Say("You want it developed. . .");
+    cReceptionist.Say("Of course, sir");
+  } else
+  {
+    cReceptionist.Say("Take a picture of the rich and stern-looking man whose painting is at the British Museum");
+    cReceptionist.Say("Then bring it back to me");
+  }
 return
 @5
 RECEPTIONIST: Of course, sir
@@ -7378,6 +7546,7 @@ return
     player.Say("But. . .");
     cReceptionist.Say("On your way, now. That exam is not going to complete itself");
     dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
+    dLawSocietyReceptionist.SetOptionState(14,eOptionOff);
   }
 return
 @15
@@ -7402,13 +7571,13 @@ stop
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Cloudy outside</Text>
+                <Text xml:space="preserve">Can you give me a Procedures Book?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text>Busy?</Text>
+                <Text xml:space="preserve">About the painting</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
@@ -7486,16 +7655,19 @@ stop
 @S  // Dialog startup entry point
 HARKER: Hi
 PHOTOPRO: . . .
-  if(player.HasInventory(iPhotos))
+  if(dPhotoPro.GetOptionState(7) == eOptionOn)
   {
-    dPhotoPro.SetOptionState(6,eOptionOn);
-    if(getNbMissingNegatives() > 0)
-    {
-      dPhotoPro.SetOptionState(14,eOptionOn);
-    }
-  } else if(player.HasInventory(iFilm))
+    dPhotoPro.SetOptionState(1,eOptionOff);
+  }
+  
+  if(cPhotoPro.HasInventory(iEggs) && player.HasInventory(iFilm))
   {
-    dPhotoPro.SetOptionState(7,eOptionOn);
+    dPhotoPro.SetOptionState(15,eOptionOn);
+  }
+  
+  if(getNbMissingNegatives() > 0)
+  {
+    dPhotoPro.SetOptionState(14,eOptionOn);
   }
 return
 @1
@@ -7503,12 +7675,14 @@ PHOTOPRO: Ok
 HARKER: . . .
 PHOTOPRO: . . .
   dPhotoPro.SetOptionState(8,eOptionOn);
+  dPhotoPro.SetOptionState(1,eOptionOff);
 return
 @2
 PHOTOPRO: That is not how it works
 HARKER: Right, no. . .
 HARKER: How do I get you to do it
 PHOTOPRO: I don't turn negatives into photo
+  dPhotoPro.SetOptionState(2,eOptionOff);
   dPhotoPro.SetOptionState(3,eOptionOn);
 return
 @3
@@ -7523,6 +7697,8 @@ HARKER: What do you do?
 PHOTOPRO: We print photographs from negatives
 HARKER: Right
   dPhotoPro.SetOptionState(5,eOptionOn);
+  dPhotoPro.SetOptionState(3,eOptionOff);
+  dPhotoPro.SetOptionState(4,eOptionOff);
 return
 @4
 PHOTOPRO: If you don't know how, you can take a course
@@ -7533,17 +7709,22 @@ PHOTOPRO: . . .
 HARKER: So you can do it?
 PHOTOPRO: I have done the course
   dPhotoPro.SetOptionState(5,eOptionOn);
-  dPhotoPro.SetOptionState(8,eOptionOn);
+  dPhotoPro.SetOptionState(2,eOptionOff);
+  dPhotoPro.SetOptionState(3,eOptionOff);
+  dPhotoPro.SetOptionState(4,eOptionOff);
 return
 @5
 PHOTOPRO: I can print them
 HARKER: Splendid. Let's do that
+  dPhotoPro.SetOptionState(5,eOptionOff);  
   dPhotoPro.SetOptionState(6,eOptionOn);  
   dPhotoPro.SetOptionState(9,eOptionOn);
 return
 @6
+  tranfertAllSubitemFromOneParentToAnother(iFilm, iSubmittedFilm);
+  player.LoseInventory(iSubmittedFilm);
   player.LoseInventory(iFilm);
-  cPhotoPro.AddInventory(iFilm);
+  cPhotoPro.AddInventory(iSubmittedFilm);
 PHOTOPRO: . . .
 HARKER: My pictures are on there. . .
 PHOTOPRO: No, these are negatives
@@ -7551,24 +7732,16 @@ HARKER: Right
 PHOTOPRO: . . .
 HARKER: But you can develop these negative into photos
 PHOTOPRO: It is possible for me to print them
-  dPhotoPro.SetOptionState(1,eOptionOff);
-  dPhotoPro.SetOptionState(2,eOptionOff);
-  dPhotoPro.SetOptionState(3,eOptionOff);
-  dPhotoPro.SetOptionState(4,eOptionOff);
-  dPhotoPro.SetOptionState(5,eOptionOff);
   dPhotoPro.SetOptionState(6,eOptionOff);
-  dPhotoPro.SetOptionState(7,eOptionOff);
-  dPhotoPro.SetOptionState(8,eOptionOff);
   dPhotoPro.SetOptionState(10,eOptionOn);
 return
 @7
 PHOTOPRO: Yes
 HARKER: Terrific
-  dPhotoPro.SetOptionState(1,eOptionOn);
   dPhotoPro.SetOptionState(2,eOptionOn);
   dPhotoPro.SetOptionState(4,eOptionOn);  
-  dPhotoPro.SetOptionState(8,eOptionOn);  
   dPhotoPro.SetOptionState(9,eOptionOn);
+  dPhotoPro.SetOptionState(7,eOptionOff);
   if(getNbMissingNegatives() > 0)
   {
     dPhotoPro.SetOptionState(14,eOptionOn);
@@ -7588,12 +7761,14 @@ HARKER: Right.
 HARKER: I meant: Do I need to know how to use it for you to dev. . . PRINT my negatives?
 PHOTOPRO: No
 HARKER: Understood
+  dPhotoPro.SetOptionState(8,eOptionOff);
 return
 @9
 PHOTOPRO: The weather is pretty cloudy, today
 HARKER: What? I mean it is, but what. . .
 PHOTOPRO: My guess is somewhere between 2 to 3 hours
 HARKER: Understood
+  dPhotoPro.SetOptionState(9,eOptionOffForever);
 return
 @10
   if(!cPhotoPro.HasInventory(iEggs))
@@ -7613,15 +7788,8 @@ return
     player.Say("What if I could get you eggs");
     cPhotoPro.Say("Then I could print you photos");
     player.Say("Understood");
+    dPhotoPro.SetOptionState(10,eOptionOff);
     dPhotoPro.SetOptionState(11,eOptionOn);
-    dPhotoPro.SetOptionState(1,eOptionOff);
-    dPhotoPro.SetOptionState(2,eOptionOff);
-    dPhotoPro.SetOptionState(3,eOptionOff);
-    dPhotoPro.SetOptionState(4,eOptionOff);
-    dPhotoPro.SetOptionState(5,eOptionOff);
-    dPhotoPro.SetOptionState(7,eOptionOff);
-    dPhotoPro.SetOptionState(8,eOptionOff);
-    dPhotoPro.SetOptionState(9,eOptionOff);
   } else {
     cPhotoPro.Say("Just sign here to confirm you have read our quality insurance and confidentiality policy");
     if(player.HasInventory(iPenInk))
@@ -7732,6 +7900,23 @@ PHOTOPRO: How many?
   dPhotoPro.SetOptionState(14,eOptionOff);
 return
 @15
+  if(cPhotoPro.HasInventory(iSubmittedFilm))
+  {
+    cPhotoPro.Say("I am already printing your films");
+    player.Say("You cannot work on two batches at a time?");
+    cPhotoPro.Say("I cannot");
+  } else
+  {
+    tranfertAllSubitemFromOneParentToAnother(iFilm,iSubmittedFilm);
+    player.LoseInventory(iSubmittedFilm);
+    player.LoseInventory(iFilm);
+    cPhotoPro.AddInventory(iSubmittedFilm);
+    cPhotoPro.Say("Just sign here to confirm you have read our quality insurance and confidentiality policy");
+    player.Say("There you go");
+    CallRoomScript(11);
+  }
+return
+@16
 PHOTOPRO: Ok
 stop
 ]]></Script>
@@ -7822,6 +8007,12 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>15</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Can you print these negatives into photos, please?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>16</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Good bye</Text>
@@ -8093,66 +8284,349 @@ LIBRARIAN: *whispering*[Feel free to look around
 LIBRARIAN: *whispering*[But, please steer clear of the archive room's door
 return
 @2
-LIBRARIAN: *whispering*[Ah yes, Transylvania is a very interesting region
-LIBRARIAN: *whispering*[We have volumes on the Carpathians, Hungary, and the Crescent region
-  dLibrarian.SetOptionState(2, eOptionOff);
-  dLibrarian.SetOptionState(5, eOptionOn);
-  dLibrarian.SetOptionState(7, eOptionOn);
-  dLibrarian.SetOptionState(8, eOptionOn);
+LIBRARIAN: *whispering*[Interested in Transylvanian architecture, heh?
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(3) == eOptionOff)//Coxe
+  {
+    cLibrarian.Say("*whispering*[Coxe's 'An Account of the Principalities of Wallachia and Moldavia'");
+    dBookshelves.SetOptionState(3,eOptionOn);
+    //Architecture
+    dLibrarian.SetOptionState(2,eOptionOff);
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+    //History
+    if(dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(5,eOptionOff);
+    }
+  }  
 return
 @3
-LIBRARIAN: *whispering*[Ah yes, the culture of the region is fascinating
-LIBRARIAN: *whispering*[We have book on the regional industries
-  dLibrarian.SetOptionState(3, eOptionOff);
-  dLibrarian.SetOptionState(9, eOptionOn);
+LIBRARIAN: *whispering*[Ah, creativity, handiness, and culture! Such is shaped by the people's crafts!
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(1) == eOptionOff)//Boner
+  {
+    cLibrarian.Say("*whispering*[Boner's 'Transylvania: Its Products and Its People'");
+    dBookshelves.SetOptionState(1,eOptionOn);
+    //Industry
+    dLibrarian.SetOptionState(6,eOptionOff);
+    //Craft
+    dLibrarian.SetOptionState(3,eOptionOff);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  }  
 return
 @4
-LIBRARIAN: *whispering*[Oh that is interesting
-LIBRARIAN: *whispering*[We only have one book about the history of Wallachia and Moldavia
-  dLibrarian.SetOptionState(4, eOptionOff);
-  dLibrarian.SetOptionState(6, eOptionOn);
+LIBRARIAN: *whispering*[What you believe shapes who you are!
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(6) == eOptionOff)//Schanta
+  {
+    cLibrarian.Say("*whispering*[Schanta's 'The Folktales of the Magyars'");
+    dBookshelves.SetOptionState(6,eOptionOn);
+    //Folklore
+    dLibrarian.SetOptionState(4,eOptionOff);
+  }    
 return
 @5
-LIBRARIAN: *whispering*[Yes, yes, the Carpathians
-  notableWhisper(cLibrarian,"Carpathian book","Look for 'Round About the Carpathians'[It is a travel book written by Andrew F. Crosse in 1878",0);
-  setProposedArchiveBook(2);
+LIBRARIAN: *whispering*[The wise looks behind to learn how to go forward!
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(3) == eOptionOff)//Coxe
+  {
+    cLibrarian.Say("*whispering*[Coxe's 'An Account of the Principalities of Wallachia and Moldavia'");
+    dBookshelves.SetOptionState(3,eOptionOn);
+    //Architecture
+    dLibrarian.SetOptionState(2,eOptionOff);
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+    //History
+    if(dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(5,eOptionOff);
+    }
+  }  
+  if(dBookshelves.GetOptionState(5) == eOptionOff)//Mazuchelli
+  {
+    cLibrarian.Say("*whispering*[Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'");
+    dBookshelves.SetOptionState(5,eOptionOn);
+    //History
+    if(dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(5,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  } 
 return
 @6
-LIBRARIAN: *whispering*[Two very intriguing regions indeed!
-  notableWhisper(cLibrarian,"History book","Look for 'An Account of the Principalities of Wallachia and Moldavia'[By William W. Coxe",0);
-  setProposedArchiveBook(3);
+LIBRARIAN: *whispering*[Industry! A country's beating heart!
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(1) == eOptionOff)//Boner
+  {
+    cLibrarian.Say("*whispering*[Boner's 'Transylvania: Its Products and Its People'");
+    dBookshelves.SetOptionState(1,eOptionOn);
+    //Industry
+    dLibrarian.SetOptionState(6,eOptionOff);
+    //Craft
+    dLibrarian.SetOptionState(3,eOptionOff);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  } 
 return
 @7
-LIBRARIAN: *whispering*[The Crescent. . . The old Ottoman Empire!
-  notableWhisper(cLibrarian,"Crescent Region book","Look for 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'[By Charles Frederick Hoffmeister",0);
-  setProposedArchiveBook(4);
+LIBRARIAN: *whispering*[Peoples of Europe. A recipe of similarities, nuances and differences
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(1) == eOptionOff)//Boner
+  {
+    cLibrarian.Say("*whispering*[Boner's 'Transylvania: Its Products and Its People'");
+    dBookshelves.SetOptionState(1,eOptionOn);
+    //Industry
+    dLibrarian.SetOptionState(6,eOptionOff);
+    //Craft
+    dLibrarian.SetOptionState(3,eOptionOff);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  } 
+  if(dBookshelves.GetOptionState(2) == eOptionOff)//Crosse
+  {
+    cLibrarian.Say("*whispering*[Crosse's 'Round About the Carpathians'");
+    dBookshelves.SetOptionState(2,eOptionOn);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+  }
+  if(dBookshelves.GetOptionState(3) == eOptionOff)//Coxe
+  {
+    cLibrarian.Say("*whispering*[Coxe's 'An Account of the Principalities of Wallachia and Moldavia'");
+    dBookshelves.SetOptionState(3,eOptionOn);
+    //Architecture
+    dLibrarian.SetOptionState(2,eOptionOff);
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+    //History
+    if(dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(5,eOptionOff);
+    }
+  } 
+  if(dBookshelves.GetOptionState(4) == eOptionOff)//Hoffmeister
+  {
+    cLibrarian.Say("*whispering*[Hoffmeister's 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'");
+    dBookshelves.SetOptionState(4,eOptionOn);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  }
+  if(dBookshelves.GetOptionState(5) == eOptionOff)//Mazuchelli
+  {
+    cLibrarian.Say("*whispering*[Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'");
+    dBookshelves.SetOptionState(5,eOptionOn);
+    //History
+    if(dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(5,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  }
 return
 @8
-LIBRARIAN: *whispering*[Very intriguing area and culture!
-LIBRARIAN: *whispering*[The Magyars have the most fascinating folklore as well!
-  notableWhisper(cLibrarian,"Hungary book","Look for 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'[By husband-and-wife team, Nina Elizabeth Mazuchelli and Otto William Mazuchelli",0);
-  setProposedArchiveBook(5);
-  dLibrarian.SetOptionState(10, eOptionOn);
+LIBRARIAN: *whispering*[Transylvanian regions are most intriguing!
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(2) == eOptionOff)//Crosse
+  {
+    cLibrarian.Say("*whispering*[Crosse's 'Round About the Carpathians'");
+    dBookshelves.SetOptionState(2,eOptionOn);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+  }
+  if(dBookshelves.GetOptionState(3) == eOptionOff)//Coxe
+  {
+    cLibrarian.Say("*whispering*[Coxe's 'An Account of the Principalities of Wallachia and Moldavia'");
+    dBookshelves.SetOptionState(3,eOptionOn);
+    //Architecture
+    dLibrarian.SetOptionState(2,eOptionOff);
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+    //History
+    if(dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(5,eOptionOff);
+    }
+  }
 return
 @9
-LIBRARIAN: *whispering*[An essential angle on the lives of the people!
-  notableWhisper(cLibrarian,"Industry book","Look for 'Transylvania: Its Products and Its People'[By Charles Boner",0);
-  setProposedArchiveBook(1);
+LIBRARIAN: *whispering*[Travelogues are my favorite types of regional descriptions. You can really feel the traveller's experience
+LIBRARIAN: *whispering*[Take a look at. . .
+  if(dBookshelves.GetOptionState(1) == eOptionOff)//Boner
+  {
+    cLibrarian.Say("*whispering*[Boner's 'Transylvania: Its Products and Its People'");
+    dBookshelves.SetOptionState(1,eOptionOn);
+    //Industry
+    dLibrarian.SetOptionState(6,eOptionOff);
+    //Craft
+    dLibrarian.SetOptionState(3,eOptionOff);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  } 
+  if(dBookshelves.GetOptionState(2) == eOptionOff)//Crosse
+  {
+    cLibrarian.Say("*whispering*[Crosse's 'Round About the Carpathians'");
+    dBookshelves.SetOptionState(2,eOptionOn);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+    //Region
+    if(dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(8,eOptionOff);
+    }
+  }
+  if(dBookshelves.GetOptionState(4) == eOptionOff)//Hoffmeister
+  {
+    cLibrarian.Say("*whispering*[Hoffmeister's 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'");
+    dBookshelves.SetOptionState(4,eOptionOn);
+    //Travelogue
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(9,eOptionOff);
+    }
+    //People
+    if(dBookshelves.GetOptionState(1) == eOptionOn && dBookshelves.GetOptionState(2) == eOptionOn && dBookshelves.GetOptionState(3) == eOptionOn && dBookshelves.GetOptionState(4) == eOptionOn && dBookshelves.GetOptionState(5) == eOptionOn)
+    {
+      dLibrarian.SetOptionState(7,eOptionOff);
+    }
+  }
+  if(hasSeenDraculaLetter())
+  {
+    dLibrarian.SetOptionState(10,eOptionOn);
+  }
 return
 @10
-LIBRARIAN: *whispering*[Ah, yes! What you believe makes you who you are!
-  notableWhisper(cLibrarian,"Industry book","Look for 'The Folktales of the Magyars'[Edited by Elena Schanta",0);
-  setProposedArchiveBook(6);
+HARKER: *whispering*[I am actually going on a business trip in Transylvania as well
+LIBRARIAN: *whispering*[Really! How exciting!
+LIBRARIAN: *whispering*[You should keep a diary of your travel!
+LIBRARIAN: *whispering*[It could make a great book some day!
+  dLibrarian.SetOptionState(10,eOptionOff);
+  giveScoreOnce("Diary for travel book", 3);
 return
 @11
 LIBRARIAN: *whispering*[Ah! Welcome to the all-access Transylvanian exhibit experience!
 LIBRARIAN: *whispering*[I am Gerald, curator of the exhibit, at your service
   player.LoseInventory(iBritishMuseumTicket);
+  player.Walk(200, 135, eNoBlock, eWalkableAreas);
   cLibrarian.Walk(200,118,eBlock,eWalkableAreas);
   cLibrarian.FaceDirection(eDirectionUp);
   object[0].Graphic = 296;
   RestoreWalkableArea(2);
-  player.Walk(200, 135, eNoBlock, eWalkableAreas);
   cLibrarian.Walk(215, 125, eBlock, eWalkableAreas);
   cLibrarian.FaceDirection(eDirectionLeft);
   cLibrarian.FollowCharacter(player, 30, 80);
@@ -8166,13 +8640,19 @@ LIBRARIAN: *whispering*[I am Gerald, curator of the exhibit, at your service
   dLibrarian.SetOptionState(14, eOptionOn);
 stop
 @12
-LIBRARIAN: *whispering*[We have a number of book on the subject in the archive room
+LIBRARIAN: *whispering*[We have a number of book on Transylvania and its surroundings in the archive room
 LIBRARIAN: *whispering*[Mainly travel narratives, very interesting volumes, indeed
-LIBRARIAN: *whispering*[What type of information are you looking for
+LIBRARIAN: *whispering*[What type of information are you looking for?
   dLibrarian.SetOptionState(12, eOptionOff);
   dLibrarian.SetOptionState(2, eOptionOn);
   dLibrarian.SetOptionState(3, eOptionOn);
   dLibrarian.SetOptionState(4, eOptionOn);
+  dLibrarian.SetOptionState(5, eOptionOn);
+  dLibrarian.SetOptionState(6, eOptionOn);
+  dLibrarian.SetOptionState(7, eOptionOn);
+  dLibrarian.SetOptionState(8, eOptionOn);
+  dLibrarian.SetOptionState(9, eOptionOn);
+return
 @13
 LIBRARIAN: *whispering*[To you as well!
 stop
@@ -8191,55 +8671,55 @@ stop
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">The region</Text>
+                <Text>Architecture</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">The local economy</Text>
+                <Text>Crafts</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">The history</Text>
+                <Text>Folklore</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">About the Carpathians</Text>
+                <Text>History</Text>
               </DialogOption>
               <DialogOption>
                 <ID>6</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">About the history of Wallachia and Moldavia</Text>
+                <Text>Industry</Text>
               </DialogOption>
               <DialogOption>
                 <ID>7</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">About the Crescent Region</Text>
+                <Text>People</Text>
               </DialogOption>
               <DialogOption>
                 <ID>8</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">About Hungary</Text>
+                <Text>Regions</Text>
               </DialogOption>
               <DialogOption>
                 <ID>9</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">About the regional industries</Text>
+                <Text>Travelogue</Text>
               </DialogOption>
               <DialogOption>
                 <ID>10</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">About the Magyar folklore</Text>
+                <Text xml:space="preserve">Travel to Transylvania</Text>
               </DialogOption>
               <DialogOption>
                 <ID>11</ID>
@@ -8275,118 +8755,59 @@ stop
 @S  // Dialog startup entry point
 return
 @1
+  player.Walk(hotspot[1].WalkToX,hotspot[1].WalkToY,eBlock,eWalkableAreas);
+  player.FaceDirection(eDirectionUp,eBlock);
 HARKER: This is Charles Boner's travelogue in Transylvania
 HARKER: Its description of the region's industry is impressively detailed for this type of book
 HARKER: The author really gets into the people's agricultural practices and other crafts
-    player.Say("In the population of Transylvania there are four distinct nationalities");
-    player.Say("Saxons in the South, and mixed with them the Wallachs, who are the descendants of the Dacians");
-    player.Say("Magyars in the West, and Szekelys in the East and North.");
-    player.Say("I am going among the latter, who claim to be descended from Attila and the Huns");
-    player.Say("This may be so, for when the Magyars conquered the country in the eleventh century");
-    player.Say("They found the Huns settled in it.");
-  if(Game.DoOnceOnly("People of Transylvania"))
-  {
-    GiveScore(3);
-  }
+  CallRoomScript(4);
   giveScoreOnce("Boner's 'Transylvania: Its Products and Its People'",1);
 return
 @2
-HARKER: Crosse's description of his travels around the Carpathian Mountains
+  player.Walk(hotspot[2].WalkToX,hotspot[2].WalkToY,eBlock,eWalkableAreas);
+  player.FaceDirection(eDirectionUp,eBlock);
+HARKER: Crosse's description of his travels around the Carpathians
 HARKER: The descriptions of the landscapes and atmosphere are brilliant
-HARKER: Crosse also describes his experiences with local people of the Carpathian's different regions
-    player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
-    player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
-    player.Say("One of the wildest and least known portions of Europe");
-  if(Game.DoOnceOnly("District"))
-  {
-    GiveScore(3);
-  }
+HARKER: Crosse also describes his experiences with local people of different regions
+  CallRoomScript(6);  
   giveScoreOnce("Crosse's 'Round About the Carpathians'",1);
 return
 @3
+  player.Walk(hotspot[3].WalkToX,hotspot[3].WalkToY,eBlock,eWalkableAreas);
+  player.FaceDirection(eDirectionUp,eBlock);
 HARKER: This is an historical book about Wallachia and Moldavia
 HARKER: It describes the visual architecture of the region, but Coxe mainly tells the cultural and political history of the people
 HARKER: The relationships between the two regions is also discussed in details
 HARKER: The book covers most the the 18th and 19th century
-    player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
-    player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
-    player.Say("One of the wildest and least known portions of Europe");
-  if(Game.DoOnceOnly("District"))
-  {
-    GiveScore(3);
-  }
+  CallRoomScript(7);
   giveScoreOnce("Coxe's 'An Account of the Principalities of Wallachia and Moldavia'",1);
 return
 @4
+  player.Walk(hotspot[4].WalkToX,hotspot[4].WalkToY,eBlock,eWalkableAreas);
+  player.FaceDirection(eDirectionUp,eBlock);
 HARKER: This is a recent travelogue about Hoffmeister's voyage from Greece to Buda-Pesh
 HARKER: The author spends a few chapters on the different romanian cultures
   giveScoreOnce("Hoffmeister's 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'",1);
 return
 @5
+  player.Walk(hotspot[5].WalkToX,hotspot[5].WalkToY,eBlock,eWalkableAreas);
+  player.FaceDirection(eDirectionUp,eBlock);
 HARKER: Although this book focuses on Hungarian history and people, the Magyar seem to be especially relevant to the region where I am headed
-    player.Say("I find that the district the Count named in his letter is in the extreme east of the country, just on the borders of three states");
-    player.Say("Transylvania, Moldavia and Bukovina, in the midst of the Carpathian mountains");
-    player.Say("One of the wildest and least known portions of Europe");
-  if(Game.DoOnceOnly("District"))
-  {
-    GiveScore(3);
-  }
+  CallRoomScript(8);
   giveScoreOnce("Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'",1);
 HARKER: This is a book written by a couple going through the Hungarian lands, retelling their experience
 return
 @6
+  player.Walk(hotspot[7].WalkToX,hotspot[7].WalkToY,eBlock,eWalkableAreas);
+  player.FaceDirection(eDirectionUp,eBlock);
 HARKER: Superstitions seem to be rampant in the lands where I am headed. . .
 HARKER: This book is composed of a written retelling of Magyar folktales and myths
 HARKER: I think knowing a bit more about their beliefs will help me understand the people
-HARKER: I see references to many figures, most notably the Táltos, the Lidérc, witches, the Ördög, and the Tündérek
   giveScoreOnce("Schanta's 'The Folktales of the Magyars'",1);
-return
+  dSchantaBook.Start();
+stop
 @7
-HARKER: The Táltos is a mythical figure in Hungarian folklore, often depicted as a magical horseman 
-HARKER: They are known for their wisdom and connection to the spirit world
-  if(Game.DoOnceOnly("Táltos"))
-  {
-    CallRoomScript(2);
-  }
-return
-@8
-HARKER: The Lidérc is a spirit associated with supernatural occurrences 
-HARKER: It is said to have the ability to shape-shift into different forms. 
-HARKER: Some stories depict Lidérc as a mischievous being, while others portray it as more malevolent
-  if(Game.DoOnceOnly("Lidérc"))
-  {
-    CallRoomScript(2);
-  }
-return
-@9
-HARKER: A few tales feature witch-like characters resembling Baba Yaga
-HARKER: These characters are often portrayed as old, wise, and possessing magical powers. 
-HARKER: They may help or hinder protagonists in the stories.
-  if(Game.DoOnceOnly("witch"))
-  {
-    CallRoomScript(2);
-  }
-return
-@10
-HARKER: The Ördög is a common figure in folktales, which seems to be a devil
-HARKER: These stories often involve clever protagonists outwitting the devil through wit or cunning.
-  if(Game.DoOnceOnly("Ördög"))
-  {
-    CallRoomScript(2);
-  }
-return
-@11
-HARKER: Tündérek are fairies depicted as beautiful, magical beings associated with nature. 
-HARKER: They may play various roles in folktales, from helping humans to testing their morality.
-HARKER: Namely, the Zöld Szemű Tündér, which loosely translates to Green-Eyed Fairy is a fairy with green eyes
-HARKER: It is often associated with nature and the magical realm. 
-HARKER: The presence of the Green-Eyed Fairy in a story may signify a connection between the human and magical worlds.
-  if(Game.DoOnceOnly("Tündérek"))
-  {
-    CallRoomScript(2);
-  }
-return
-@12
+HARKER: I cannot find a useful book
 stop
 ]]></Script>
             <DialogOptions>
@@ -8429,38 +8850,8 @@ stop
               <DialogOption>
                 <ID>7</ID>
                 <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">About the Táltos</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>8</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">About the Lidérc</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>9</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">About the witches</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>10</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">About the Ördög</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>11</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">About the Tündérek</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>12</ID>
-                <Say>True</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">I don't need any book on these shelves</Text>
+                <Text xml:space="preserve">Leave bookshelves</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -8643,6 +9034,102 @@ stop
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text>Hawkins</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>15</ID>
+            <Name>dSchantaBook</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+HARKER: I see references to many figures, most notably the Táltos, the Lidérc, witches, the Ördög, and the Tündérek
+return
+@1
+HARKER: The Táltos is a mythical figure in Hungarian folklore, often depicted as a magical horseman 
+HARKER: They are known for their wisdom and connection to the spirit world
+  if(Game.DoOnceOnly("Táltos"))
+  {
+    CallRoomScript(2);
+  }
+return
+@2
+HARKER: The Lidérc is a spirit associated with supernatural occurrences 
+HARKER: It is said to have the ability to shape-shift into different forms. 
+HARKER: Some stories depict Lidérc as a mischievous being, while others portray it as more malevolent
+  if(Game.DoOnceOnly("Lidérc"))
+  {
+    CallRoomScript(2);
+  }
+return
+@3
+HARKER: A few tales feature witch-like characters resembling Baba Yaga
+HARKER: These characters are often portrayed as old, wise, and possessing magical powers. 
+HARKER: They may help or hinder protagonists in the stories.
+  if(Game.DoOnceOnly("witch"))
+  {
+    CallRoomScript(2);
+  }
+return
+@4
+  notableSay(player,"Devil", "The Ördög is a common figure in folktales, which seems to be a devil", 3);
+HARKER: These stories often involve clever protagonists outwitting the devil through wit or cunning.
+  if(Game.DoOnceOnly("Ördög"))
+  {
+    CallRoomScript(2);
+  }
+return
+@5
+HARKER: Tündérek are fairies depicted as beautiful, magical beings associated with nature. 
+HARKER: They may play various roles in folktales, from helping humans to testing their morality.
+HARKER: Namely, the Zöld Szemű Tündér, which loosely translates to Green-Eyed Fairy is a fairy with green eyes
+HARKER: It is often associated with nature and the magical realm. 
+HARKER: The presence of the Green-Eyed Fairy in a story may signify a connection between the human and magical worlds.
+  if(Game.DoOnceOnly("Tündérek"))
+  {
+    CallRoomScript(2);
+  }
+return
+@6
+  dBookshelves.Start();
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the Táltos</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the Lidérc</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the witches</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the Ördög</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the Tündérek</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Enough about folklore</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -13065,6 +13552,126 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="429" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="430" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>1</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="431" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>2</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="432" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>3</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="433" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>4</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="434" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>5</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="435" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>6</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="436" Width="27" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/TelegramOffice/machine.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>7</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
             </SubFolders>
@@ -13566,6 +14173,36 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>210</ImportHeight>
                   <ImportWidth>275</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="427" Width="288" Height="200" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/288x200.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>200</ImportHeight>
+                  <ImportWidth>288</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="428" Width="288" Height="74" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/288x74.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>74</ImportHeight>
+                  <ImportWidth>288</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
@@ -18522,6 +19159,99 @@ stop
               </View>
             </Views>
           </ViewFolder>
+          <ViewFolder Name="TelegramReceiver">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>29</ID>
+                <Name>Receiver</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>433</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>434</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>435</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>436</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>433</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>429</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>430</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>431</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>432</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>429</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
         </SubFolders>
         <Views>
           <View>
@@ -20837,7 +21567,9 @@ stop
         </Views>
       </ViewFolder>
     </Views>
-    <DeletedViews />
+    <DeletedViews>
+      <ViewID>30</ViewID>
+    </DeletedViews>
     <Scripts>
       <ScriptFolder Name="Main">
         <SubFolders />
