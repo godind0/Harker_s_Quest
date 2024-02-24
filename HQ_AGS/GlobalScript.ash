@@ -135,6 +135,7 @@ import String getTrainDepartureTime();
 import bool canPlayerBoardTrain(String);
 import function isAnyTrainInStation(city, int, Character*, bool, int);
 import String getTrainInStation();
+import function manageDarkness();
 
 import String getNoteDescription(String);
 import String whatTimeIsIt(bool);

@@ -954,7 +954,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>320</Width>
-              <ZOrder>1</ZOrder>
+              <ZOrder>5</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -2086,7 +2086,7 @@
               <Clickable>True</Clickable>
               <Height>33</Height>
               <ID>8</ID>
-              <Left>247</Left>
+              <Left>210</Left>
               <Name>gQuickInventory</Name>
               <OnClick />
               <PopupStyle>Persistent</PopupStyle>
@@ -2094,7 +2094,7 @@
               <Top>201</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
-              <Width>70</Width>
+              <Width>101</Width>
               <ZOrder>1</ZOrder>
             </NormalGUI>
             <Controls>
@@ -2107,7 +2107,7 @@
                 <Height>32</Height>
                 <ID>0</ID>
                 <Image>44</Image>
-                <Left>34</Left>
+                <Left>68</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>45</MouseoverImage>
                 <Name>btnInv</Name>
@@ -2145,6 +2145,30 @@
                 <Visible>False</Visible>
                 <Width>33</Width>
                 <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>32</Height>
+                <ID>2</ID>
+                <Image>438</Image>
+                <Left>34</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>438</MouseoverImage>
+                <Name>btnQuickWait</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnQuickWait_OnClick</OnClick>
+                <PushedImage>438</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>0</Top>
+                <Visible>True</Visible>
+                <Width>33</Width>
+                <ZOrder>2</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -2573,7 +2597,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>194</Width>
-              <ZOrder>3</ZOrder>
+              <ZOrder>6</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIButton>
@@ -3068,16 +3092,16 @@
               <GUILabel>
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
-                <Font>0</Font>
+                <Font>2</Font>
                 <Height>25</Height>
                 <ID>4</ID>
-                <Left>0</Left>
+                <Left>2</Left>
                 <Locked>False</Locked>
                 <Name>lblF4Help</Name>
                 <Text xml:space="preserve">Press F4 to insert memorized thought</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>130</Top>
+                <Top>83</Top>
                 <Visible>True</Visible>
                 <Width>137</Width>
                 <ZOrder>4</ZOrder>
@@ -3379,7 +3403,7 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>111</Height>
+                <Height>95</Height>
                 <ID>5</ID>
                 <Left>98</Left>
                 <Locked>False</Locked>
@@ -3450,6 +3474,71 @@
                 <Width>185</Width>
                 <ZOrder>8</ZOrder>
               </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>9</ID>
+                <Left>112</Left>
+                <Locked>False</Locked>
+                <Name>lblClassify_pageNb</Name>
+                <Text xml:space="preserve">Page #/@</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>153</Top>
+                <Visible>True</Visible>
+                <Width>156</Width>
+                <ZOrder>9</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>10</ID>
+                <Image>217</Image>
+                <Left>98</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>217</MouseoverImage>
+                <Name>btnClassify_prevPage</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnClassify_prevPage_OnClick</OnClick>
+                <PushedImage>217</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>158</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>10</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>11</ID>
+                <Image>218</Image>
+                <Left>276</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>218</MouseoverImage>
+                <Name>btnClassify_nextPage</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnClassify_nextPage_OnClick</OnClick>
+                <PushedImage>218</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>158</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>11</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -4145,7 +4234,7 @@
                 <Height>26</Height>
                 <ID>6</ID>
                 <Image>42</Image>
-                <Left>173</Left>
+                <Left>195</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnCloseExam</Name>
@@ -4221,7 +4310,7 @@
                 <Height>26</Height>
                 <ID>10</ID>
                 <Image>42</Image>
-                <Left>30</Left>
+                <Left>9</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnExamProcedures</Name>
@@ -4235,6 +4324,30 @@
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>10</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>11</ID>
+                <Image>42</Image>
+                <Left>102</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnExam_Notebook</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnExam_Notebook_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Notebook</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>161</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>11</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -5128,6 +5241,10 @@
                 <Name>invContext_classifiedName</Name>
                 <Value xml:space="preserve">Carfax Dossier</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">dossier, papers, sale, document, contract, detail, contrat</Value>
+              </CustomProperty>
             </Properties>
             <Interactions>
               <Event Index="0" />
@@ -5166,7 +5283,7 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">Sollicitor diploma</Description>
+            <Description>Diploma</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>26</ID>
@@ -5953,6 +6070,10 @@
                 <Name>dialogIndex</Name>
                 <Value>4</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>75</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Exeter Train Station Clerk</RealName>
             <ScriptName>cExeterTrainOfficer</ScriptName>
@@ -6003,6 +6124,10 @@
               <CustomProperty>
                 <Name>TextDescription</Name>
                 <Value xml:space="preserve">This is the Waterloo Train Station Officer</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>75</Value>
               </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">London Train Station Officer</RealName>
@@ -7866,6 +7991,7 @@ return
     cPhotoPro.Say("Ok");
     player.Say("I can sign your disclaimer");
     cPhotoPro.Say("Here it is");
+    dPhotoPro.SetOptionState(12, eOptionOff);
     CallRoomScript(11);
   } else
   {
@@ -7874,7 +8000,6 @@ return
     player.Say("Right");
     cPhotoPro.Say("Free publicity");
   }
-  dPhotoPro.SetOptionState(12, eOptionOff);
 return
 @13
   CallRoomScript(13);
@@ -8807,7 +8932,6 @@ HARKER: I think knowing a bit more about their beliefs will help me understand t
   dSchantaBook.Start();
 stop
 @7
-HARKER: I cannot find a useful book
 stop
 ]]></Script>
             <DialogOptions>
@@ -8815,37 +8939,37 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Boner's 'Transylvania: Its Products and Its People'</Text>
+                <Text xml:space="preserve">Transylvania: Its Products and Its People</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Crosse's 'Round About the Carpathians'</Text>
+                <Text xml:space="preserve">Round About the Carpathians</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Coxe's 'An Account of the Principalities of Wallachia and Moldavia'</Text>
+                <Text xml:space="preserve">An Account of the Principalities of Wallachia and Moldavia</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Hoffmeister's 'On the Track of the Crescent: Erratic Notes from the Piraeus to Pesth'</Text>
+                <Text xml:space="preserve">On the Track of the Crescent</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Mazuchelli's 'Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary'</Text>
+                <Text xml:space="preserve">Magyarland: Being the Narrative of our Travels Through the Highlands and the Lowlands of Hungary</Text>
               </DialogOption>
               <DialogOption>
                 <ID>6</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Schanta's 'The Folktales of the Magyars'</Text>
+                <Text xml:space="preserve">The Folktales of the Magyars</Text>
               </DialogOption>
               <DialogOption>
                 <ID>7</ID>
@@ -13532,6 +13656,21 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="437" Width="56" Height="24" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/LawSociety/Kellys_Directory.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="TelegramOffice">
@@ -14203,6 +14342,21 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>74</ImportHeight>
                   <ImportWidth>288</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="438" Width="33" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/btnWait.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>192</ImportHeight>
+                  <ImportWidth>100</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
