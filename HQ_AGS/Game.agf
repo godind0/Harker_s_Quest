@@ -282,8 +282,8 @@
         <AppliesToInvItems>False</AppliesToInvItems>
         <AppliesToObjects>False</AppliesToObjects>
         <AppliesToRooms>False</AppliesToRooms>
-        <DefaultValue>-1</DefaultValue>
-        <Description xml:space="preserve">Must be within this distance to talk. -1 means no such condition</Description>
+        <DefaultValue>100</DefaultValue>
+        <Description xml:space="preserve">Must be within this distance to talk. -1 means no talk</Description>
         <Name>dialogMaxDistance</Name>
         <Type>Number</Type>
       </CustomPropertySchemaItem>
@@ -942,7 +942,7 @@
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>0</BackgroundImage>
               <BorderColor>0</BorderColor>
-              <Clickable>True</Clickable>
+              <Clickable>False</Clickable>
               <Height>60</Height>
               <ID>0</ID>
               <Left>0</Left>
@@ -954,7 +954,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>320</Width>
-              <ZOrder>5</ZOrder>
+              <ZOrder>4</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -1093,36 +1093,12 @@
                 <Width>280</Width>
                 <ZOrder>2</ZOrder>
               </GUILabel>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>False</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>32</Height>
-                <ID>3</ID>
-                <Image>48</Image>
-                <Left>100</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
-                <Name>notBtnSquare</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick />
-                <PushedImage>0</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>0</TextColor>
-                <Top>164</Top>
-                <Visible>False</Visible>
-                <Width>33</Width>
-                <ZOrder>3</ZOrder>
-              </GUIButton>
               <GUILabel>
                 <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>132</Height>
-                <ID>4</ID>
+                <ID>3</ID>
                 <Left>100</Left>
                 <Locked>False</Locked>
                 <Name>lblDescriptionSelectedItem</Name>
@@ -1132,32 +1108,8 @@
                 <Top>26</Top>
                 <Visible>True</Visible>
                 <Width>174</Width>
-                <ZOrder>4</ZOrder>
+                <ZOrder>3</ZOrder>
               </GUILabel>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>False</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>21</Height>
-                <ID>5</ID>
-                <Image>51</Image>
-                <Left>106</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
-                <Name>imgSelectedInv</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick />
-                <PushedImage>0</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>0</TextColor>
-                <Top>170</Top>
-                <Visible>False</Visible>
-                <Width>21</Width>
-                <ZOrder>5</ZOrder>
-              </GUIButton>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
                 <Clickable>True</Clickable>
@@ -1165,7 +1117,7 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>26</Height>
-                <ID>6</ID>
+                <ID>4</ID>
                 <Image>42</Image>
                 <Left>184</Left>
                 <Locked>False</Locked>
@@ -1180,7 +1132,7 @@
                 <Top>170</Top>
                 <Visible>False</Visible>
                 <Width>92</Width>
-                <ZOrder>6</ZOrder>
+                <ZOrder>4</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -1189,7 +1141,7 @@
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>54</BackgroundImage>
               <BorderColor>0</BorderColor>
-              <Clickable>True</Clickable>
+              <Clickable>False</Clickable>
               <Height>208</Height>
               <ID>2</ID>
               <Left>63</Left>
@@ -1552,7 +1504,7 @@
                 <Text xml:space="preserve">Are you sure you want to restart?</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>4</Top>
+                <Top>3</Top>
                 <Visible>True</Visible>
                 <Width>186</Width>
                 <ZOrder>0</ZOrder>
@@ -1636,12 +1588,12 @@
                 <Left>4</Left>
                 <Locked>True</Locked>
                 <Name>lblSaveText</Name>
-                <Text xml:space="preserve">Please choose the name to save this game as:</Text>
+                <Text xml:space="preserve">Please choose the name to save this game as</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>4</Top>
+                <Top>3</Top>
                 <Visible>True</Visible>
-                <Width>178</Width>
+                <Width>272</Width>
                 <ZOrder>0</ZOrder>
               </GUILabel>
               <GUITextBox>
@@ -1787,12 +1739,12 @@
                 <Left>4</Left>
                 <Locked>True</Locked>
                 <Name>lblRestoreText</Name>
-                <Text xml:space="preserve">Please choose the game that you want to restore:</Text>
+                <Text xml:space="preserve">Please choose the game that you want to restore</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>3</Top>
+                <Top>2</Top>
                 <Visible>True</Visible>
-                <Width>178</Width>
+                <Width>272</Width>
                 <ZOrder>0</ZOrder>
               </GUILabel>
               <GUIButton>
@@ -2071,7 +2023,7 @@
                 <Text xml:space="preserve">Are you sure you want to quit?</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>4</Top>
+                <Top>3</Top>
                 <Visible>True</Visible>
                 <Width>150</Width>
                 <ZOrder>2</ZOrder>
@@ -2239,10 +2191,27 @@
                 <Text xml:space="preserve">Press 'Enter' to confirm</Text>
                 <TextAlignment>Right</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>52</Top>
+                <Top>50</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
                 <ZOrder>2</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>20</Height>
+                <ID>3</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lblParse_F4Memory</Name>
+                <Text xml:space="preserve">F4 to insert memory</Text>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>50</Top>
+                <Visible>False</Visible>
+                <Width>137</Width>
+                <ZOrder>3</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -3093,17 +3062,17 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>2</Font>
-                <Height>25</Height>
+                <Height>30</Height>
                 <ID>4</ID>
-                <Left>2</Left>
+                <Left>0</Left>
                 <Locked>False</Locked>
-                <Name>lblF4Help</Name>
-                <Text xml:space="preserve">Press F4 to insert memorized thought</Text>
+                <Name>lblSimpleTB_F4Memory</Name>
+                <Text xml:space="preserve">F4 to insert memory</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>83</Top>
+                <Top>80</Top>
                 <Visible>True</Visible>
-                <Width>137</Width>
+                <Width>139</Width>
                 <ZOrder>4</ZOrder>
               </GUILabel>
             </Controls>
@@ -5900,7 +5869,7 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogMaxDistance</Name>
-                <Value>150</Value>
+                <Value>100</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>alternateNames</Name>
@@ -6009,7 +5978,7 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogMaxDistance</Name>
-                <Value>30</Value>
+                <Value>100</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogWhileSitting</Name>
@@ -6184,6 +6153,10 @@
                 <Name>dialogIndex</Name>
                 <Value>6</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>100</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Cab Driver</RealName>
             <ScriptName>cCabby</ScriptName>
@@ -6235,9 +6208,13 @@
                 <Name>TextDescription</Name>
                 <Value>Random</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>100</Value>
+              </CustomProperty>
             </Properties>
-            <RealName>RandomChar</RealName>
-            <ScriptName>cRandomChar</ScriptName>
+            <RealName>Person</RealName>
+            <ScriptName>cRandomChar1</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33280</SpeechColor>
@@ -6276,7 +6253,7 @@
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
-            <NormalView>12</NormalView>
+            <NormalView>30</NormalView>
             <Properties>
               <CustomProperty>
                 <Name>TextDescription</Name>
@@ -6287,8 +6264,8 @@
                 <Value>horse</Value>
               </CustomProperty>
             </Properties>
-            <RealName>Horse</RealName>
-            <ScriptName>cHorse2</ScriptName>
+            <RealName>Person</RealName>
+            <ScriptName>cRandomChar2</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>33280</SpeechColor>
@@ -6512,7 +6489,7 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogMaxDistance</Name>
-                <Value>40</Value>
+                <Value>100</Value>
               </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Telegram operator</RealName>
@@ -6569,6 +6546,10 @@
                 <Name>dialogIndex</Name>
                 <Value>8</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>dialogMaxDistance</Name>
+                <Value>100</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Photography professional</RealName>
             <ScriptName>cPhotoPro</ScriptName>
@@ -6579,6 +6560,48 @@
             <StartX>108</StartX>
             <StartY>120</StartY>
             <StartingRoom>10</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>14</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>31</NormalView>
+            <Properties />
+            <RealName>Person</RealName>
+            <ScriptName>cRandomChar3</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>160</StartX>
+            <StartY>120</StartY>
+            <StartingRoom>-1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
             <UniformMovementSpeed>True</UniformMovementSpeed>
@@ -8995,7 +9018,7 @@ HARKER: There is nothing in here but the Holy text
 option-off 2
 return
 @3
-HARKER: There are two sections to Matthew 24...
+HARKER: There are two sections to Matthew 24. . .
 HARKER: 'The Destruction of the Temple and Signs of the End Times' takes verses 1 to 29
 HARKER: 'The Day and Hour Unknown' is composed of verses 30 to 51
   dBible.SetHasOptionBeenChosen(3,true);
@@ -13156,6 +13179,21 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="443" Width="44" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/GareExeter/Bench.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="WaterlooStation">
@@ -13814,7 +13852,68 @@ stop
                 </Sprites>
               </SpriteFolder>
             </SubFolders>
-            <Sprites />
+            <Sprites>
+              <Sprite Slot="439" Width="3" Height="1" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/CigaretteGround1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>1</ImportHeight>
+                  <ImportWidth>3</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="440" Width="3" Height="2" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/CigaretteGround2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>2</ImportHeight>
+                  <ImportWidth>3</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="441" Width="12" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/PaperGround.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>7</ImportHeight>
+                  <ImportWidth>12</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="442" Width="15" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/PlantPot.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>22</ImportHeight>
+                  <ImportWidth>15</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+            </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="UI">
             <SubFolders>
@@ -14662,9 +14761,114 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="444" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="445" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>1</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="446" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>2</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="447" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>3</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="448" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>4</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="449" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>5</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="450" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_r.gif</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>32</ImportHeight>
+                      <ImportWidth>32</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>6</Frame>
+                      <RemapToGamePalette>True</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                   <Sprite Slot="392" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14679,7 +14883,7 @@ stop
                   </Sprite>
                   <Sprite Slot="393" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14694,7 +14898,7 @@ stop
                   </Sprite>
                   <Sprite Slot="394" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14709,7 +14913,7 @@ stop
                   </Sprite>
                   <Sprite Slot="395" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14724,7 +14928,7 @@ stop
                   </Sprite>
                   <Sprite Slot="396" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14739,7 +14943,7 @@ stop
                   </Sprite>
                   <Sprite Slot="397" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14754,7 +14958,7 @@ stop
                   </Sprite>
                   <Sprite Slot="398" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_r.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -14767,114 +14971,9 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="399" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                  <Sprite Slot="451" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
                     <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="400" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>1</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="401" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>2</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="402" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>3</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="403" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>4</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="404" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>5</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="405" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>6</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="406" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-                    <Source>
-                      <FileName>Assets/Visual/GIF/RandChar/randChar_32_u.gif</FileName>
+                      <FileName>Assets/Visual/GIF/New folder/randChar_32_u.gif</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>32</ImportHeight>
@@ -21480,7 +21579,7 @@ stop
           </View>
           <View>
             <ID>26</ID>
-            <Name>RandomCharView</Name>
+            <Name>RandomCharView1</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -21552,49 +21651,49 @@ stop
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>0</ID>
-                    <Image>392</Image>
+                    <Image>444</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>1</ID>
-                    <Image>393</Image>
+                    <Image>445</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>2</ID>
-                    <Image>394</Image>
+                    <Image>446</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>3</ID>
-                    <Image>395</Image>
+                    <Image>447</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>4</ID>
-                    <Image>396</Image>
+                    <Image>448</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>5</ID>
-                    <Image>397</Image>
+                    <Image>449</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>6</ID>
-                    <Image>398</Image>
+                    <Image>450</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -21607,6 +21706,61 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
+                    <Image>444</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>445</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>446</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>447</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>448</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>449</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>450</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
                     <Image>392</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
@@ -21652,6 +21806,191 @@ stop
                     <Image>398</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>451</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>30</ID>
+            <Name>RandomCharView2</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>384</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>385</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>386</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>387</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>388</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>389</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>390</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>391</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>0</ID>
+                    <Image>444</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>1</ID>
+                    <Image>445</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>2</ID>
+                    <Image>446</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>3</ID>
+                    <Image>447</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>4</ID>
+                    <Image>448</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>5</ID>
+                    <Image>449</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>6</ID>
+                    <Image>450</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>444</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>445</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>446</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>447</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>448</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>449</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>450</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
                 </Frames>
               </Loop>
               <Loop>
@@ -21662,56 +22001,296 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>399</Image>
+                    <Image>392</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>400</Image>
+                    <Image>393</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>401</Image>
+                    <Image>394</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
-                    <Image>402</Image>
+                    <Image>395</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
-                    <Image>403</Image>
+                    <Image>396</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
-                    <Image>404</Image>
+                    <Image>397</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>6</ID>
-                    <Image>405</Image>
+                    <Image>398</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>7</ID>
-                    <Image>406</Image>
+                    <Image>451</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>31</ID>
+            <Name>RandomCharView3</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>384</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>385</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>386</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>387</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>388</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>389</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>390</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>391</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>0</ID>
+                    <Image>444</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>1</ID>
+                    <Image>445</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>2</ID>
+                    <Image>446</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>3</ID>
+                    <Image>447</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>4</ID>
+                    <Image>448</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>5</ID>
+                    <Image>449</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>6</ID>
+                    <Image>450</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>444</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>445</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>446</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>447</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>448</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>449</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>450</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>392</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>393</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>394</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>395</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>396</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>397</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>398</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>451</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -21721,9 +22300,7 @@ stop
         </Views>
       </ViewFolder>
     </Views>
-    <DeletedViews>
-      <ViewID>30</ViewID>
-    </DeletedViews>
+    <DeletedViews />
     <Scripts>
       <ScriptFolder Name="Main">
         <SubFolders />

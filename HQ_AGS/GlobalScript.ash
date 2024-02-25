@@ -90,6 +90,48 @@ enum horseState
   BandagedHorse
 };
 
+enum bodyParts
+{
+  BP_hair, 
+  BP_hair_mustache, 
+  BP_skin, 
+  BP_coat, 
+  BP_necktie, 
+  BP_undershirt, 
+  BP_pants, 
+  BP_shoes
+};
+
+enum characterColors
+{
+  CC_black, 
+  CC_white, 
+  CC_grey, 
+  CC_brown, 
+  CC_green, 
+  CC_blue, 
+  CC_red, 
+  CC_yellow, 
+  CC_purple, 
+  CC_beige, 
+  CC_orange,
+  CC_cyan, 
+  CC_skin_porcelain, 
+  CC_skin_ivory, 
+  CC_skin_warmIvory,
+  CC_skin_roseBeige,
+  CC_skin_siena, 
+  CC_skin_band,
+  CC_skin_dark,
+  CC_hair_dark, 
+  CC_hair_brown, 
+  CC_hair_red, 
+  CC_hair_blond, 
+  CC_hair_grey, 
+  CC_hair_white, 
+  CC_random
+};
+
 enum parentItemDict
 {
   subitemDescription, 
@@ -152,6 +194,7 @@ import function applyWait(bool);
 import function addTime(int, int, int, int);
 import bool getGottaSleep();
 import bool isPlayerHungry();
+import bool isPlayerDrowsy();
 import function hasEaten();
 import function hasSlept();
 import function addTimedEventInXMinutes(int, String);
@@ -166,6 +209,8 @@ import function changeArrival_X_Y(int, int, int);
 import zone stringAsZone(String);
 import function travel_movePlayer(zone, bool);
 import function travel(zone);
+import function embarkTrain();
+import bool wasOnTrain();
 import String isThisPlaceOpened(commerce);
 import bool isThisPlaceOpened_bool(commerce);
 import commerce getCommerceType(zone);
@@ -240,7 +285,7 @@ import function debugDisplay(String);
 import function debugDisplayFromHere(String);
 import function setDebugFromHere(bool);
 import function triggerCutscene(cutsceneIndex);
-import function sit(elementType, int, Character*, int,  bool);
+import function sit(elementType, int, Character*, int,  bool, float overrideReachDistance = -1.0);
 import function standUp(Character*,  int);
 import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
@@ -259,6 +304,10 @@ import function changeAllSubItemNoteInParent(InventoryItem*, String);
 import function removeSubitem(InventoryItem*, String,  bool);
 
 import Dictionary* makeAColorDictionary(int hair = 25388, int mustache = 27501, int skin = 58607, int skinShadow = 58444, int coat = 512, int coatLight = 736, int coatDark = 256, int neckTie = 0, int underShirt = 65535, int pants = 4290, int pantsDark = 32, int shoe = 20800, int shoeDark = 14528);
+import Dictionary* createARandomSecondaryNPCDictionary();
+import Dictionary* createASecondaryNPCDictionary(characterColors thisSkin = CC_random, characterColors thisHair = CC_random, int hasMustache = -1, characterColors thisJacket = CC_random, characterColors thisNecktie = CC_random, characterColors thisUndershirt = CC_random, characterColors thisPant = CC_random, characterColors thisShoe = CC_random);
+import function changeCharacterColors(Character*, Dictionary*);
+import function manageRandomCharacter(Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
 
 import function foundMorseClue(int);
 import bool getMorseClues(int);//-1 return true for "all done"
