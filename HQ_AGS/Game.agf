@@ -1141,7 +1141,7 @@
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>54</BackgroundImage>
               <BorderColor>0</BorderColor>
-              <Clickable>False</Clickable>
+              <Clickable>True</Clickable>
               <Height>208</Height>
               <ID>2</ID>
               <Left>63</Left>
@@ -1153,7 +1153,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>194</Width>
-              <ZOrder>2</ZOrder>
+              <ZOrder>4</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIButton>
@@ -1567,12 +1567,12 @@
               <Clickable>True</Clickable>
               <Height>200</Height>
               <ID>4</ID>
-              <Left>31</Left>
+              <Left>20</Left>
               <Name>gSaveGame</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>33</Top>
+              <Top>20</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>280</Width>
@@ -1718,12 +1718,12 @@
               <Clickable>True</Clickable>
               <Height>200</Height>
               <ID>5</ID>
-              <Left>31</Left>
+              <Left>20</Left>
               <Name>gRestoreGame</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>33</Top>
+              <Top>20</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>280</Width>
@@ -2982,13 +2982,13 @@
                 <Height>20</Height>
                 <ID>0</ID>
                 <Left>4</Left>
-                <Locked>False</Locked>
+                <Locked>True</Locked>
                 <Name>tbSimpleTextbox</Name>
                 <OnActivate>tbSimpleTextbox_OnActivate</OnActivate>
                 <ShowBorder>True</ShowBorder>
                 <Text />
                 <TextColor>63488</TextColor>
-                <Top>22</Top>
+                <Top>21</Top>
                 <Visible>True</Visible>
                 <Width>131</Width>
                 <ZOrder>0</ZOrder>
@@ -22305,6 +22305,30 @@ stop
       <ScriptFolder Name="Main">
         <SubFolders />
         <ScriptAndHeaders>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
+                <FileName>Books.ash</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>710807770</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>Books.asc</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>710807770</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
