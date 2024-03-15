@@ -2127,17 +2127,17 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>428</BackgroundImage>
+              <BackgroundImage>0</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>74</Height>
+              <Height>228</Height>
               <ID>9</ID>
               <Left>16</Left>
               <Name>gParser</Name>
               <OnClick />
               <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
-              <Top>160</Top>
+              <Top>6</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>288</Width>
@@ -2157,10 +2157,10 @@
                 <ShowBorder>True</ShowBorder>
                 <Text />
                 <TextColor>63488</TextColor>
-                <Top>29</Top>
+                <Top>186</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
-                <ZOrder>0</ZOrder>
+                <ZOrder>2</ZOrder>
               </GUITextBox>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2169,15 +2169,15 @@
                 <Height>25</Height>
                 <ID>1</ID>
                 <Left>4</Left>
-                <Locked>False</Locked>
+                <Locked>True</Locked>
                 <Name>lblParserCommand</Name>
                 <Text xml:space="preserve">Enter command</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>4</Top>
+                <Top>161</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
-                <ZOrder>1</ZOrder>
+                <ZOrder>3</ZOrder>
               </GUILabel>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2185,16 +2185,16 @@
                 <Font>0</Font>
                 <Height>20</Height>
                 <ID>2</ID>
-                <Left>4</Left>
+                <Left>5</Left>
                 <Locked>False</Locked>
                 <Name>lblTextParserConfirm</Name>
                 <Text xml:space="preserve">Press 'Enter' to confirm</Text>
                 <TextAlignment>Right</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>50</Top>
+                <Top>207</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
-                <ZOrder>2</ZOrder>
+                <ZOrder>4</ZOrder>
               </GUILabel>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2208,11 +2208,127 @@
                 <Text xml:space="preserve">F4 to insert memory</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>50</Top>
+                <Top>207</Top>
                 <Visible>False</Visible>
                 <Width>137</Width>
-                <ZOrder>3</ZOrder>
+                <ZOrder>5</ZOrder>
               </GUILabel>
+              <GUIButton>
+                <ClickAction>NoAction</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>74</Height>
+                <ID>4</ID>
+                <Image>428</Image>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>428</MouseoverImage>
+                <Name>btnParserGUIbg</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>428</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>154</Top>
+                <Visible>True</Visible>
+                <Width>288</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>5</ID>
+                <Image>42</Image>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnParserInsertVerb</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnParserInsertVerb_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Verbs</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>127</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>6</ZOrder>
+              </GUIButton>
+              <GUIListBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>6</ID>
+                <Left>0</Left>
+                <Locked>True</Locked>
+                <Name>lbParserVerbList</Name>
+                <OnSelectionChanged>lbParserVerbList_OnSelectionChanged</OnSelectionChanged>
+                <SelectedBackgroundColor>63488</SelectedBackgroundColor>
+                <SelectedTextColor>65535</SelectedTextColor>
+                <ShowBorder>True</ShowBorder>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>0</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIListBox>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>7</ID>
+                <Image>42</Image>
+                <Left>94</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnParserInsertObject</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnParserInsertObject_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text>Objects</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>127</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>7</ZOrder>
+              </GUIButton>
+              <GUIListBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>8</ID>
+                <Left>94</Left>
+                <Locked>True</Locked>
+                <Name>lbParserObjectList</Name>
+                <OnSelectionChanged />
+                <SelectedBackgroundColor>63488</SelectedBackgroundColor>
+                <SelectedTextColor>65535</SelectedTextColor>
+                <ShowBorder>True</ShowBorder>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>0</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>8</ZOrder>
+              </GUIListBox>
             </Controls>
           </GUIMain>
           <GUIMain>
