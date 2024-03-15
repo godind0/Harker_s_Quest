@@ -155,6 +155,7 @@ import function setupTravelDestinations();
 import function playConfirm();
 import function playSelect();
 import function playCancel();
+import function hide_parser_gui();
 
 import String[] roomSpecificParse(String);
 import function musicInRoom(AudioClip*,  int);

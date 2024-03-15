@@ -353,6 +353,17 @@
         <Name>invContext_classifiedName</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">If Known, the character will appear in the room's object list when they are present</Description>
+        <Name>Known</Name>
+        <Type>Boolean</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -2160,7 +2171,7 @@
                 <Top>186</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
-                <ZOrder>2</ZOrder>
+                <ZOrder>4</ZOrder>
               </GUITextBox>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2177,7 +2188,7 @@
                 <Top>161</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
-                <ZOrder>3</ZOrder>
+                <ZOrder>5</ZOrder>
               </GUILabel>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2194,7 +2205,7 @@
                 <Top>207</Top>
                 <Visible>True</Visible>
                 <Width>280</Width>
-                <ZOrder>4</ZOrder>
+                <ZOrder>6</ZOrder>
               </GUILabel>
               <GUILabel>
                 <Clickable>True</Clickable>
@@ -2211,7 +2222,7 @@
                 <Top>207</Top>
                 <Visible>False</Visible>
                 <Width>137</Width>
-                <ZOrder>5</ZOrder>
+                <ZOrder>7</ZOrder>
               </GUILabel>
               <GUIButton>
                 <ClickAction>NoAction</ClickAction>
@@ -2235,7 +2246,7 @@
                 <Top>154</Top>
                 <Visible>True</Visible>
                 <Width>288</Width>
-                <ZOrder>1</ZOrder>
+                <ZOrder>3</ZOrder>
               </GUIButton>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -2259,7 +2270,7 @@
                 <Top>127</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
-                <ZOrder>6</ZOrder>
+                <ZOrder>8</ZOrder>
               </GUIButton>
               <GUIListBox>
                 <Clickable>True</Clickable>
@@ -2281,7 +2292,7 @@
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>92</Width>
-                <ZOrder>0</ZOrder>
+                <ZOrder>2</ZOrder>
               </GUIListBox>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -2305,7 +2316,7 @@
                 <Top>127</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
-                <ZOrder>7</ZOrder>
+                <ZOrder>9</ZOrder>
               </GUIButton>
               <GUIListBox>
                 <Clickable>True</Clickable>
@@ -2316,7 +2327,7 @@
                 <Left>94</Left>
                 <Locked>True</Locked>
                 <Name>lbParserObjectList</Name>
-                <OnSelectionChanged />
+                <OnSelectionChanged>lbParserObjectList_OnSelectionChanged</OnSelectionChanged>
                 <SelectedBackgroundColor>63488</SelectedBackgroundColor>
                 <SelectedTextColor>65535</SelectedTextColor>
                 <ShowBorder>True</ShowBorder>
@@ -2327,8 +2338,56 @@
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>92</Width>
-                <ZOrder>8</ZOrder>
+                <ZOrder>10</ZOrder>
               </GUIListBox>
+              <GUIButton>
+                <ClickAction>NoAction</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>9</ID>
+                <Image>399</Image>
+                <Left>94</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnLBBG_objects</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>0</Top>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>NoAction</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>10</ID>
+                <Image>399</Image>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnLBBG_verbs</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>0</Top>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -14572,6 +14631,21 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>192</ImportHeight>
                   <ImportWidth>100</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="399" Width="92" Height="126" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/listBoxBackground.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>126</ImportHeight>
+                  <ImportWidth>92</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>False</RemapToGamePalette>
