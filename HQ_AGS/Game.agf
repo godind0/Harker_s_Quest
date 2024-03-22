@@ -2268,7 +2268,7 @@
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
                 <Top>127</Top>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>92</Width>
                 <ZOrder>8</ZOrder>
               </GUIButton>
@@ -2276,10 +2276,10 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>126</Height>
+                <Height>100</Height>
                 <ID>6</ID>
                 <Left>0</Left>
-                <Locked>True</Locked>
+                <Locked>False</Locked>
                 <Name>lbParserVerbList</Name>
                 <OnSelectionChanged>lbParserVerbList_OnSelectionChanged</OnSelectionChanged>
                 <SelectedBackgroundColor>63488</SelectedBackgroundColor>
@@ -2288,7 +2288,7 @@
                 <ShowScrollArrows>True</ShowScrollArrows>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>0</Top>
+                <Top>26</Top>
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>92</Width>
@@ -2314,7 +2314,7 @@
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
                 <Top>127</Top>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>92</Width>
                 <ZOrder>9</ZOrder>
               </GUIButton>
@@ -2322,10 +2322,10 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>126</Height>
+                <Height>100</Height>
                 <ID>8</ID>
                 <Left>94</Left>
-                <Locked>True</Locked>
+                <Locked>False</Locked>
                 <Name>lbParserObjectList</Name>
                 <OnSelectionChanged>lbParserObjectList_OnSelectionChanged</OnSelectionChanged>
                 <SelectedBackgroundColor>63488</SelectedBackgroundColor>
@@ -2334,7 +2334,7 @@
                 <ShowScrollArrows>True</ShowScrollArrows>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>0</Top>
+                <Top>26</Top>
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>92</Width>
@@ -2359,7 +2359,7 @@
                 <Text xml:space="preserve">New Button</Text>
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>0</Top>
+                <Top>26</Top>
                 <Visible>False</Visible>
                 <Width>92</Width>
                 <ZOrder>1</ZOrder>
@@ -2383,7 +2383,7 @@
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>0</Top>
+                <Top>26</Top>
                 <Visible>False</Visible>
                 <Width>92</Width>
                 <ZOrder>0</ZOrder>
@@ -2418,7 +2418,7 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>126</Height>
+                <Height>100</Height>
                 <ID>12</ID>
                 <Image>399</Image>
                 <Left>188</Left>
@@ -2428,10 +2428,10 @@
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick />
                 <PushedImage>0</PushedImage>
-                <Text xml:space="preserve">New Button</Text>
+                <Text />
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>0</Top>
+                <Top>26</Top>
                 <Visible>False</Visible>
                 <Width>92</Width>
                 <ZOrder>12</ZOrder>
@@ -2440,19 +2440,19 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>126</Height>
+                <Height>100</Height>
                 <ID>13</ID>
                 <Left>188</Left>
                 <Locked>False</Locked>
                 <Name>lbParserUseOnList</Name>
-                <OnSelectionChanged />
+                <OnSelectionChanged>lbParserUseOnList_OnSelectionChanged</OnSelectionChanged>
                 <SelectedBackgroundColor>63488</SelectedBackgroundColor>
                 <SelectedTextColor>65535</SelectedTextColor>
                 <ShowBorder>True</ShowBorder>
                 <ShowScrollArrows>True</ShowScrollArrows>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>0</Top>
+                <Top>26</Top>
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>92</Width>
@@ -3097,14 +3097,14 @@
                 <Left>213</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
-                <Name>btnNewGame</Name>
+                <Name>btnStartHelp_newgame_classic</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnNewGame_OnClick</OnClick>
+                <OnClick>btnStartHelp_newgame_classic_OnClick</OnClick>
                 <PushedImage>43</PushedImage>
-                <Text xml:space="preserve">New Game</Text>
+                <Text>Classic</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>56</Top>
+                <Top>77</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>1</ZOrder>
@@ -3128,7 +3128,7 @@
                 <Text>Load</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>88</Top>
+                <Top>164</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>2</ZOrder>
@@ -3145,14 +3145,14 @@
                 <Left>213</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
-                <Name>btnToggleHintsTitleMenu</Name>
+                <Name>btnStartHelp_newgame_withHints</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnToggleHintsTitleMenu_OnClick</OnClick>
+                <OnClick>btnStartHelp_newgame_withHints_OnClick</OnClick>
                 <PushedImage>43</PushedImage>
-                <Text xml:space="preserve">Hints hidden</Text>
+                <Text xml:space="preserve">With Hints</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>196</Top>
+                <Top>106</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>3</ZOrder>
@@ -3183,7 +3183,7 @@
                 <Height>26</Height>
                 <ID>5</ID>
                 <Image>42</Image>
-                <Left>213</Left>
+                <Left>120</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnCredits</Name>
@@ -3193,11 +3193,45 @@
                 <Text>Credits</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>63488</TextColor>
-                <Top>165</Top>
+                <Top>200</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
                 <ZOrder>5</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>18</Height>
+                <ID>6</ID>
+                <Left>213</Left>
+                <Locked>False</Locked>
+                <Name>lblStartHelp_newgame</Name>
+                <Text xml:space="preserve">New Game</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>58</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>6</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>18</Height>
+                <ID>7</ID>
+                <Left>213</Left>
+                <Locked>False</Locked>
+                <Name>Label1</Name>
+                <Text>Continue</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>146</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>7</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -9602,7 +9636,7 @@ stop
         <HotspotX>0</HotspotX>
         <HotspotY>0</HotspotY>
         <ID>5</ID>
-        <Image>2061</Image>
+        <Image>2057</Image>
         <Name xml:space="preserve">Pick up</Name>
         <StandardMode>False</StandardMode>
         <View>0</View>
@@ -9613,7 +9647,7 @@ stop
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
         <HotspotX>1</HotspotX>
-        <HotspotY>1</HotspotY>
+        <HotspotY>0</HotspotY>
         <ID>6</ID>
         <Image>2061</Image>
         <Name>Pointer</Name>
@@ -9656,6 +9690,19 @@ stop
         <ID>9</ID>
         <Image>2061</Image>
         <Name>Usermode2</Name>
+        <StandardMode>False</StandardMode>
+        <View>0</View>
+      </MouseCursor>
+      <MouseCursor>
+        <Animate>False</Animate>
+        <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
+        <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
+        <AnimationDelay>5</AnimationDelay>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
+        <ID>10</ID>
+        <Image>400</Image>
+        <Name>FindInter</Name>
         <StandardMode>False</StandardMode>
         <View>0</View>
       </MouseCursor>
@@ -11179,6 +11226,21 @@ stop
                       <RemapToGamePalette>False</RemapToGamePalette>
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="400" Width="12" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/UI/PointerInvBlack.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>12</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>BottomLeft</ImportMethod>
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
@@ -14709,12 +14771,12 @@ stop
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="399" Width="92" Height="126" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="399" Width="92" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
-                  <FileName>Assets/Visual/UI/listBoxBackground.png</FileName>
+                  <FileName>Assets/Visual/UI/100x92.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
-                  <ImportHeight>126</ImportHeight>
+                  <ImportHeight>100</ImportHeight>
                   <ImportWidth>92</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
