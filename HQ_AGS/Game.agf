@@ -2388,6 +2388,76 @@
                 <Width>92</Width>
                 <ZOrder>0</ZOrder>
               </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>11</ID>
+                <Image>42</Image>
+                <Left>188</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btnParseUseOn</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnParseUseOn_OnClick</OnClick>
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Use on. . .</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>127</Top>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>11</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>12</ID>
+                <Image>399</Image>
+                <Left>188</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnLBBG_useOn</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>0</Top>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>12</ZOrder>
+              </GUIButton>
+              <GUIListBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>126</Height>
+                <ID>13</ID>
+                <Left>188</Left>
+                <Locked>False</Locked>
+                <Name>lbParserUseOnList</Name>
+                <OnSelectionChanged />
+                <SelectedBackgroundColor>63488</SelectedBackgroundColor>
+                <SelectedTextColor>65535</SelectedTextColor>
+                <ShowBorder>True</ShowBorder>
+                <ShowScrollArrows>True</ShowScrollArrows>
+                <TextAlignment>Left</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>0</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>92</Width>
+                <ZOrder>13</ZOrder>
+              </GUIListBox>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -22498,30 +22568,6 @@ stop
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
-                <FileName>Books.ash</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
-                <Key>710807770</Key>
-                <IsHeader>True</IsHeader>
-              </Script>
-            </ScriptAndHeader_Header>
-            <ScriptAndHeader_Script>
-              <Script>
-                <FileName>Books.asc</FileName>
-                <Name />
-                <Description />
-                <Author />
-                <Version />
-                <Key>710807770</Key>
-                <IsHeader>False</IsHeader>
-              </Script>
-            </ScriptAndHeader_Script>
-          </ScriptAndHeader>
-          <ScriptAndHeader>
-            <ScriptAndHeader_Header>
-              <Script>
                 <FileName>KeyboardMovement.ash</FileName>
                 <Name>KeyboardMovement</Name>
                 <Description>Allows to move the player character using the keyboard.
@@ -22593,7 +22639,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aIntrigue</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT11 - GP Ensemble - 4 4 - G minor - 105BPM.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -22606,7 +22652,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aDeambulation</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Audio/Music/8BIT12 - GP Ensemble - 4 4 - D  minor - 80BPM.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -22619,7 +22665,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>ALostInThought</ScriptName>
                 <SourceFileName>Assets/Audio/Music/Lost_in_thought.mp3</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2023-12-09 14:49:56Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2023-12-05 13:23:55Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
