@@ -293,6 +293,7 @@ import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);
 import function notableWhisper(Character*, String, String,  int);
+import function changeNotableDescription(String);
 import function isNoteTaken(String);
 import function takeNote();
 import function show_simpleTextBox(String);
