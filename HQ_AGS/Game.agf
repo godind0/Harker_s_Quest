@@ -2105,7 +2105,7 @@
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
                 <Top>0</Top>
-                <Visible>False</Visible>
+                <Visible>True</Visible>
                 <Width>33</Width>
                 <ZOrder>1</ZOrder>
               </GUIButton>

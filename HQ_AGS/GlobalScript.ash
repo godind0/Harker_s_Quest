@@ -181,7 +181,6 @@ import function isAnyTrainInStation(city, int, Character*, bool, int);
 import String getTrainInStation();
 import function manageDarkness();
 
-import String getNoteDescription(String);
 import String whatTimeIsIt(bool);
 import String getAMPM();
 import bool isItBeforeThisTime(int, int, int, bool, int);
