@@ -2109,7 +2109,7 @@
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
                 <Top>0</Top>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>33</Width>
                 <ZOrder>1</ZOrder>
               </GUIButton>
@@ -6990,6 +6990,7 @@ return
   } else {
     cHawkins.Say("Ah yes! Give them here!");
     player.LoseInventory(iLegalPapers);
+    modifyQuestNoteLineVariant(0, 1, 4);//The papers have been handed in
     if(iLegalPapers.Name != "Legal dossier")
     {
       cHawkins.Say("You could not put them together in a folder?");

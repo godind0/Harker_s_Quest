@@ -202,6 +202,10 @@ import function addTimedEventInXMinutes(int, String);
 import function removeTimedEventByWhatHappens(String);
 import bool playerHasTimedEventByWhatHappens(String);
 
+import function createANote(String, String);
+import function linkNoteToQuestByTitle(String, int);
+import function modifyQuestNoteLineVariant(int, int, int);
+
 import function adjustTravelDestinations();
 import function addTravelDestination(zone);
 import bool playerHasTravelDestination(zone);
