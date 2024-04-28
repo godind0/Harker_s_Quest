@@ -90,7 +90,7 @@ enum horseState
   BandagedHorse
 };
 
-enum bodyParts
+/*enum bodyParts // READD IF ERROR
 {
   BP_hair, 
   BP_hair_mustache, 
@@ -100,9 +100,9 @@ enum bodyParts
   BP_undershirt, 
   BP_pants, 
   BP_shoes
-};
+};*/
 
-enum characterColors
+/*enum characterColors //READD IF ERROR
 {
   CC_black, 
   CC_white, 
@@ -130,7 +130,7 @@ enum characterColors
   CC_hair_grey, 
   CC_hair_white, 
   CC_random
-};
+};*/
 
 enum parentItemDict
 {
@@ -140,30 +140,54 @@ enum parentItemDict
   subItemAlternateName
 };
 
-import void sayBackgroundBacklog(this Character*, String addedMessage);
+//DEBUG FUNCTIONS
+import function debugDisplay(String);
+import function debugDisplayFromHere(String);
+import function setDebugFromHere(bool);
 
-import function setStoryBeat(storyBeat);
-import bool hasSeenDraculaLetter();
-import storyBeat getStoryBeat();
-import bool getSkipCutscene();
-import function gameIsOver(String);
-import int arrival_x[];
-import int arrival_y[];
-import String carfaxSeller;
-import function setOpeningAndClosingTimes();
-import function setupTravelDestinations();
+//NPC MANAGEMENT
+import void sayBackgroundBacklog(this Character*, String addedMessage);
+import bool getPreviouslyTalkedTo(Character*);
+import function setPreviouslyTalkedTo(Character*,  bool);
+/*import Dictionary* makeAColorDictionary(int hair = 25388, int mustache = 27501, int skin = 58607, int skinShadow = 58444, int coat = 512, int coatLight = 736, int coatDark = 256, int neckTie = 0, int underShirt = 65535, int pants = 4290, int pantsDark = 32, int shoe = 20800, int shoeDark = 14528);
+import Dictionary* createARandomSecondaryNPCDictionary();
+import Dictionary* createASecondaryNPCDictionary(characterColors thisSkin = CC_random, characterColors thisHair = CC_random, int hasMustache = -1, characterColors thisJacket = CC_random, characterColors thisNecktie = CC_random, characterColors thisUndershirt = CC_random, characterColors thisPant = CC_random, characterColors thisShoe = CC_random);
+import function changeCharacterColors(Character*, Dictionary*);
+import function manageRandomCharacter(Character*, int, int, CharacterDirection, bool randomizeAppearance = true);*/ // READD IF ERROR
+
+//SOUNDS AND MUSIC
 import function playConfirm();
 import function playSelect();
 import function playCancel();
-import function hide_parser_gui();
-import function addToVerbDictionary(String);
-import bool getPreviouslyTalkedTo(Character*);
-import function setPreviouslyTalkedTo(Character*,  bool);
-
-import bool playerHasAnySubitem(InventoryItem*);
-import String[] roomSpecificParse(String);
 import function musicInRoom(AudioClip*,  int);
 import function musicFirstSetup(AudioClip*,  int);
+
+//GUI
+import function hide_parser_gui();
+import function show_simpleTextBox(String);
+import function open_gui(GUI*);
+import function close_gui(GUI*);
+
+//INVENTORY
+import bool playerHasAnySubitem(InventoryItem*);
+import function addSubitem(InventoryItem*, String, String, String);
+import bool playerHasSubitem(String, InventoryItem*);
+import function tranfertAllSubitemFromOneParentToAnother(InventoryItem*, InventoryItem*);
+import function changeAllSubItemNoteInParent(InventoryItem*, String);
+import function removeSubitem(InventoryItem*, String,  bool);
+// > GAME SPECIFIC : TELEGRAMS AND PACKAGES
+import function addHotelPackage(String, String, String);
+import function getHotelPackages();
+import function setTelegramInclusionByIndex(String, int, bool);
+// > PHOTOGRAPHY
+import int getNbNegative();
+import int getNbMissingNegatives();
+import function resetNbNegativesToMax();
+import function takeAPicture(String, String, int);
+
+//GENERAL GAMEPLAY
+import function addToVerbDictionary(String);
+import String[] roomSpecificParse(String);
 import String findVerbInDictionary(String);
 import bool interact(String[]);
 import String[] findElementIndexByName(String);
@@ -174,16 +198,18 @@ import int getIndexOfElementUsed();
 import elementType getETOfElementUsed();
 import bool alphaOrder_isThisBeforeThat(String, String);
 import function giveScoreOnce(String, int);
+import function gameIsOver(String);
+// > ROOM STATE
+import bool isCharacterNearObject(Object*, float,  Character*);
+import bool isCharacterNearCharacter(Character*, float,  Character*);
+import bool isCharacterNearHotspot(Hotspot*, float,  Character*);
+import float calculateDistanceFromCharacter(int, int,  Character*);
+import bool isThisOpened(Object*);
+// > ACTIONS
+import function sit(elementType, int, Character*, int,  bool, float overrideReachDistance = -1.0);
+import function standUp(Character*,  int);
 
-import function createTrainTimetables();
-import function show_trainTicket_GUI(city, city);
-import String getTrainArrivalTime(String);
-import String getTrainDepartureTime();
-import bool canPlayerBoardTrain(String);
-import function isAnyTrainInStation(city, int, Character*, bool, int);
-import String getTrainInStation();
-import function manageDarkness();
-
+//TIME MANAGEMENT
 import String whatTimeIsIt(bool);
 import String getAMPM();
 import bool isItBeforeThisTime(int, int, int, bool, int);
@@ -196,19 +222,36 @@ import String translateMinutesToHHMMAM(int);
 import function show_wait_GUI(String);
 import function applyWait(bool);
 import function addTime(int, int, int, int);
+// > DARKNESS
+import function modifyCloudiness(int);
+import function manageDarkness();
+// > TIMED EVENTS
+import function addTimedEventInXMinutes(int, String);
+import function removeTimedEventByWhatHappens(String);
+import bool playerHasTimedEventByWhatHappens(String);
+// > NEEDS
 import bool getGottaSleep();
 import bool isPlayerHungry();
 import bool isPlayerDrowsy();
 import function hasEaten();
 import function hasSlept();
-import function addTimedEventInXMinutes(int, String);
-import function removeTimedEventByWhatHappens(String);
-import bool playerHasTimedEventByWhatHappens(String);
+import function addFood(String, String, String);
+import bool playerHasSpoiledFood();
+import function cleanAllSpoiledFood();
+import bool isFoodSpoiled(String);
 
-import function createANote(String, String);
-import function linkNoteToQuestByTitle(String, int);
-import function modifyQuestNoteLineVariant(int, int, int);
-
+//####################################################################################################
+//GAME-SPECIFIC
+import function setStoryBeat(storyBeat);
+import bool hasSeenDraculaLetter();
+import storyBeat getStoryBeat();
+import bool getSkipCutscene();
+import function triggerCutscene(cutsceneIndex);
+// > LOCATION MANAGEMENT
+import int arrival_x[];
+import int arrival_y[];
+import function setOpeningAndClosingTimes();
+import function setupTravelDestinations();
 import function adjustTravelDestinations();
 import function addTravelDestination(zone);
 import bool playerHasTravelDestination(zone);
@@ -217,8 +260,6 @@ import function changeArrival_X_Y(int, int, int);
 import zone stringAsZone(String);
 import function travel_movePlayer(zone, bool);
 import function travel(zone);
-import function embarkTrain();
-import bool wasOnTrain();
 import String isThisPlaceOpened(commerce);
 import bool isThisPlaceOpened_bool(commerce);
 import commerce getCommerceType(zone);
@@ -229,23 +270,27 @@ import zone getRealDestination();
 import function setTravellingBool(bool);
 import bool getTravellingBool();
 import int travelDestinationTimeInMinutes(zone, zone);
-import function modifyCloudiness(int);
+// > TRAINS
+import function createTrainTimetables();
+import function show_trainTicket_GUI(city, city);
+import String getTrainArrivalTime(String);
+import String getTrainDepartureTime();
+import bool canPlayerBoardTrain(String);
+import function isAnyTrainInStation(city, int, Character*, bool, int);
+import String getTrainInStation();
+import function embarkTrain();
+import bool wasOnTrain();
+// > CAB
 import function takeACab(zone);
 import function setHorseViews(horseState);
 import function setCoachView(coachState);
 import horseState getHorseState();
-
-import function addFood(String, String, String);
-import bool playerHasSpoiledFood();
-import function cleanAllSpoiledFood();
-import bool isFoodSpoiled(String);
-
 import function setThreeLondonCabRides(bool);
 import Dictionary* cabSellMsg_TravelDestinations;
 import function sayListOfThings(String[], Dictionary*, int, Character*);
 import String getCabPropositionByIndex(int);
 import function cabTellPropositions();
-
+// > CONVEYANCING
 import String getClientListPerCitySector(String, String);
 import String generateReadHawkinsFileString(String);
 import bool validatePropertyProposition(String, String);
@@ -262,39 +307,10 @@ import bool isThisSigned(InventoryItem*);
 import bool areAllExamQuestionsAnswered();
 import int howManyCorrectExamAnswers();
 import int howManyExamAnswers();
-
-import function addHotelPackage(String, String, String);
-import function getHotelPackages();
-import function setTelegramInclusionByIndex(String, int, bool);
-
-import int getNbNegative();
-import int getNbMissingNegatives();
-import function resetNbNegativesToMax();
-import function takeAPicture(String, String, int);
-
-import function createBook(String, String,  String, String);
-import bool getProposedArchiveBook(int);
-import function show_book_gui(String);
-import function setProposedArchiveBook(int);
-import int findPageByExpressionInCurrentBook(String);
-import bool isThisPageReadInCurrentBook(int);
-
-import function readThis(String, String);
-import bool isCharacterNearObject(Object*, float,  Character*);
-import bool isCharacterNearCharacter(Character*, float,  Character*);
-import bool isCharacterNearHotspot(Hotspot*, float,  Character*);
-import float calculateDistanceFromCharacter(int, int,  Character*);
-import bool isThisOpened(Object*);
-import function memorize(String);
-import String getMemorisedThought();
-import function loseThought();
-
-import function debugDisplay(String);
-import function debugDisplayFromHere(String);
-import function setDebugFromHere(bool);
-import function triggerCutscene(cutsceneIndex);
-import function sit(elementType, int, Character*, int,  bool, float overrideReachDistance = -1.0);
-import function standUp(Character*,  int);
+// > NOTEBOOK
+import function createANote(String, String);
+import function linkNoteToQuestByTitle(String, int);
+import function modifyQuestNoteLineVariant(int, int, int);
 import function notableSay(Character*, String, String,  int);
 import function notableThought(String, String,  int);
 import function notableRead(String, String,  int);
@@ -302,24 +318,20 @@ import function notableWhisper(Character*, String, String,  int);
 import function changeNotableDescription(String);
 import function isNoteTaken(String);
 import function takeNote();
-import function show_simpleTextBox(String);
-import function enterMap();
-import function exitMap();
-
-import function addSubitem(InventoryItem*, String, String, String);
-import bool playerHasSubitem(String, InventoryItem*);
-import function tranfertAllSubitemFromOneParentToAnother(InventoryItem*, InventoryItem*);
-import function changeAllSubItemNoteInParent(InventoryItem*, String);
-import function removeSubitem(InventoryItem*, String,  bool);
-
-import Dictionary* makeAColorDictionary(int hair = 25388, int mustache = 27501, int skin = 58607, int skinShadow = 58444, int coat = 512, int coatLight = 736, int coatDark = 256, int neckTie = 0, int underShirt = 65535, int pants = 4290, int pantsDark = 32, int shoe = 20800, int shoeDark = 14528);
-import Dictionary* createARandomSecondaryNPCDictionary();
-import Dictionary* createASecondaryNPCDictionary(characterColors thisSkin = CC_random, characterColors thisHair = CC_random, int hasMustache = -1, characterColors thisJacket = CC_random, characterColors thisNecktie = CC_random, characterColors thisUndershirt = CC_random, characterColors thisPant = CC_random, characterColors thisShoe = CC_random);
-import function changeCharacterColors(Character*, Dictionary*);
-import function manageRandomCharacter(Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
-
+// > BOOKS
+import function createBook(String, String,  String, String);
+import bool getProposedArchiveBook(int);
+import function show_book_gui(String);
+import function setProposedArchiveBook(int);
+import int findPageByExpressionInCurrentBook(String);
+import bool isThisPageReadInCurrentBook(int);
+import function readThis(String, String);
+// > MEMORY
+import function memorize(String);
+import String getMemorisedThought();
+import function loseThought();
+// > MORSE
 import function foundMorseClue(int);
 import bool getMorseClues(int);//-1 return true for "all done"
-
-import function open_gui(GUI*);
-import function close_gui(GUI*);
+// > SHARED VARIABLES
+import String carfaxSeller;
