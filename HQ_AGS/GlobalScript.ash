@@ -157,7 +157,10 @@ import function playSelect();
 import function playCancel();
 import function hide_parser_gui();
 import function addToVerbDictionary(String);
+import bool getPreviouslyTalkedTo(Character*);
+import function setPreviouslyTalkedTo(Character*,  bool);
 
+import bool playerHasAnySubitem(InventoryItem*);
 import String[] roomSpecificParse(String);
 import function musicInRoom(AudioClip*,  int);
 import function musicFirstSetup(AudioClip*,  int);
