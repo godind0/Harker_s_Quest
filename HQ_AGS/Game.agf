@@ -10540,6 +10540,11 @@ stop
           <Name>seenDraculaLetter</Name>
           <Type>bool</Type>
         </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>Notable_overrideCode</Name>
+          <Type>int</Type>
+        </GlobalVariable>
       </Variables>
     </GlobalVariables>
     <Sprites>
