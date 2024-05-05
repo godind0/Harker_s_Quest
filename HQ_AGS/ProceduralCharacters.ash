@@ -41,6 +41,16 @@ enum bodyParts
   BP_shoes
 };
 
+enum defProcCharView
+{
+  DPCV_male_walk, 
+  DPCV_male_sit, 
+  DPCV_male_climb, 
+  DPCV_female_walk, 
+  DPCV_female_sit
+};
+
 import function removeRandomChars(bool);
 import void makeSecCharAppearance(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
+import function setDefaultProceduralCharacterView(defProcCharView, int);
 //import function manageRandomCharacter(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
