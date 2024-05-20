@@ -1,4 +1,4 @@
-// new module header
+// Ppocedural characters header
 enum characterColors
 {
   CC_black, 
@@ -31,8 +31,7 @@ enum characterColors
 
 enum bodyParts
 {
-  BP_hair, 
-  BP_hair_mustache, 
+  BP_hair,
   BP_skin, 
   BP_coat, 
   BP_necktie, 
@@ -41,16 +40,18 @@ enum bodyParts
   BP_shoes
 };
 
-enum defProcCharView
+enum viewTypes
 {
-  DPCV_male_walk, 
-  DPCV_male_sit, 
-  DPCV_male_climb, 
-  DPCV_female_walk, 
-  DPCV_female_sit
+  walkView, 
+  sitView, 
+  climbView
 };
 
 import function removeRandomChars(bool);
 import void makeSecCharAppearance(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
-import function setDefaultProceduralCharacterView(defProcCharView, int);
-//import function manageRandomCharacter(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
+import function recolor(this Character*, Dictionary*);
+import function recolorPart(this Character*, bodyParts, characterColors);
+import function recolorRandomly(this Character*);
+import function recolorPartManualEntry(this Character*, bodyParts, int, int manuallyEnteredColorLight = -1, int manuallyEnteredColorDark = -1);
+import function removeFacialHair(this Character*, bool, bool);
+import function addFacialHair(this Character*, bool, bool, int);
