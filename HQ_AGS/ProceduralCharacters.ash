@@ -47,6 +47,16 @@ enum viewTypes
   climbView
 };
 
+struct Clothes
+{
+  bodyParts bodyPart;
+  String colorDescription;
+  int mainColor;
+  int lightColor; 
+  int darkColor;
+  bool available;
+};
+
 import function removeRandomChars(bool);
 import void makeSecCharAppearance(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
 import function recolor(this Character*, Dictionary*);
@@ -55,3 +65,4 @@ import function recolorRandomly(this Character*);
 import function recolorPartManualEntry(this Character*, bodyParts, int, int manuallyEnteredColorLight = -1, int manuallyEnteredColorDark = -1);
 import function removeFacialHair(this Character*, bool, bool);
 import function addFacialHair(this Character*, bool, bool, int);
+import function setClothesChangeGUI(GUI*, Button*, Label*, Label*);

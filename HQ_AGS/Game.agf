@@ -3218,7 +3218,7 @@
                 <ID>4</ID>
                 <Left>13</Left>
                 <Locked>False</Locked>
-                <Name>Label2</Name>
+                <Name>lblGraphicAdvHelpText</Name>
                 <Text xml:space="preserve">This is a graphic adventure game that uses a text input for actions.[You must write a verb and a target object/character to give a command (e.g.: Take notebook), then press 'Enter' to execute it.[You can use the keyboard to move the character around, but we suggest using the mouse.</Text>
                 <TextAlignment>Left</TextAlignment>
                 <TextColor>63488</TextColor>
@@ -3276,7 +3276,7 @@
                 <ID>7</ID>
                 <Left>213</Left>
                 <Locked>False</Locked>
-                <Name>Label1</Name>
+                <Name>lblStartHelp_continue</Name>
                 <Text>Continue</Text>
                 <TextAlignment>Center</TextAlignment>
                 <TextColor>63488</TextColor>
@@ -4879,6 +4879,319 @@
               <ZOrder>4</ZOrder>
             </NormalGUI>
             <Controls />
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>41</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>192</Height>
+              <ID>26</ID>
+              <Left>110</Left>
+              <Name>gChangeClothes</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <Top>24</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>100</Width>
+              <ZOrder>2</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>0</ID>
+                <Image>218</Image>
+                <Left>89</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>218</MouseoverImage>
+                <Name>btn_Vest_Next</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>218</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>85</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>NoAction</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>32</Height>
+                <ID>1</ID>
+                <Image>576</Image>
+                <Left>34</Left>
+                <Locked>True</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>bgBtn_harker</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>72</Top>
+                <Visible>True</Visible>
+                <Width>32</Width>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>3</Font>
+                <Height>48</Height>
+                <ID>2</ID>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <Name>lbl_chooseClothes_title</Name>
+                <Text xml:space="preserve">Choose clothes</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>5</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>3</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>3</ID>
+                <Image>217</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>217</MouseoverImage>
+                <Name>btn_Vest_Back</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>217</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>85</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>NoAction</ClickAction>
+                <Clickable>False</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>32</Height>
+                <ID>4</ID>
+                <Image>640</Image>
+                <Left>34</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>bgBtn_red</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>71</Top>
+                <Visible>True</Visible>
+                <Width>32</Width>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>5</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btn_clothes_accept</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>43</PushedImage>
+                <Text xml:space="preserve">Wear it</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>133</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>26</Height>
+                <ID>6</ID>
+                <Image>42</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>43</MouseoverImage>
+                <Name>btn_clothes_cancel</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>43</PushedImage>
+                <Text>Cancel</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>162</Top>
+                <Visible>True</Visible>
+                <Width>92</Width>
+                <ZOrder>6</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>7</ID>
+                <Left>12</Left>
+                <Locked>False</Locked>
+                <Name>lbl_chooseClothes_piece</Name>
+                <Text>Piece</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>54</Top>
+                <Visible>True</Visible>
+                <Width>75</Width>
+                <ZOrder>7</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>8</ID>
+                <Image>218</Image>
+                <Left>89</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>218</MouseoverImage>
+                <Name>btn_clothes_piece_next</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>218</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>58</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>8</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>9</ID>
+                <Image>217</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>217</MouseoverImage>
+                <Name>btn_clothes_piece_back</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>217</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>58</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>9</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>15</Height>
+                <ID>10</ID>
+                <Left>12</Left>
+                <Locked>False</Locked>
+                <Name>lbl_clothes_color</Name>
+                <Text>Color</Text>
+                <TextAlignment>Center</TextAlignment>
+                <TextColor>63488</TextColor>
+                <Top>107</Top>
+                <Visible>True</Visible>
+                <Width>75</Width>
+                <ZOrder>10</ZOrder>
+              </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>11</ID>
+                <Image>218</Image>
+                <Left>89</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>218</MouseoverImage>
+                <Name>btn_clothes_color_next</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>218</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>111</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>11</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>7</Height>
+                <ID>12</ID>
+                <Image>217</Image>
+                <Left>4</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>217</MouseoverImage>
+                <Name>btn_clothes_color_back</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>217</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Top>111</Top>
+                <Visible>True</Visible>
+                <Width>7</Width>
+                <ZOrder>12</ZOrder>
+              </GUIButton>
+            </Controls>
           </GUIMain>
         </GUIs>
       </GUIFolder>
@@ -16438,6 +16751,21 @@ stop
                   <RemapToGamePalette>False</RemapToGamePalette>
                   <RemapToRoomPalette>False</RemapToRoomPalette>
                   <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="640" Width="32" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Visual/UI/redBG_square.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>32</ImportHeight>
+                  <ImportWidth>32</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>NoTransparency</ImportMethod>
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
