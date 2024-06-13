@@ -65,4 +65,12 @@ import function recolorRandomly(this Character*);
 import function recolorPartManualEntry(this Character*, bodyParts, int, int manuallyEnteredColorLight = -1, int manuallyEnteredColorDark = -1);
 import function removeFacialHair(this Character*, bool, bool);
 import function addFacialHair(this Character*, bool, bool, int);
-import function setClothesChangeGUI(GUI*, Button*, Label*, Label*);
+import function setClothesChangeGUIElements(GUI*, Button*, Label*, Label*, Button*, Button*, Button*, Button*);
+import function open_changeClothes_gui(bool, bool, bool, bool, bool, bool, int roomCallIndex = -1); //(1_coat, 2_necktie, 3_shirt, 4_pants, 5_shoe, 6_hair)
+import function createPlayerClothing(bodyParts, String, int, int, int, bool available = true);
+import function changeClothes_changeBodyPart(bool);
+import function changeClothes_changeColor(bool);
+import void dressUp(this Character*);
+import int getWornClothesIndex(this Character*, bodyParts);
+import bool isPlayerWearing(this Character*, bodyParts, String);
+import int getClothingIndexByDescription(bodyParts, String);

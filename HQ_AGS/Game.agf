@@ -4901,37 +4901,13 @@
             </NormalGUI>
             <Controls>
               <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>7</Height>
-                <ID>0</ID>
-                <Image>218</Image>
-                <Left>89</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>218</MouseoverImage>
-                <Name>btn_Vest_Next</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick />
-                <PushedImage>218</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>0</TextColor>
-                <Top>85</Top>
-                <Visible>True</Visible>
-                <Width>7</Width>
-                <ZOrder>1</ZOrder>
-              </GUIButton>
-              <GUIButton>
                 <ClickAction>NoAction</ClickAction>
                 <Clickable>False</Clickable>
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>32</Height>
-                <ID>1</ID>
+                <ID>0</ID>
                 <Image>576</Image>
                 <Left>34</Left>
                 <Locked>True</Locked>
@@ -4946,14 +4922,14 @@
                 <Top>72</Top>
                 <Visible>True</Visible>
                 <Width>32</Width>
-                <ZOrder>2</ZOrder>
+                <ZOrder>1</ZOrder>
               </GUIButton>
               <GUILabel>
                 <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>3</Font>
                 <Height>48</Height>
-                <ID>2</ID>
+                <ID>1</ID>
                 <Left>4</Left>
                 <Locked>False</Locked>
                 <Name>lbl_chooseClothes_title</Name>
@@ -4963,32 +4939,8 @@
                 <Top>5</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
-                <ZOrder>3</ZOrder>
+                <ZOrder>2</ZOrder>
               </GUILabel>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>7</Height>
-                <ID>3</ID>
-                <Image>217</Image>
-                <Left>4</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>217</MouseoverImage>
-                <Name>btn_Vest_Back</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick />
-                <PushedImage>217</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>0</TextColor>
-                <Top>85</Top>
-                <Visible>True</Visible>
-                <Width>7</Width>
-                <ZOrder>4</ZOrder>
-              </GUIButton>
               <GUIButton>
                 <ClickAction>NoAction</ClickAction>
                 <Clickable>False</Clickable>
@@ -4996,7 +4948,7 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>32</Height>
-                <ID>4</ID>
+                <ID>2</ID>
                 <Image>640</Image>
                 <Left>34</Left>
                 <Locked>False</Locked>
@@ -5020,14 +4972,14 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>26</Height>
-                <ID>5</ID>
+                <ID>3</ID>
                 <Image>42</Image>
                 <Left>4</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btn_clothes_accept</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_clothes_accept_OnClick</OnClick>
                 <PushedImage>43</PushedImage>
                 <Text xml:space="preserve">Wear it</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -5035,7 +4987,7 @@
                 <Top>133</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
-                <ZOrder>5</ZOrder>
+                <ZOrder>3</ZOrder>
               </GUIButton>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -5044,14 +4996,14 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>26</Height>
-                <ID>6</ID>
+                <ID>4</ID>
                 <Image>42</Image>
                 <Left>4</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btn_clothes_cancel</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_clothes_cancel_OnClick</OnClick>
                 <PushedImage>43</PushedImage>
                 <Text>Cancel</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -5059,14 +5011,14 @@
                 <Top>162</Top>
                 <Visible>True</Visible>
                 <Width>92</Width>
-                <ZOrder>6</ZOrder>
+                <ZOrder>4</ZOrder>
               </GUIButton>
               <GUILabel>
                 <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>15</Height>
-                <ID>7</ID>
+                <ID>5</ID>
                 <Left>12</Left>
                 <Locked>False</Locked>
                 <Name>lbl_chooseClothes_piece</Name>
@@ -5076,7 +5028,7 @@
                 <Top>54</Top>
                 <Visible>True</Visible>
                 <Width>75</Width>
-                <ZOrder>7</ZOrder>
+                <ZOrder>5</ZOrder>
               </GUILabel>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -5085,14 +5037,14 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>7</Height>
-                <ID>8</ID>
+                <ID>6</ID>
                 <Image>218</Image>
                 <Left>89</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>218</MouseoverImage>
                 <Name>btn_clothes_piece_next</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_clothes_piece_next_OnClick</OnClick>
                 <PushedImage>218</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -5100,7 +5052,7 @@
                 <Top>58</Top>
                 <Visible>True</Visible>
                 <Width>7</Width>
-                <ZOrder>8</ZOrder>
+                <ZOrder>6</ZOrder>
               </GUIButton>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -5109,14 +5061,14 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>7</Height>
-                <ID>9</ID>
+                <ID>7</ID>
                 <Image>217</Image>
                 <Left>4</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>217</MouseoverImage>
                 <Name>btn_clothes_piece_back</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_clothes_piece_back_OnClick</OnClick>
                 <PushedImage>217</PushedImage>
                 <Text xml:space="preserve">New Button</Text>
                 <TextAlignment>TopCenter</TextAlignment>
@@ -5124,14 +5076,14 @@
                 <Top>58</Top>
                 <Visible>True</Visible>
                 <Width>7</Width>
-                <ZOrder>9</ZOrder>
+                <ZOrder>7</ZOrder>
               </GUIButton>
               <GUILabel>
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>15</Height>
-                <ID>10</ID>
+                <ID>8</ID>
                 <Left>12</Left>
                 <Locked>False</Locked>
                 <Name>lbl_clothes_color</Name>
@@ -5141,7 +5093,7 @@
                 <Top>107</Top>
                 <Visible>True</Visible>
                 <Width>75</Width>
-                <ZOrder>10</ZOrder>
+                <ZOrder>8</ZOrder>
               </GUILabel>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -5150,14 +5102,14 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>7</Height>
-                <ID>11</ID>
+                <ID>9</ID>
                 <Image>218</Image>
                 <Left>89</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>218</MouseoverImage>
                 <Name>btn_clothes_color_next</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_clothes_color_next_OnClick</OnClick>
                 <PushedImage>218</PushedImage>
                 <Text xml:space="preserve">New Button</Text>
                 <TextAlignment>TopCenter</TextAlignment>
@@ -5165,7 +5117,7 @@
                 <Top>111</Top>
                 <Visible>True</Visible>
                 <Width>7</Width>
-                <ZOrder>11</ZOrder>
+                <ZOrder>9</ZOrder>
               </GUIButton>
               <GUIButton>
                 <ClickAction>RunScript</ClickAction>
@@ -5174,14 +5126,14 @@
                 <Enabled>True</Enabled>
                 <Font>0</Font>
                 <Height>7</Height>
-                <ID>12</ID>
+                <ID>10</ID>
                 <Image>217</Image>
                 <Left>4</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>217</MouseoverImage>
                 <Name>btn_clothes_color_back</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_clothes_color_back_OnClick</OnClick>
                 <PushedImage>217</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -5189,7 +5141,7 @@
                 <Top>111</Top>
                 <Visible>True</Visible>
                 <Width>7</Width>
-                <ZOrder>12</ZOrder>
+                <ZOrder>10</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
