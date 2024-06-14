@@ -72,5 +72,6 @@ import function changeClothes_changeBodyPart(bool);
 import function changeClothes_changeColor(bool);
 import void dressUp(this Character*);
 import int getWornClothesIndex(this Character*, bodyParts);
+import int getClothesIndex(bodyParts set, String colorDesc);
 import bool isPlayerWearing(this Character*, bodyParts, String);
 import int getClothingIndexByDescription(bodyParts, String);

@@ -43,7 +43,8 @@ enum zone
   BritishMuseum, 
   PhotographyShop, 
   LawSocietyOffices, 
-  LondonHotel, 
+  LondonHotel,
+  JonathanBedroom, 
   StayHere
 };
 
@@ -98,11 +99,6 @@ enum parentItemDict
   subItemAlternateName
 };
 
-//DEBUG FUNCTIONS
-import function debugDisplay(String);
-import function debugDisplayFromHere(String);
-import function setDebugFromHere(bool);
-
 //NPC MANAGEMENT
 import void sayBackgroundBacklog(this Character*, String addedMessage);
 import bool getPreviouslyTalkedTo(Character*);
@@ -144,14 +140,13 @@ import String[] roomSpecificParse(String);
 import String findVerbInDictionary(String);
 import bool interact(String[]);
 import String[] findElementIndexByName(String);
-import String keycodeToString(char);
 import String etToString(elementType);
 import elementType stringToET(String);
 import int getIndexOfElementUsed();
 import elementType getETOfElementUsed();
-import bool alphaOrder_isThisBeforeThat(String, String);
 import function giveScoreOnce(String, int);
 import function gameIsOver(String);
+import int getObjectMidX(Object*);
 // > ROOM STATE
 import bool isCharacterNearObject(Object*, float,  Character*);
 import bool isCharacterNearCharacter(Character*, float,  Character*);
@@ -161,7 +156,9 @@ import bool isThisOpened(Object*);
 // > ACTIONS
 import function sit(elementType, int, Character*, int,  bool, float overrideReachDistance = -1.0);
 import function standUp(Character*,  int);
-
+import void closeObject(this Object*);
+import void openObject(this Object*);
+import function useInteraction(String);
 //TIME MANAGEMENT
 import String whatTimeIsIt(bool);
 import String getAMPM();
@@ -268,6 +265,7 @@ import int howManyExamAnswers();
 import function createANote(String, String);
 import function linkNoteToQuestByTitle(String, int);
 import function modifyQuestNoteLineVariant(int, int, int);
+import int getQuestLineVariant(int, int);
 import function addDynamicQuestTextElement(int, String, String);
 import function notableSay(Character*, String, String,  int, int overrideCode=0);
 import function notableThought(String, String,  int, int overrideCode=0);
@@ -291,5 +289,8 @@ import function loseThought();
 // > MORSE
 import function foundMorseClue(int);
 import bool getMorseClues(int);//-1 return true for "all done"
+// > BEARD
+import function setBeardPercent(int);
+import function getBeardPercent();
 // > SHARED VARIABLES
 import String carfaxSeller;
