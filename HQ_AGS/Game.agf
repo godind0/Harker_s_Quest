@@ -408,6 +408,39 @@
         <Name>faceDirectionUponArrival</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>True</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>True</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">Number added to the element's X when a character interacts with it</Description>
+        <Name>interactXdelta</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>True</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>True</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">Number added to the element's Y when a character interacts with it</Description>
+        <Name>interactYdelta</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>True</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>True</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>Null</DefaultValue>
+        <Description xml:space="preserve">[up, down, right, left, obj, Null] Direction the character should be facing when interacts with the element</Description>
+        <Name>interactFinalDirection</Name>
+        <Type>Text</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -922,7 +955,7 @@
             <Number>1</Number>
           </UnloadedRoom>
           <UnloadedRoom>
-            <Description xml:space="preserve">Hawkins Esq. Offices - Exeter</Description>
+            <Description xml:space="preserve">Hawkins Esq. - Reception - Exeter</Description>
             <Number>2</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -1004,6 +1037,14 @@
           <UnloadedRoom>
             <Description>Train</Description>
             <Number>22</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description xml:space="preserve">Hawkins Esq. Offices - Backroom - Exeter</Description>
+            <Number>23</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description xml:space="preserve">Hawkins Esq. - Main office - Exeter</Description>
+            <Number>24</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -3971,7 +4012,7 @@
                 <MouseoverImage>43</MouseoverImage>
                 <Name>btnGameOver_quit</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnGameOver_quit_OnClick</OnClick>
+                <OnClick>btnConfirmedQuit_OnClick</OnClick>
                 <PushedImage>43</PushedImage>
                 <Text>Quit</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -6589,7 +6630,7 @@
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogWhileSitting</Name>
-                <Value>45</Value>
+                <Value>6</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogMaxDistance</Name>
@@ -6614,8 +6655,8 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>1608</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>265</StartX>
-            <StartY>174</StartY>
+            <StartX>234</StartX>
+            <StartY>146</StartY>
             <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>True</TurnBeforeWalking>
@@ -7673,9 +7714,11 @@ return
   {
     cHawkins.Say("What? No notebook?");
     cHawkins.Say("Go get your notebook Harker!");
+    player.Think("Oh no. . . I forgot it at home");
   } else if(!player.HasInventory(iLegalPapers))
   {
     cHawkins.Say("Where are they? Go get them!");
+    player.Think("Oh no. . . I forgot them at home");
   } else {
     cHawkins.Say("Ah yes! Give them here!");
     player.LoseInventory(iLegalPapers);
@@ -7769,17 +7812,14 @@ HARKER: They are divided by city sectors
 HARKER: When I found the right set of properties, I can note them down in my notebook.
   if(!player.HasInventory(iNotebook))
   {
-    player.Say("I always leave my notebook on my desk at night, it should be there");
+    player.Say("I always leave my notebook on my nightstand befre going to bed, it'll surely be there");
   } else {
     player.Say("After a while all the name sound the same to me");
     player.Say("I can only note the last set I found");
   }
 HARKER: Then, I can find which file drawer holds their file using the ledger
 HARKER: The property's age is on the seller's file.
-  if(!player.HasInventory(iLedger))
-  {
-    player.Say("I will have to find that ledger to do that, however");
-  }
+HARKER: The files are classified alphabetically, and the ledger can tell me in what drawers each file is
 return
 @2
 HARKER: Central London sellers are. . .
@@ -7861,17 +7901,14 @@ HARKER: They are divided by city sectors
 HARKER: When I found the right set of properties, I can note them down in my notebook.
   if(!player.HasInventory(iNotebook))
   {
-    player.Say("I always leave my notebook on my desk at night, it should be there");
+    player.Say("I always leave my notebook on my nightstand befre going to bed, it'll surely be there");
   } else {
     player.Say("After a while all the name sound the same to me");
     player.Say("I can only note the last set I found");
   }
 HARKER: Then, I can find which file drawer holds their file using the ledger
 HARKER: The property's age is on the seller's file.
-  if(!player.HasInventory(iLedger))
-  {
-    player.Say("I will have to find that ledger to do that, however");
-  }
+HARKER: The files are classified alphabetically, and the ledger can tell me in what drawers each file is
 return
 @2
 HARKER: Central Exeter sellers are. . .
@@ -7960,7 +7997,10 @@ HARKER: Let's head home
 stop
 @2
 HARKER: Let's go to work
-HARKER: I hope I have everything
+  if(Game.DoOnceOnly("hopeIgotEverything"))
+  {
+    player.Say("I hope I have everything");
+  }
   travel(HawkinsOffices);
 stop
 @3
@@ -13607,576 +13647,25 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="645" Width="9" Height="55" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/Apartment_Harker/armoire_door.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Hawkins Office">
-                <SubFolders>
-                  <SpriteFolder Name="File drawers">
-                    <SubFolders>
-                      <SpriteFolder Name="L1">
-                        <SubFolders />
-                        <Sprites>
-                          <Sprite Slot="138" Width="9" Height="4" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="139" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="140" Width="11" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="141" Width="14" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="142" Width="15" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="143" Width="15" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="144" Width="17" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="145" Width="18" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="146" Width="21" Height="15" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_1.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                        </Sprites>
-                      </SpriteFolder>
-                      <SpriteFolder Name="L2">
-                        <SubFolders />
-                        <Sprites>
-                          <Sprite Slot="147" Width="9" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="148" Width="9" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="149" Width="11" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="150" Width="14" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="151" Width="15" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="152" Width="15" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="153" Width="17" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="154" Width="18" Height="15" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="155" Width="21" Height="17" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_2.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                        </Sprites>
-                      </SpriteFolder>
-                      <SpriteFolder Name="L3">
-                        <SubFolders />
-                        <Sprites>
-                          <Sprite Slot="156" Width="9" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="157" Width="9" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="158" Width="11" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="159" Width="14" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="160" Width="15" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="161" Width="15" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="162" Width="17" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="163" Width="18" Height="14" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="164" Width="21" Height="17" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_3.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                        </Sprites>
-                      </SpriteFolder>
-                      <SpriteFolder Name="L4">
-                        <SubFolders />
-                        <Sprites>
-                          <Sprite Slot="165" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_1_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="166" Width="9" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_2_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="167" Width="11" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_3_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="168" Width="14" Height="7" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_4_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="169" Width="15" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_5_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="170" Width="15" Height="9" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_6_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="171" Width="17" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_7_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="172" Width="18" Height="11" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_8_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                          <Sprite Slot="173" Width="21" Height="13" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                            <Source>
-                              <FileName>Assets/Visual/HawkinsOffice/Drawer_9_4.png</FileName>
-                              <OffsetX>0</OffsetX>
-                              <OffsetY>0</OffsetY>
-                              <ImportHeight>240</ImportHeight>
-                              <ImportWidth>320</ImportWidth>
-                              <ImportAsTile>False</ImportAsTile>
-                              <Frame>0</Frame>
-                              <RemapToGamePalette>False</RemapToGamePalette>
-                              <RemapToRoomPalette>False</RemapToRoomPalette>
-                              <ImportMethod>LeaveAsIs</ImportMethod>
-                              <ImportAlphaChannel>True</ImportAlphaChannel>
-                            </Source>
-                          </Sprite>
-                        </Sprites>
-                      </SpriteFolder>
-                    </SubFolders>
-                    <Sprites />
-                  </SpriteFolder>
-                </SubFolders>
+                <SubFolders />
                 <Sprites>
                   <Sprite Slot="126" Width="10" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
@@ -14223,7 +13712,7 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="129" Width="21" Height="23" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="129" Width="28" Height="19" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Clerk desk.png</FileName>
                       <OffsetX>0</OffsetX>
@@ -14328,21 +13817,6 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="136" Width="11" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                    <Source>
-                      <FileName>Assets/Visual/HawkinsOffice/Visitor chair 2.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>240</ImportHeight>
-                      <ImportWidth>320</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>False</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
                   <Sprite Slot="137" Width="14" Height="26" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Visitor waiting sofa.png</FileName>
@@ -14403,13 +13877,13 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="184" Width="13" Height="10" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                  <Sprite Slot="184" Width="38" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/Ledger.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
-                      <ImportHeight>32</ImportHeight>
-                      <ImportWidth>32</ImportWidth>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
@@ -14466,6 +13940,171 @@ stop
                   <Sprite Slot="234" Width="25" Height="14" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/CameraTable.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="646" Width="14" Height="26" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/Visitor waiting sofa2.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="647" Width="78" Height="25" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/entrance_carpet.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="648" Width="11" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/drawer_opened.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="649" Width="93" Height="32" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/drawers.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="650" Width="9" Height="4" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/procedureBook.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="138" Width="8" Height="21" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/fence_left_diag.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="139" Width="70" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/fence_left_flat.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="140" Width="16" Height="26" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/fence_right_diag.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="141" Width="42" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/fence_right_flat.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="142" Width="10" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/chair_reception.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="143" Width="17" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/desk_reception.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>

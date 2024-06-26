@@ -43,9 +43,9 @@ enum zone
   BritishMuseum, 
   PhotographyShop, 
   LawSocietyOffices, 
-  LondonHotel,
-  JonathanBedroom, 
-  StayHere
+  LondonHotel, 
+  StayHere, 
+  JonathanBedroom
 };
 
 enum commerce
@@ -99,6 +99,15 @@ enum parentItemDict
   subItemAlternateName
 };
 
+struct shavingArea
+{
+  int roomNumber;
+  elementType mirrorET;
+  int mirrorIndex;
+  elementType sinkET;
+  int sinkIndex;
+};
+
 //NPC MANAGEMENT
 import void sayBackgroundBacklog(this Character*, String addedMessage);
 import bool getPreviouslyTalkedTo(Character*);
@@ -146,16 +155,19 @@ import int getIndexOfElementUsed();
 import elementType getETOfElementUsed();
 import function giveScoreOnce(String, int);
 import function gameIsOver(String);
-import int getObjectMidX(Object*);
+import int getObjectMidX(this Object*);
+import void gotoObject(this Character*, Object*);
+import void gotoHotspot(this Character*, Hotspot*);
+
 // > ROOM STATE
 import bool isCharacterNearObject(Object*, float,  Character*);
 import bool isCharacterNearCharacter(Character*, float,  Character*);
 import bool isCharacterNearHotspot(Hotspot*, float,  Character*);
 import float calculateDistanceFromCharacter(int, int,  Character*);
-import bool isThisOpened(Object*);
+import bool isThisOpened(this Object*);
 // > ACTIONS
-import function sit(elementType, int, Character*, int,  bool, float overrideReachDistance = -1.0);
-import function standUp(Character*,  int);
+import function sit(this Character*, elementType, int, int,  bool, float overrideReachDistance = -1.0);
+import function standUp(this Character*,  int);
 import void closeObject(this Object*);
 import void openObject(this Object*);
 import function useInteraction(String);
@@ -244,6 +256,7 @@ import function cabTellPropositions();
 import String getClientListPerCitySector(String, String);
 import String generateReadHawkinsFileString(String);
 import bool validatePropertyProposition(String, String);
+import int getPropertyAge(String);
 import String getPropertyRequestMessage(String);
 import String getPropertyRequesterName();
 import String getPropertyRequestSector(String);

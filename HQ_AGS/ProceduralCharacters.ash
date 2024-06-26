@@ -71,6 +71,7 @@ import function createPlayerClothing(bodyParts, String, int, int, int, bool avai
 import function changeClothes_changeBodyPart(bool);
 import function changeClothes_changeColor(bool);
 import void dressUp(this Character*);
+import function wearThisClothing(this Character*, bodyParts, String);
 import int getWornClothesIndex(this Character*, bodyParts);
 import int getClothesIndex(bodyParts set, String colorDesc);
 import bool isPlayerWearing(this Character*, bodyParts, String);
