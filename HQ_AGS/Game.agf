@@ -441,6 +441,17 @@
         <Name>interactFinalDirection</Name>
         <Type>Text</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>True</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">Redirects to a different chair. -1 means that it does not redirect</Description>
+        <Name>sit_redir</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -6979,11 +6990,11 @@
             <Properties>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value>Random</Value>
+                <Value xml:space="preserve">man, person, homme</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value>Random</Value>
+                <Value xml:space="preserve">A gentleman</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>dialogMaxDistance</Name>
@@ -6997,12 +7008,20 @@
                 <Name>sitView</Name>
                 <Value>40</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>interactXdelta</Name>
+                <Value>20</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>interactFinalDirection</Name>
+                <Value>left</Value>
+              </CustomProperty>
             </Properties>
-            <RealName>Person</RealName>
+            <RealName>Man</RealName>
             <ScriptName>cRandomMan1</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>33280</SpeechColor>
+            <SpeechColor>50712</SpeechColor>
             <SpeechView>0</SpeechView>
             <StartX>229</StartX>
             <StartY>183</StartY>
@@ -7042,11 +7061,11 @@
             <Properties>
               <CustomProperty>
                 <Name>TextDescription</Name>
-                <Value xml:space="preserve">I don't know what to remark</Value>
+                <Value xml:space="preserve">A lady</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>alternateNames</Name>
-                <Value>horse</Value>
+                <Value xml:space="preserve">woman, person, femme</Value>
               </CustomProperty>
               <CustomProperty>
                 <Name>sex</Name>
@@ -7057,7 +7076,7 @@
                 <Value>38</Value>
               </CustomProperty>
             </Properties>
-            <RealName>Person</RealName>
+            <RealName>Woman</RealName>
             <ScriptName>cRandomWoman1</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
@@ -7398,8 +7417,16 @@
                 <Name>sitView</Name>
                 <Value>45</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">man, person, homme</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">A gentleman</Value>
+              </CustomProperty>
             </Properties>
-            <RealName>Person</RealName>
+            <RealName>Man</RealName>
             <ScriptName>cRandomMan2</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
@@ -7656,8 +7683,16 @@
                 <Name>sex</Name>
                 <Value>1</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">woman, person, femme</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">A lady</Value>
+              </CustomProperty>
             </Properties>
-            <RealName>Person</RealName>
+            <RealName>Woman</RealName>
             <ScriptName>cRandomWoman2</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
@@ -11031,7 +11066,7 @@ stop
           <Type>bool</Type>
         </GlobalVariable>
         <GlobalVariable>
-          <DefaultValue>0</DefaultValue>
+          <DefaultValue>-1</DefaultValue>
           <Name>Notable_overrideCode</Name>
           <Type>int</Type>
         </GlobalVariable>
@@ -14105,6 +14140,96 @@ stop
                   <Sprite Slot="143" Width="17" Height="22" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                     <Source>
                       <FileName>Assets/Visual/HawkinsOffice/desk_reception.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="148" Width="29" Height="34" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/frame.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="147" Width="6" Height="5" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/cigarBox.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="146" Width="10" Height="9" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/sideTable.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="145" Width="14" Height="8" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/goutBench.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="144" Width="21" Height="27" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/chaise.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>240</ImportHeight>
+                      <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="136" Width="63" Height="20" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/HawkinsOffice/carpetMainOffice.png</FileName>
                       <OffsetX>0</OffsetX>
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>

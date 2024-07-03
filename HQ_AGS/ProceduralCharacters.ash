@@ -57,6 +57,7 @@ struct Clothes
   bool available;
 };
 
+import function setCharacterPropertyTypes(Dictionary*);
 import function removeRandomChars(bool);
 import void makeSecCharAppearance(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
 import function recolor(this Character*, Dictionary*);
