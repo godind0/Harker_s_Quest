@@ -211,6 +211,7 @@ import bool hasSeenDraculaLetter();
 import storyBeat getStoryBeat();
 import bool getSkipCutscene();
 import function triggerCutscene(cutsceneIndex);
+import function updateThisCollectingQuest(String);
 // > LOCATION MANAGEMENT
 import int arrival_x[];
 import int arrival_y[];
@@ -271,7 +272,6 @@ import String getLedgerReadText();
 import function setLedgerReadText(String);
 import String getProposedSeller();
 import String getCarfaxSeller();
-import bool playerHasAllCarfaxPictures();
 import bool isThisSigned(InventoryItem*);
 import bool areAllExamQuestionsAnswered();
 import int howManyCorrectExamAnswers();
