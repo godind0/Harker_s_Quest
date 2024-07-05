@@ -7,3 +7,4 @@ import bool getDebugTools();
 import function setDebugFromHere(bool);
 import function debugDisplayFromHere(String);
 import String keycodeToString(char);
+import String ProperCase(this String*, bool bringOthersToLowerCase = false);

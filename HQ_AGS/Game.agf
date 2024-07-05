@@ -7858,23 +7858,23 @@ HARKER: The files are classified alphabetically, and the ledger can tell me in w
 return
 @2
 HARKER: Central London sellers are. . .
-  notableSay(player, "Central London", getClientListPerCitySector("London", "City center"),  0);
+  player.notableSay("Central London", getClientListPerCitySector("London", "City center"),  0);
 return
 @3
 HARKER: Northern London sellers are. . .
-  notableSay(player, "Northern London", getClientListPerCitySector("London", "North"),  0);
+  player.notableSay("Northern London", getClientListPerCitySector("London", "North"),  0);
 return
 @4
 HARKER: Western London sellers are. . .
-  notableSay(player, "Western London", getClientListPerCitySector("London", "West"),  0);
+  player.notableSay( "Western London", getClientListPerCitySector("London", "West"),  0);
 return
 @5
 HARKER: Southern London sellers are. . .
-  notableSay(player, "Southern London", getClientListPerCitySector("London", "South"),  0);
+  player.notableSay("Southern London", getClientListPerCitySector("London", "South"),  0);
 return
 @6
 HARKER: Eastern London sellers are. . .
-  notableSay(player, "Eastern London", getClientListPerCitySector("London", "East"),  0);
+  player.notableSay("Eastern London", getClientListPerCitySector("London", "East"),  0);
 return
 @7
 stop]]></Script>
@@ -7947,23 +7947,23 @@ HARKER: The files are classified alphabetically, and the ledger can tell me in w
 return
 @2
 HARKER: Central Exeter sellers are. . .
-  notableSay(player, "Central Exeter", getClientListPerCitySector("Exeter", "City center"),  0);
+  player.notableSay("Central Exeter", getClientListPerCitySector("Exeter", "City center"),  0);
 return
 @3
 HARKER: Northern Exeter sellers are. . .
-  notableSay(player, "Northern Exeter", getClientListPerCitySector("Exeter", "North"),  0);
+  player.notableSay("Northern Exeter", getClientListPerCitySector("Exeter", "North"),  0);
 return
 @4
 HARKER: Western Exeter sellers are. . .
-  notableSay(player, "Western Exeter", getClientListPerCitySector("Exeter", "West"),  0);
+  player.notableSay("Western Exeter", getClientListPerCitySector("Exeter", "West"),  0);
 return
 @5
 HARKER: Southern Exeter sellers are. . .
-  notableSay(player, "Southern Exeter", getClientListPerCitySector("Exeter", "South"),  0);
+  player.notableSay("Southern Exeter", getClientListPerCitySector("Exeter", "South"),  0);
 return
 @6
 HARKER: Eastern Exeter sellers are. . .
-  notableSay(player, "Eastern Exeter", getClientListPerCitySector("Exeter", "East"),  0);
+  player.notableSay("Eastern Exeter", getClientListPerCitySector("Exeter", "East"),  0);
 return
 @7
 stop]]></Script>
@@ -8227,7 +8227,7 @@ stop
 @S  // Dialog startup entry point
 MINA: Oh Jonathan!
 MINA: I am so pleased we can meet this morning
-  if(getStoryBeat() < packYourThings)
+  if(getQuestLineVariant(5,0) == 0)
   {
     dMina.SetOptionState(4,eOptionOff);
     dMina.SetOptionState(5,eOptionOff);
@@ -8238,7 +8238,7 @@ MINA: I am so pleased we can meet this morning
       dMina.SetOptionState(5,eOptionOff);
     }
   }
-  CallRoomScript(4);
+  CallRoomScript(4); // sets the metMina boolean to true
 return
 @1
 MINA: We are incredibly busy at the school
@@ -8275,6 +8275,7 @@ MINA: I cannot wait to see her again this summer
 MINA: She has talked of inviting me to her parent's estate in Whitby
 MINA: We shall discuss this further in May
 MINA: That is, of course, if our wedding does not occur before then!
+HARKER: We shall wed as soon as I get my full solicitor accreditation
 HARKER: I have not contacted the Law Society, yet
 HARKER: But I have completed all the requirements to pass the exam
 MINA: Have you! This is great news! I cannot wait!
@@ -8291,7 +8292,7 @@ MINA: *giggles*
 MINA: Nowhere as competent as you, of course
 HARKER: Excellent
 HARKER: I am looking forward to working together with you
-HARKER: Once I am a fully accredited sollicitor of course
+HARKER: Once I am a fully accredited solicitor of course
 MINA: Of course
   dMina.SetOptionState(3,eOptionOff);
   if(dMina.GetOptionState(1) == eOptionOff && dMina.GetOptionState(2) == eOptionOff && dMina.GetOptionState(3) == eOptionOff)
@@ -8303,13 +8304,13 @@ return
   dMina.SetOptionState(4,eOptionOffForever);
   giveScoreOnce("ToldMinaAboutLondon", 2);
 MINA: London?
-HARKER: Mr Hawkins suffers from his gout again
+HARKER: Mr. Hawkins suffers from his gout again
 HARKER: He had business to attend in London, but prefers to rest today
 HARKER: He needs to travel to the mainland starting tomorrow
 HARKER: I am merely helping him with pictures of a property in Purfleet
   if(dMina.GetOptionState(2) == eOptionOff)
   {
-    cMina.Say("Maybe you can arrange for you sollicitor's exam once you are there");
+    cMina.Say("Maybe you can arrange for you solicitor's exam once you are there");
     player.Say("That would be most convenient indeed, it hadn't crossed my mind");
     player.Say("But my main objective is to visit the Purfleet property");
   }
@@ -8321,6 +8322,7 @@ MINA: I know how you like to read old books. . .
   player.AddInventory(iBritishMuseumTicket);
   addTravelDestination(BritishMuseum);
   giveScoreOnce(iBritishMuseumTicket.Name, 1);
+  modifyQuestNoteLineVariant(6,0,1);
 HARKER: A ticket to the British Museum!
 MINA: Not only that!
 MINA: It allows you to access the archives related to the current exhibit
@@ -8337,14 +8339,15 @@ MINA: Now, did you pack everything you will need?
   {
     player.Say("I believe I do!");
   }
-  notableSay(cMina, "Need to pack", "In your travel trunk, you will need your razor and shaving glass, a pen and ink, as well as your cigars and matches", 1);
+MINA: In your travel trunk, you will need your razor and shaving glass, a pen and ink, as well as your cigars and matches
+  modifyQuestNoteLineVariant(5,1,1);
+  updateThisCollectingQuest("trunkAndPacking");
 HARKER: Thank you for the reminder
 MINA: I would help you pack, but I need to head back to the school
 HARKER: No worries
 HARKER: I will only be gone a day
   if(Game.DoOnceOnly("darkerWithMina"))
   {
-    //gDark.Transparency = gDark.Transparency - 10;
     modifyCloudiness(10);
     Wait(15);
     player.Say("I keeps getting cloudier");
@@ -8501,7 +8504,7 @@ HARKER: Brilliant, what is it?
 CABBY: Not so fast, mate
 CABBY: What's in it for me?
 HARKER: What do you want?
-  notableSay(cCabby, "Butty mission", "I'm hungry, I want a butty", 0);
+  cCabby.notableSay("Butty mission", "I'm hungry, I want a butty", 0);
 HARKER: You want a sandwich in exchange for the seller's name?
 CABBY: Yup, a butty sandwich
 HARKER: Understood
@@ -8701,7 +8704,7 @@ RECEPTIONIST: First, you have to know this. . .
 RECEPTIONIST: The corridor to your right lead East, the one to your left is West
 RECEPTIONIST: If you go behind you, this is South. The opposite, behind me, would be North.
 RECEPTIONIST: With that in mind, this is the way to the photo desk. . .
-  notableSay(cReceptionist,"To the photo desk","From the reception, East, North, West, North, North.",1);
+  cReceptionist.notableSay("To the photo desk","From the reception, East, North, West, North, North.",1);
   dLawSocietyReceptionist.SetOptionState(1,eOptionOffForever);
   loseThought();
 RECEPTIONIST: If you go South enough times, you'll get to the exit walkway leading you back here
@@ -8773,7 +8776,7 @@ return
   {
     cReceptionist.Say("Oh, you're interested now?");
     player.Say("Well, that ticket would be very useful");
-    notableSay(cReceptionist,"Proposition","If you snatch up the telegram addressed to 'Parton' and bring it to back here at the Law Society reception, I will give you my archive access in return",1);
+    cReceptionist.notableSay("Proposition","If you snatch up the telegram addressed to 'Parton' and bring it to back here at the Law Society reception, I will give you my archive access in return",1);
     cReceptionist.Say("It should be arriving at any time");
     player.Say("Understood");
   } else
@@ -9101,7 +9104,7 @@ return
     dMenu.SetOptionState(8, eOptionOn);
     cPhotoPro.Say("That is where I normally get them");
     player.Say("Terrific. Where is the cantine");
-    notableSay(cPhotoPro,"Cantine location","From here, go South twice and East twice",1);
+    cPhotoPro.notableSay("Cantine location","From here, go South twice and East twice",1);
     loseThought();
     player.Say("Understood");
   }
@@ -10318,7 +10321,7 @@ HARKER: They may help or hinder protagonists in the stories.
   }
 return
 @4
-  notableSay(player,"Devil", "The Ördög is a common figure in folktales, which seems to be a devil", 3);
+  player.notableSay("Devil", "The Ördög is a common figure in folktales, which seems to be a devil", 3);
 HARKER: These stories often involve clever protagonists outwitting the devil through wit or cunning.
   if(Game.DoOnceOnly("Ördög"))
   {

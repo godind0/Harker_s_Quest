@@ -2,6 +2,9 @@
 // the game (local and global). Do not place functions here; rather,
 // place import definitions and #define names here to be used by all
 // scripts.
+
+#define STANDARDREACH 40.0
+
 import Dictionary* verbDictionary;
 
 enum elementType 
@@ -159,12 +162,17 @@ import int getObjectMidX(this Object*);
 import void gotoObject(this Character*, Object*);
 import void gotoHotspot(this Character*, Hotspot*);
 import void gotoCharacter(this Character*, Character*);
+import bool isSitting(this Character*);
+import int getSeatIndex(this Character*);
 
 // > ROOM STATE
-import bool isCharacterNearObject(Object*, float,  Character*);
-import bool isCharacterNearCharacter(Character*, float,  Character*);
-import bool isCharacterNearHotspot(Hotspot*, float,  Character*);
-import float calculateDistanceFromCharacter(int, int,  Character*);
+import bool isNearObject(this Character*, Object*, float maxDistance = 40.0);
+import bool isNearCharacter(this Character*, Character*, float maxDistance = 40.0);
+import bool isNearHotspot(this Character*, Hotspot*, float maxDistance = 40.0);
+import float isThisFarAwayFromXY(this Character*, int, int);
+import float isThisFarAwayFromObject(this Character*, Object*);
+import float isThisFarAwayFromCharacter(this Character*, Character*);
+import float isThisFarAwayFromHotspot(this Character*, Hotspot*);
 import bool isThisOpened(this Object*);
 // > ACTIONS
 import function sitByObjectIndex(this Character*, int, bool alreadySat = 0, float overrideReachdistance = -1.0);
@@ -282,10 +290,8 @@ import function linkNoteToQuestByTitle(String, int);
 import function modifyQuestNoteLineVariant(int, int, int);
 import int getQuestLineVariant(int, int);
 import function addDynamicQuestTextElement(int, String, String);
-import function notableSay(Character*, String, String,  int, int overrideCode=-1);
-import function notableThought(String, String,  int, int overrideCode=-1);
+import function notableSay(this Character*, String, String,  int, int overrideCode=-1);
 import function notableRead(String, String,  int, int overrideCode=-1);
-import function notableWhisper(Character*, String, String,  int, int overrideCode=-1);
 import function changeNotableDescription(String);
 import function isNoteTaken(String);
 import function takeNote();
