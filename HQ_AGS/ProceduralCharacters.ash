@@ -44,7 +44,11 @@ enum viewTypes
 {
   walkView, 
   sitView, 
-  climbView
+  climbView, 
+  smokeLightUpView, 
+  smokeView, 
+  smokeLightUpSitView, 
+  smokeSitView
 };
 
 struct Clothes
@@ -60,7 +64,7 @@ struct Clothes
 import function setCharacterPropertyTypes(Dictionary*);
 import function removeRandomChars(bool);
 import void makeSecCharAppearance(this Character*, int, int, CharacterDirection, bool randomizeAppearance = true);
-import function recolor(this Character*, Dictionary*);
+import function recolor(this Character*, viewTypes, Dictionary*);
 import function recolorPart(this Character*, bodyParts, characterColors);
 import function recolorRandomly(this Character*);
 import function recolorPartManualEntry(this Character*, bodyParts, int, int manuallyEnteredColorLight = -1, int manuallyEnteredColorDark = -1);
@@ -77,3 +81,7 @@ import int getWornClothesIndex(this Character*, bodyParts);
 import int getClothesIndex(bodyParts set, String colorDesc);
 import bool isPlayerWearing(this Character*, bodyParts, String);
 import int getClothingIndexByDescription(bodyParts, String);
+import int getViewIndex(this Character*, viewTypes);
+import void setColoredView(this Character*, viewTypes, StopMovementStyle doIStop = eStopMoving); 
+
+import function fillDefaultViews(int);
