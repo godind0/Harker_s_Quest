@@ -85,3 +85,4 @@ import int getViewIndex(this Character*, viewTypes);
 import void setColoredView(this Character*, viewTypes, StopMovementStyle doIStop = eStopMoving); 
 
 import function fillDefaultViews(int);
+import void setColors(this Character*);

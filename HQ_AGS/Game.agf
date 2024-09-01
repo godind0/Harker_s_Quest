@@ -507,6 +507,171 @@
         <Name>walkView</Name>
         <Type>Number</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_Hair</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">TRUE is facial  hair (if male), FALSE is no facial hair. Color is the same as hair</Description>
+        <Name>ProCol_Mustache</Name>
+        <Type>Boolean</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">TRUE is facial  hair (if male), FALSE is no facial hair. Color is the same as hair</Description>
+        <Name>ProCol_Beard</Name>
+        <Type>Boolean</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_Skin</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is 'same as skin'</Description>
+        <Name>ProCol_Skin_dark</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is 'same as coat-blouse'</Description>
+        <Name>ProCol_CoatBlouse_dark</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_CoatBlouse</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is 'same as coat-blouse'</Description>
+        <Name>ProCol_CoatBlouse_light</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_NecktieNecklaceBelt</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_Undershirt</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_PantsSkirt</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is 'same aspants/skirt'</Description>
+        <Name>ProCol_PantsSkirt_dark</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_Shoes</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is 'same as shoes'</Description>
+        <Name>ProCol_Shoes_dark</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>-1</DefaultValue>
+        <Description xml:space="preserve">-1 is randomized</Description>
+        <Name>ProCol_Eye</Name>
+        <Type>Number</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -6671,6 +6836,58 @@
                 <Name>smokeView_smoke</Name>
                 <Value>5</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse</Name>
+                <Value>62988</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_dark</Name>
+                <Value>43937</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_light</Name>
+                <Value>65236</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Hair</Name>
+                <Value>8352</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_NecktieNecklaceBelt</Name>
+                <Value>58607</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt</Name>
+                <Value>62988</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt_dark</Name>
+                <Value>43937</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes</Name>
+                <Value>58607</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes_dark</Name>
+                <Value>56330</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin</Name>
+                <Value>58607</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin_dark</Name>
+                <Value>56330</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Undershirt</Name>
+                <Value>65236</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Eye</Name>
+                <Value>12481</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Jonathan Harker</RealName>
             <ScriptName>cHarker</ScriptName>
@@ -6846,6 +7063,58 @@
               <CustomProperty>
                 <Name>sitView</Name>
                 <Value>7</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse</Name>
+                <Value>32473</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_dark</Name>
+                <Value>13812</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_light</Name>
+                <Value>42811</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Hair</Name>
+                <Value>2113</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_NecktieNecklaceBelt</Name>
+                <Value>9132</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt</Name>
+                <Value>32473</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt_dark</Name>
+                <Value>13812</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes</Name>
+                <Value>9132</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes_dark</Name>
+                <Value>9132</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin</Name>
+                <Value>60685</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin_dark</Name>
+                <Value>58506</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Undershirt</Name>
+                <Value>59391</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Eye</Name>
+                <Value>129</Value>
               </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Mina Murray</RealName>
