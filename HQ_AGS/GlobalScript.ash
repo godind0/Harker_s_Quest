@@ -48,7 +48,8 @@ enum zone
   LawSocietyOffices, 
   LondonHotel, 
   StayHere, 
-  JonathanBedroom
+  JonathanBedroom, 
+  SchoolYard
 };
 
 enum commerce
@@ -58,7 +59,8 @@ enum commerce
   LawSocietyBuilding, 
   Museum, 
   Shop, 
-  AlwaysOpened
+  AlwaysOpened, 
+  SchoolZone
 };
 
 enum city
@@ -293,7 +295,7 @@ import function addDynamicQuestTextElement(int, String, String);
 import function notableSay(this Character*, String, String,  int, int overrideCode=-1);
 import function notableRead(String, String,  int, int overrideCode=-1);
 import function changeNotableDescription(String);
-import function isNoteTaken(String);
+import bool isNoteTaken(String);
 import function takeNote();
 // > BOOKS
 import function createBook(String, String,  String, String);
