@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>8</AudioIndexer>
+      <AudioIndexer>10</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
@@ -671,6 +671,17 @@
         <Description xml:space="preserve">-1 is randomized</Description>
         <Name>ProCol_Eye</Name>
         <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>True</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>False</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue>0</DefaultValue>
+        <Description xml:space="preserve">Set to true when colored so we can use the room_load function to setColor</Description>
+        <Name>colored</Name>
+        <Type>Boolean</Type>
       </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
@@ -6616,6 +6627,130 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Embroidery box</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>45</ID>
+            <Image>0</Image>
+            <Name>iEmbroidery</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">instruments, embroidery, art, tools</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>invContext</Name>
+                <Value>Classify</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>invContext_classifiedName</Name>
+                <Value xml:space="preserve">Embroidery kit</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">These are the embroidery instruments Miss Reed left for the art class Mina is covering. I need to put them back in order</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">Embroidery book</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>46</ID>
+            <Image>0</Image>
+            <Name>iDictNeedlework</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">dictionary, encyclopedia, embroidery, needlework, dictionaire</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ReadDisplay</Name>
+                <Value xml:space="preserve">Alphabet entry: The word alphabet is derived from Alpha and Beta, the first and second letters in the Greek language. The embroidery of letters entered largely into the instruction given in needlework in ancient days, no girl being considered a proficient in the art until she could work in cross stitch all the letters of the alphal let upon a sampler. In modern times this proficiency is not so much required, as linen marking is done with ink, but ornamental alphabets are still used. The Irish peasantry are celebrated for their skill in embroidering letters upon handkerchief corners, and French ladies display much taste in working with silk upon silk tablecloths and cushions. English ladies use alphabets more for initials upon saddle cloths, rugs, and cambric. The designs for these letters are taken from well-known characters, such as Gothic, Roman, Renaissance or Cuneiform, the preference being given to the letters that are clear in form, however much ornamented. To work: Trace the pattern upon stiff paper and lay it under such materials as allow of the lines showing through, or for thick stuffs iron it off. The letters look better placed across the material than straight. Embroider them with lace thread, embroidery cotton, silk, floss, gold and silver thread, or with human hair. For the stitches use Satin, Feather, Overcast, and Rope for solid thick materials; and Point de Pois, Point Rtjsse, Point d'Or add to the first mentioned for cambrics, Japanese silks, and other light foundations. The illustrations (Fig. 5) show the capitals and small letters of an alphabet much used in embroidery ; work these in Satin Stitch, Point de Pois, and Herringbone. Where the dark lines of the illustrations are, cut out the material and Buttonhole it over, and fill in the open space thus made with Herringbone stitches.</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is the embroidery book Miss Reed has suggested to Mina to help her cover her 'Alphabet' embroidery class. It is called 'The Dictionary of Needlework : an Encyclopaedia of Artistic, Plain, and Fancy Needlework'</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Voucher</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>47</ID>
+            <Image>0</Image>
+            <Name>iVoucher</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">voucher, reed, prepaid</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ReadDisplay</Name>
+                <Value xml:space="preserve">Valid for one (1) round trip train ticket to London</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">The replacement voucher Mina got from the school. I must give this to Miss Reed</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description>Branch</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>48</ID>
+            <Image>0</Image>
+            <Name>iBranch</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">stick, branch, wood, baton, staff, bois</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">A surprisingly sturdy branch</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -6955,6 +7090,62 @@
                 <Name>sitView</Name>
                 <Value>4</Value>
               </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Mustache</Name>
+                <Value>1</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse</Name>
+                <Value>44434</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_dark</Name>
+                <Value>33933</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_light</Name>
+                <Value>50775</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Eye</Name>
+                <Value>8451</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes</Name>
+                <Value>8451</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes_dark</Name>
+                <Value>8451</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Hair</Name>
+                <Value>59163</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Undershirt</Name>
+                <Value>59163</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_NecktieNecklaceBelt</Name>
+                <Value>8451</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt</Name>
+                <Value>33933</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt_dark</Name>
+                <Value>25449</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin_dark</Name>
+                <Value>64878</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin</Name>
+                <Value>65108</Value>
+              </CustomProperty>
             </Properties>
             <RealName xml:space="preserve">Mr. Hawkins</RealName>
             <ScriptName>cHawkins</ScriptName>
@@ -6962,7 +7153,7 @@
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>1608</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>234</StartX>
+            <StartX>246</StartX>
             <StartY>146</StartY>
             <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
@@ -8061,6 +8252,164 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>20</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>49</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">kate, woman, reed, miss, friend, colleague, femme</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>sitView</Name>
+                <Value>50</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">This is Miss Reed a childhood friend and colleague of Mina's.</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse</Name>
+                <Value>29599</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_dark</Name>
+                <Value>16927</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_CoatBlouse_light</Name>
+                <Value>38079</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Eye</Name>
+                <Value>2152</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Hair</Name>
+                <Value>53952</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_NecktieNecklaceBelt</Name>
+                <Value>59199</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt</Name>
+                <Value>4270</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_PantsSkirt_dark</Name>
+                <Value>2152</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes</Name>
+                <Value>2152</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Shoes_dark</Name>
+                <Value>2152</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Undershirt</Name>
+                <Value>64786</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin</Name>
+                <Value>65079</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>ProCol_Skin_dark</Name>
+                <Value>64786</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">Kate Reed</RealName>
+            <ScriptName>cKate</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>64384</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>165</StartX>
+            <StartY>178</StartY>
+            <StartingRoom>3</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>21</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>8</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>21</NormalView>
+            <Properties>
+              <CustomProperty>
+                <Name>alternateNames</Name>
+                <Value xml:space="preserve">librarian, school, woman, mean, person</Value>
+              </CustomProperty>
+              <CustomProperty>
+                <Name>TextDescription</Name>
+                <Value xml:space="preserve">The equally autere and angry-looking librarian does not look like someone you should mess with</Value>
+              </CustomProperty>
+            </Properties>
+            <RealName xml:space="preserve">School Librarian</RealName>
+            <ScriptName>cSchoolLib</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>50712</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>233</StartX>
+            <StartY>136</StartY>
+            <StartingRoom>26</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -8583,12 +8932,15 @@ stop
   {
     cMina.FaceCharacter(player);
   }
-  if(cMina.GetProperty("Known") == 0)
+  if(!cMina.getPreviouslyTalkedTo())
   {
     cMina.Say("Oh Jonathan!");
     cMina.Say("I am so pleased we can meet this morning");
-    cMina.SetProperty("Known",true);
-    modifyQuestNoteLineVariant(6,0,1);//Met Mina
+    cMina.setPreviouslyTalkedTo(true);
+    if(isItBeforeThisTime(11, 30, 00, false, 1))
+    {
+      modifyQuestNoteLineVariant(6,0,1);//Met Mina
+    }
   } else
   {
     cMina.Say("Hello again, Jonathan");
@@ -8598,6 +8950,16 @@ return
 MINA: We are incredibly busy at the school
 MINA: With the Trinity term that is just starting and all
 MINA: The schoolmistress is anxious for everything to be ready until June
+MINA: And Kate is on assignment out of town
+MINA: I need to cover her art class
+MINA: You know that I do not know much about it
+  if(dKate.GetOptionState(1) == eOptionOff)
+  {
+    player.Say("Oh, I encountered Miss Reed at the train station");
+    player.Say("She said all you need to know can be found in the school's library");
+    cMina.Say("Oh dear Kate");
+    cMina.Say("That will be helpful to know");
+  }
 MINA: How about you?
 MINA: Did you manage to finish all those papers for Mr. Hawkins?
   if(iLegalPapers.Name.StartsWith("Complete"))
@@ -8717,8 +9079,116 @@ HARKER: I will only be gone a day
   }
 return
 @6
+MINA: Today?
+MINA: She was supposed to leave yesterday with that big trunk of donations
+HARKER: She did have a massive trunk with her
+MINA: She did say she was meeting. . .
+HARKER: Pardon?
+MINA: Nevermind. Just gossip.
+MINA: London is only a few hours out, she has plenty of time
+HARKER: She did lose her train ticket voucher
+MINA: Oh no!
+MINA: How will she get on that train?
+HARKER: She suggested that you would be able to get her a second voucher
+MINA: Oh. I suppose I can do that
+MINA: I think the administrative office is receiving applicant family today, however
+MINA: It will take me quite some time to manage to get in without attracting attention
+MINA: And I have this art class to prepare
+  dMina.SetOptionState(6, eOptionOff);
+  dMina.SetOptionState(7, eOptionOn);
+return
+@7
+HARKER: I wish I could help
+MINA: Oh! Maybe you can!
+MINA: Here
+MINA: This is kit of instruments Kate told me to use for her class
+MINA: She is teaching the girl to embroider the alphabet
+MINA: Can you arrange those in some sort of logical order
+MINA: From the first used piece of equipement to the last?
+HARKER: I can try, but I know nothing about embroidery
+MINA: Neither do I, sadly
+  if(dKate.GetOptionState(1) == eOptionOff)
+  {
+    player.Say("She mentionned something about books in the school's library");
+    player.Say("How everything you need is in there");
+    cMina.Say("Oh she did leave a note about this!");
+    cMina.Say("The Dictionary of Needlework: An Encyclopaedia of Artistic, Plain, and Fancy Needlework");
+    cMina.Say("You get that book from the library while I go to the admnistrative office");
+    player.Say("Splendid!");
+    cMina.Say("Oh!");
+    cMina.Say("The librarian is in the middle of changing the classification method");
+    cMina.Say("Therefore some books are classified by theme while others are classified by author's last name");
+    player.Say("Splendid. . .");
+    dMina.SetOptionState(7, eOptionOff);
+    modifyQuestNoteLineVariant(14,2,1);//Mina will get the voucher
+    modifyQuestNoteLineVariant(14,3,1);//The instruments are out of order
+    modifyQuestNoteLineVariant(14,4,1);//I need the book
+    modifyQuestNoteLineVariant(14,5,1);//Maybe the librarian can help
+    player.AddInventory(iEmbroidery);
+    giveScoreOnce(iEmbroidery.Name, 1);
+    if(player.HasInventory(iEmbroidery))
+    {
+      addSubitem(iEmbroidery, "Pattern", "A pattern of letters", "");
+      addSubitem(iEmbroidery, "Linen", "A thick piece of fabric", "");
+      addSubitem(iEmbroidery, "Buttonhole", "Buttonhole thread is used to secure edges", "");
+      addSubitem(iEmbroidery, "Scissors", "A pair of scissors to cut off extra threads", "");
+      addSubitem(iEmbroidery, "Pen & paper", "A thick pencil, ideal to draw on textile as well as a thick stiff transfer paper", "");
+      addSubitem(iEmbroidery, "Hoop & thread", "An embroidery hoop and gilded thread", "");
+      addSubitem(iEmbroidery, "Iron", "An iron to. . . iron something out", "");
+    }
+  } else
+  {
+    cMina.Say("Well no point in us both losing our time at guesswork");
+    cMina.Say("Sadly, until we figure this out, I cannot see how I could spend my time getting a voucher");
+  }
+return
+@8
+  if(dMina.GetOptionState(9) == eOptionOn)
+  {
+    cMina.Say("Fantastic!");
+    cMina.Say("This will be most useful!");
+    player.Say("And here is the Dictionary of Needlework: An Encyclopaedia of Artistic");
+    cMina.Say("You are a hero, Jonathan Harker!");
+    cMina.Say("And my contribution in return");
+    cMina.Say("Kate's replacement train ticket voucher");
+    player.Say("Splendid! Did you get in trouble?");
+    cMina.Say("None that will not be forgotten once we marry!");
+    player.LoseInventory(iEmbroidery);
+    player.LoseInventory(iDictNeedlework);
+    player.AddInventory(iVoucher);
+    giveScoreOnce("GotVoucher", 3);
+    playConfirm();
+    dMina.SetOptionState(8, eOptionOff);
+    dMina.SetOptionState(9, eOptionOff);
+  } else
+  {
+    cMina.Say("Maybe you should keep it until you are done classifying the embroidery kit?");
+  }
+@9
+  if(dMina.GetOptionState(8) == eOptionOn)
+  {
+    cMina.Say("Fantastic!");
+    cMina.Say("This will be most useful!");
+    player.Say("And here is your classified embroidery kit as well");
+    cMina.Say("You are a hero, Jonathan Harker!");
+    cMina.Say("And my contribution in return");
+    cMina.Say("Kate's replacement train ticket voucher");
+    player.Say("Splendid! Did you get in trouble?");
+    cMina.Say("None that will not be forgotten once we marry!");
+    player.LoseInventory(iEmbroidery);    
+    player.LoseInventory(iDictNeedlework);
+    player.AddInventory(iVoucher);
+    giveScoreOnce("GotVoucher", 3);
+    playConfirm();
+    dMina.SetOptionState(8, eOptionOff);
+    dMina.SetOptionState(9, eOptionOff);
+  } else
+  {
+    cMina.Say("Maybe you should keep it until you are done classifying the embroidery kit?");
+  }
+return
+@10
 MINA: Of course
-MINA: I will finish my tea and head inside
 HARKER: Have a great afternoon, my love
 MINA: Same to you
 MINA: I love you, Jonathan
@@ -8761,6 +9231,30 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">I met Miss Reed at the train station</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the art class</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Here are the classified supplies</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Here is the book</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">I must go</Text>
@@ -10739,15 +11233,15 @@ stop
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
- if(!getPreviouslyTalkedTo(cConcierge))
+ if(!cConcierge.getPreviouslyTalkedTo())
  {
    cConcierge.Say("Welcome to the Hummums");
    cConcierge.Say("What can I help you with?");
-   setPreviouslyTalkedTo(cConcierge,true);
+   cConcierge.setPreviouslyTalkedTo(true);
  }
 return
 @1
-  if(!getPreviouslyTalkedTo(cConcierge))
+  if(!cConcierge.getPreviouslyTalkedTo())
   {
     cConcierge.Say("Absolutely");
     cConcierge.Say("Your name?");
@@ -10886,6 +11380,186 @@ stop
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">Where does this lead?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>18</ID>
+            <Name>dKate</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  if(!cKate.getPreviouslyTalkedTo())
+  {
+    player.Say("Excuse me, miss? Would it trouble you if I quickly purchased a. . .");
+    cKate.FaceCharacter(player);
+    cKate.Say("Yes, it would! Can't you. . .");
+    cKate.Say("John?");
+    player.Say("Jonathan, actually. Do we. . .");
+    player.Say("Miss Reed! I am so sorry, I did not recognize you");
+    cKate.Say("Because of all the screaming and publicly embarassing behaviour?");
+    player.Say("I. . . um. . .");
+    cKate.Say("Ha! Don't worry John");
+    cKate.Say("I hope Mina's doing ok?");
+    cKate.Say("She needs to cover my art class while I'm away in London");
+    if(dMina.GetOptionState(1) == eOptionOff)
+    {
+      player.Say("She did seem a bit anxious about it");
+    } else
+    {
+      player.Say("She did not mention");
+    }
+    cKate.Say("She'll be fine");
+  } else
+  {
+    cKate.Say("Hiya, John!");
+  }
+return
+@1
+KATE: If you see her, tell her that all the resources she need are in the school's library
+KATE: She's got this thing about figuring stuff out on her own
+KATE: 'Been doing that since we were wee little girls
+KATE: Can't ask for help for anything
+  dKate.SetOptionState(1, eOptionOff);
+return
+@2
+HARKER: Are you heading to London with this trunk?
+    object[19].SetTextProperty("TextDescription","This is a massive trunk under the care of Miss Reed");
+KATE: I wish it'd be that simple
+KATE: I do need to deliver that huge thing to some foundation in London
+KATE: Today at the latest
+KATE: But someone's being difficult about giving me my ticket
+  dKate.SetOptionState(2, eOptionOff);
+  dKate.SetOptionState(3, eOptionOn);
+return
+@3
+KATE: This man will not honor the school's voucher
+HARKER: Is this true, sir?
+EXETERTRAINOFFICER: Not exactly, sir
+EXETERTRAINOFFICER: I would honor the voucher, sir
+EXETERTRAINOFFICER: If the lady had it with her. . .
+EXETERTRAINOFFICER: Sir
+KATE: It is prepaid, what is the difference?
+EXETERTRAINOFFICER: I need to exchange the voucher for the ticket, miss
+EXETERTRAINOFFICER: If another person brings me the voucher and I gave you the ticket, what could I do then?
+KATE: You are just inventing problems, now!
+KATE: John, can you help me out with this?
+HARKER: Well, that is how vouchers work, Miss Reed. . .
+KATE: Ugh, fine
+  cKate.FaceDirection(eDirectionLeft);
+  Wait(20);
+  cKate.FaceDirection(eDirectionRight);
+  Wait(20);
+KATE: I cannot possibly drag this huge luggage back to school
+  cKate.FaceCharacter(player);
+KATE: D'you reckon you could get me a replacement voucher from the school?
+HARKER: I could contact the administration and. . .
+KATE: No!
+KATE: I mean there is no need to bother them
+KATE: They have a full drawer of them at the main office
+KATE: Just pick one up and bring it back
+HARKER: You want me to steal a voucher from the school for you
+KATE: Steal is a pretty strong word
+HARKER: Miss Reed, this is an all-girl school
+HARKER: I cannot even get inside the school without attracting attention
+KATE: Oh come on, John
+KATE: You are not that noticeable
+HARKER: Mina works there with you, she could get in trouble if. . .
+KATE: Well get Mina to do it!
+HARKER: That plan keep getting better, doesn't it
+KATE: She'll be 100% inconspicuous
+  if(isItBeforeThisTime(11, 00, 00, false, 1))
+  {
+    player.Say("I do have a rendezvous with her at 11 for tea");
+    cKate.Say("Sure! Or, just tap on the window of the teacher's lounge");
+    cKate.Say("I'm sure she'll be right out!");
+    cKate.Say("Solutions!");
+  } else if(!isItBeforeThisTime(11, 30, 00, false, 1))
+  {
+    if(getQuestLineVariant(6, 0) == 0)
+    {
+      modifyQuestNoteLineVariant(6, 0, 2);
+      player.Say("Oh shoot! I was supposed to meet her at the school during her break!");
+      cKate.Say("Just tap on the window of the teacher's lounge");
+      cKate.Say("I'm sure she'll be right out!");
+      player.Say("It would be pleasant to chat with her");
+      cKate.Say("Solutions!");
+    }
+    if(getQuestLineVariant(6, 0) == 1)
+    {
+      player.Say("I was there just this morning");
+      cKate.Say("Just tap on the window of the teacher's lounge");
+      cKate.Say("I'm sure she'll be right out!");
+      cKate.Say("Solutions!");
+    }
+  } else
+  {
+    player.Say("I do have a rendezvous with her at 11 for tea");
+    cKate.Say("There you go!");
+    cKate.Say("Or, just tap on the window of the teacher's lounge");
+    cKate.Say("I'm sure she'll be right out!");
+    cKate.Say("Solutions!");
+  }
+HARKER: Ok.  I will be right back
+  modifyQuestNoteLineVariant(14, 1, 1);//I need to get Kate a ticket. Tap the glass to get Mina
+  dMina.SetOptionState(6, eOptionOn);
+  dKate.SetOptionState(3, eOptionOff);
+stop
+@4
+KATE: Wonderful!
+KATE: Mina is just the best!
+HARKER: Isn't she. . .
+KATE: Well let's get that ticket sorted out
+  cKate.FaceCharacter(cExeterTrainOfficer,eBlock);
+KATE: Here is my voucher!
+EXETERTRAINOFFICER: And here is your ticket, miss!
+KATE: Thank you!
+KATE: You will take care of the massive trunk, won't you?
+EXETERTRAINOFFICER: Of course, miss
+  cKate.sit(object[18], false, 100.0);
+  modifyQuestNoteLineVariant(14,1,3);
+  dKate.SetOptionState(4, eOptionOff);
+stop
+@5
+  if(dKate.GetOptionState(1) == eOptionOff && dKate.GetOptionState(2) == eOptionOff && dKate.GetOptionState(3) == eOptionOff && dKate.GetOptionState(4) == eOptionOff)
+  {
+    player.Say("Good day, Miss Reed");
+    player.Say("I am still working on the voucher issue");
+    player.Say("I will see you soon");
+  }
+KATE: See ya!
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the art class</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">About the trunk</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">About the ticket</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Here is the voucher</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">I will see you soon</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -16299,7 +16973,7 @@ stop
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
-              <SpriteFolder Name="SchoolLibrary">
+              <SpriteFolder Name="School">
                 <SubFolders />
                 <Sprites>
                   <Sprite Slot="149" Width="10" Height="18" ColorDepth="32" Resolution="Real" AlphaChannel="True">
@@ -16429,6 +17103,36 @@ stop
                       <OffsetY>0</OffsetY>
                       <ImportHeight>240</ImportHeight>
                       <ImportWidth>320</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="740" Width="18" Height="12" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/School/school_yard_stick.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>250</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="741" Width="17" Height="29" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>Assets/Visual/School/school_yard_trashcan.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>250</ImportHeight>
+                      <ImportWidth>500</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
@@ -29570,56 +30274,56 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>78</Image>
+                    <Image>585</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>79</Image>
+                    <Image>586</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>80</Image>
+                    <Image>587</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
-                    <Image>81</Image>
+                    <Image>588</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
-                    <Image>82</Image>
+                    <Image>589</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
-                    <Image>83</Image>
+                    <Image>590</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>6</ID>
-                    <Image>84</Image>
+                    <Image>591</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>7</ID>
-                    <Image>85</Image>
+                    <Image>592</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -29632,49 +30336,49 @@ stop
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>0</ID>
-                    <Image>89</Image>
+                    <Image>593</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>1</ID>
-                    <Image>90</Image>
+                    <Image>594</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>2</ID>
-                    <Image>91</Image>
+                    <Image>595</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>3</ID>
-                    <Image>92</Image>
+                    <Image>596</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>4</ID>
-                    <Image>93</Image>
+                    <Image>597</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>5</ID>
-                    <Image>94</Image>
+                    <Image>598</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>True</Flipped>
                     <ID>6</ID>
-                    <Image>95</Image>
+                    <Image>599</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -29687,49 +30391,49 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>89</Image>
+                    <Image>593</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>90</Image>
+                    <Image>594</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>91</Image>
+                    <Image>595</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
-                    <Image>92</Image>
+                    <Image>596</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
-                    <Image>93</Image>
+                    <Image>597</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
-                    <Image>94</Image>
+                    <Image>598</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>6</ID>
-                    <Image>95</Image>
+                    <Image>599</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -29742,56 +30446,56 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>99</Image>
+                    <Image>600</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>100</Image>
+                    <Image>601</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>101</Image>
+                    <Image>602</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
-                    <Image>102</Image>
+                    <Image>603</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
-                    <Image>103</Image>
+                    <Image>604</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
-                    <Image>104</Image>
+                    <Image>605</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>6</ID>
-                    <Image>105</Image>
+                    <Image>606</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>7</ID>
-                    <Image>106</Image>
+                    <Image>607</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -31686,6 +32390,628 @@ stop
               </Loop>
             </Loops>
           </View>
+          <View>
+            <ID>49</ID>
+            <Name>Kate_walk</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>495</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>496</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>497</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>498</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>499</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>500</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>501</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>502</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>0</ID>
+                    <Image>503</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>1</ID>
+                    <Image>504</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>2</ID>
+                    <Image>505</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>3</ID>
+                    <Image>506</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>4</ID>
+                    <Image>507</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>5</ID>
+                    <Image>508</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>6</ID>
+                    <Image>509</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>7</ID>
+                    <Image>510</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>503</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>504</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>505</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>506</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>507</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>508</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>509</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>510</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>511</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>512</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>513</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>514</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>515</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>516</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>517</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>518</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>50</ID>
+            <Name>Kate_sit</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>486</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>487</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>488</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>0</ID>
+                    <Image>489</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>1</ID>
+                    <Image>490</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>2</ID>
+                    <Image>491</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>489</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>490</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>491</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>492</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>493</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>494</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>51</ID>
+            <Name>SchoolLib_walk</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>495</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>496</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>497</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>498</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>499</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>500</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>501</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>502</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>0</ID>
+                    <Image>503</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>1</ID>
+                    <Image>504</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>2</ID>
+                    <Image>505</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>3</ID>
+                    <Image>506</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>4</ID>
+                    <Image>507</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>5</ID>
+                    <Image>508</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>6</ID>
+                    <Image>509</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>7</ID>
+                    <Image>510</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>503</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>504</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>505</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>506</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>507</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>508</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>509</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>510</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>511</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>512</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>513</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>514</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>515</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>516</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>517</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>518</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
         </Views>
       </ViewFolder>
     </Views>
@@ -31894,6 +33220,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Select 1.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2023-11-28 20:22:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>6</ID>
+                <Index>10</Index>
+                <ScriptName>aBinBang</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Audio/Sfx/Retro Instrument - drumset - C09.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2024-09-02 17:38:09Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>

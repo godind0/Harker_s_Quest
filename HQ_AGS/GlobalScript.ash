@@ -115,8 +115,8 @@ struct shavingArea
 
 //NPC MANAGEMENT
 import void sayBackgroundBacklog(this Character*, String addedMessage);
-import bool getPreviouslyTalkedTo(Character*);
-import function setPreviouslyTalkedTo(Character*,  bool);
+import bool getPreviouslyTalkedTo(this Character*);
+import function setPreviouslyTalkedTo(this Character*,  bool);
 
 //SOUNDS AND MUSIC
 import function playConfirm();
